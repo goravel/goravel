@@ -1,6 +1,6 @@
-<center><img src="https://avatars.githubusercontent.com/u/93197157?s=400&u=e358ccd2a42a42fb55490e25d71d052805df1c5f&v=4" height="100px" width="100px"></center>
+<p align="center"><img src="https://media.githubusercontent.com/avatars/21076297?orig=1&token=AF47XFEZYYVBKJLAPB7XER3BTNYNW" width="400"></p
 
-# Goravel
+# Abuout Goravel
 
 Goravel is a web application framework with expressive, elegant syntax. Tribute to Laravel.
 
