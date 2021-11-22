@@ -1,8 +1,6 @@
-module goravel
+module github.com/goravel/framework
 
 go 1.17
-
-require github.com/goravel/framework v0.0.1
 
 require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
@@ -21,5 +19,3 @@ require (
 	gopkg.in/ini.v1 v1.64.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
-replace github.com/goravel/framework => ./pkg/framework
