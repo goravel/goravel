@@ -4,14 +4,14 @@ import (
 	"github.com/goravel/framework/support/facades"
 )
 
-type ConfigServiceProvider struct {
+type ServiceProvider struct {
 }
 
-func (config *ConfigServiceProvider) Boot() {
+func (config *ServiceProvider) Boot() {
 
 }
 
-func (config *ConfigServiceProvider) Register() {
+func (config *ServiceProvider) Register() {
 	viper := Viper{}
 	facades.Config = viper.Init()
 }
