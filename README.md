@@ -6,14 +6,15 @@ Goravel is a web application framework with expressive, elegant syntax. Tribute 
 
 ## TODO
 
+- [x] Config
+- [ ] Http
 - [ ] Model
 - [ ] Logger
 - [ ] Cache
 - [ ] Queue
 - [ ] Mail
-- [ ] Event
-- [ ] Helper
-- [ ] Carbon
+- [ ] Schedule
+- [ ] Job
 
 ## License
 
