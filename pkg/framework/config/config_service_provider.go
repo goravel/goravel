@@ -5,14 +5,13 @@ import (
 )
 
 type ConfigServiceProvider struct {
-	instance facades.ConfigFacade
 }
 
 func (config *ConfigServiceProvider) Boot() {
-	facades.Config = config.instance
+
 }
 
 func (config *ConfigServiceProvider) Register() {
 	viper := Viper{}
-	config.instance = viper.Init()
+	facades.Config = viper.Init()
 }

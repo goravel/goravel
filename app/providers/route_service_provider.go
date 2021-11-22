@@ -1,15 +1,12 @@
-package route
+package providers
 
-import (
-	"github.com/goravel/framework/support/facades"
-)
+import "goravel/routes"
 
 type RouteServiceProvider struct {
 }
 
 func (router *RouteServiceProvider) Boot() {
-	gin := Gin{}
-	facades.Route = gin.Init()
+	routes.V1()
 }
 
 func (router *RouteServiceProvider) Register() {
