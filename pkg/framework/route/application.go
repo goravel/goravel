@@ -5,11 +5,11 @@ import (
 	"github.com/goravel/framework/support/facades"
 )
 
-type Gin struct {
+type Application struct {
 }
 
-func (g *Gin) Init() *gin.Engine {
-	if facades.Config.Env("APP_ENV") == "production" {
+func (app *Application) Init() *gin.Engine {
+	if facades.Config.GetString("app.env") == "production" {
 		gin.SetMode(gin.ReleaseMode)
 	}
 

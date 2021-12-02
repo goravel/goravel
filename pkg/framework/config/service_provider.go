@@ -12,6 +12,6 @@ func (config *ServiceProvider) Boot() {
 }
 
 func (config *ServiceProvider) Register() {
-	viper := Viper{}
-	facades.Config = viper.Init()
+	app := Application{}
+	facades.Config = app.Init()
 }

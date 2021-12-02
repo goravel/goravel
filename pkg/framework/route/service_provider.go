@@ -7,11 +7,11 @@ import (
 type ServiceProvider struct {
 }
 
-func (router *ServiceProvider) Boot() {
-	gin := Gin{}
-	facades.Route = gin.Init()
+func (route *ServiceProvider) Boot() {
+	app := Application{}
+	facades.Route = app.Init()
 }
 
-func (router *ServiceProvider) Register() {
+func (route *ServiceProvider) Register() {
 
 }

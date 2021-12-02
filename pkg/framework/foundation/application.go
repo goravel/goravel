@@ -2,6 +2,7 @@ package foundation
 
 import (
 	"github.com/goravel/framework/config"
+	"github.com/goravel/framework/console"
 	"github.com/goravel/framework/database"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/support"
@@ -15,7 +16,6 @@ func init() {
 }
 
 type Application struct {
-	BasePath string
 }
 
 func (app *Application) Boot() {
@@ -38,16 +38,22 @@ func (app *Application) boot(serviceProvider support.ServiceProvider) {
 func (app *Application) getBaseServiceProviders() []support.ServiceProvider {
 	return []support.ServiceProvider{
 		&config.ServiceProvider{},
-		&route.ServiceProvider{},
 	}
 }
 
 func (app *Application) getConfiguredServiceProviders() []support.ServiceProvider {
-	configuredServiceProviders := []support.ServiceProvider {
+	configuredServiceProviders := []support.ServiceProvider{
 		&database.ServiceProvider{},
+		&console.ServiceProvider{},
+		&route.ServiceProvider{},
 	}
 
-	return append(configuredServiceProviders, facades.Config.Get("app.providers").([]support.ServiceProvider)...)
+	configuredServiceProviders = append(configuredServiceProviders, facades.Config.Get("app.providers").([]support.ServiceProvider)...)
+
+	// Last load
+	//configuredServiceProviders = append(configuredServiceProviders, &console.ServiceProvider{})
+
+	return configuredServiceProviders
 }
 
 func (app *Application) registerBaseServiceProviders() {
