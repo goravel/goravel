@@ -9,7 +9,7 @@ Goravel is a web application framework with expressive, elegant syntax. Tribute 
 - [x] Config
 - [x] Http
 - [x] Orm
-- [ ] Migrate
+- [x] Migrate
 - [ ] Logger
 - [ ] Cache
 - [ ] Queue
