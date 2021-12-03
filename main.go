@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
+	//This bootstraps the framework and gets it ready for use.
 	bootstrap.Boot()
 
+	//Start http server by facades.Route.
 	facades.Route.Run(facades.Config.GetString("app.host"))
 }
