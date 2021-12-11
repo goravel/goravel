@@ -1,6 +1,10 @@
 package config
 
 import (
+	"github.com/goravel/framework/console"
+	"github.com/goravel/framework/database"
+	foundationProviders "github.com/goravel/framework/foundation/providers"
+	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/support"
 	"github.com/goravel/framework/support/facades"
 	"goravel/app/providers"
@@ -43,7 +47,12 @@ func init() {
 		//request to your application. Feel free to add your own services to
 		//this array to grant expanded functionality to your applications.
 		"providers": []support.ServiceProvider{
+			&database.ServiceProvider{},
+			&console.ServiceProvider{},
+			&route.ServiceProvider{},
+			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
+			&foundationProviders.ArtisanServiceProvider{},
 		},
 	})
 }
