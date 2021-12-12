@@ -4,7 +4,7 @@
 
 # 关于 Goravel
 
-Goravel 是一个功能完备、具有扩展能力的 Web 应用程序框架。 作为一个起始脚手架帮助 Golang 开发者快速的构建自己的应用。
+Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。 作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
 
 ## 主要功能
 
@@ -21,7 +21,7 @@ Goravel 是一个功能完备、具有扩展能力的 Web 应用程序框架。 
 
 ## 文档
 
-在线文档 [https://bowens.gitbook.io/goravel/](https://bowens.gitbook.io/goravel/)
+在线文档 [https://www.goravel.dev](https://www.goravel.dev)
 
 文档仓库 [https://github.com/goravel/docs](https://github.com/goravel/docs)
 
