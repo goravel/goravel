@@ -1,4 +1,4 @@
-<p align="center"><img src="https://cdn.nlark.com/yuque/0/2021/png/744320/1637573588926-377e7fa5-9c88-4137-b7b4-978354ababaa.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0" width="300"></p>
+<p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p>
 
 English | [中文](README_cn.md)
 
