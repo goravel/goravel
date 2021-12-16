@@ -8,7 +8,7 @@ import (
 type Kernel struct {
 }
 
-func (kernel *Kernel) Middleware() []gin.HandlerFunc {
+func (kernel Kernel) Middleware() []gin.HandlerFunc {
 	return []gin.HandlerFunc{
 		gin.Logger(),
 		middleware.Cors(),

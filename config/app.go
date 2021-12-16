@@ -51,10 +51,10 @@ func init() {
 			&log.ServiceProvider{},
 			&console.ServiceProvider{},
 			&database.ServiceProvider{},
+			&foundationProviders.ArtisanServiceProvider{},
 			&route.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
-			&foundationProviders.ArtisanServiceProvider{},
 		},
 	})
 }

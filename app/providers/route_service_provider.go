@@ -11,8 +11,7 @@ type RouteServiceProvider struct {
 
 func (router *RouteServiceProvider) Boot() {
 	//Add HTTP middlewares.
-	kernel := http.Kernel{}
-	facades.Route.Use(kernel.Middleware()...)
+	facades.Route.Use(http.Kernel{}.Middleware()...)
 
 	//Add routes
 	routes.Web()
