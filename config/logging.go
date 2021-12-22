@@ -14,9 +14,7 @@ func init() {
 		"default": config.Env("LOG_CHANNEL", "stack"),
 
 		//Log Channels
-		//Here you may configure the log channels for your application. Out of
-		//the box, Laravel uses the Monolog PHP logging library. This gives
-		//you a variety of powerful log handlers / formatters to utilize.
+		//Here you may configure the log channels for your application.
 		//Available Drivers: "single", "daily", "custom", "stack"
 		//Available Level: "debug", "info", "warn", "error"
 		"channels": map[string]interface{}{

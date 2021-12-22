@@ -1,6 +1,7 @@
 package config
 
 import (
+	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/console"
 	"github.com/goravel/framework/database"
 	foundationProviders "github.com/goravel/framework/foundation/providers"
@@ -51,6 +52,7 @@ func init() {
 			&log.ServiceProvider{},
 			&console.ServiceProvider{},
 			&database.ServiceProvider{},
+			&cache.ServiceProvider{},
 			&foundationProviders.ArtisanServiceProvider{},
 			&route.ServiceProvider{},
 			&providers.AppServiceProvider{},
