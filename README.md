@@ -33,6 +33,9 @@ The framework refers to the design ideas of Laravel;
 The core functions use well-known Golang components, including but not limited to:
 [spf13/viper](https://github.com/spf13/viper) ,
 [gin-gonic/gin](https://github.com/gin-gonic/gin) ,
+[go-redis/redis](https://github.com/go-redis/redis) ,
+[urfave/cli](https://github.com/urfave/cli) ,
+[sirupsen/logrus](https://github.com/sirupsen/logrus) ,
 [go-gorm/gorm](https://github.com/go-gorm/gorm) ;
 
 The documentation refers to the content of [Laravel](https://laravel.com/docs/8.x);

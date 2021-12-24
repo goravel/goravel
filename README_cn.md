@@ -32,6 +32,9 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 核心功能使用知名的 Golang 组件， 包括但不限于：
 [spf13/viper](https://github.com/spf13/viper) 、
 [gin-gonic/gin](https://github.com/gin-gonic/gin) 、
+[go-redis/redis](https://github.com/go-redis/redis) 、
+[urfave/cli](https://github.com/urfave/cli) 、
+[sirupsen/logrus](https://github.com/sirupsen/logrus) 、
 [go-gorm/gorm](https://github.com/go-gorm/gorm) ；
 
 文档参考了 [LearnKu 社区](https://learnku.com/) 的 [Laravel 中文文档](https://learnku.com/docs/laravel/8.x/structure/9356) ；
