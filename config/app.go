@@ -5,6 +5,7 @@ import (
 	"github.com/goravel/framework/console"
 	"github.com/goravel/framework/database"
 	foundationProviders "github.com/goravel/framework/foundation/providers"
+	"github.com/goravel/framework/http"
 	"github.com/goravel/framework/log"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/support"
@@ -44,6 +45,8 @@ func init() {
 		//Application host, http server listening address.
 		"host": config.Env("APP_HOST", "127.0.0.1:3000"),
 
+		"grpc_host": config.Env("GRPC_HOST", ""),
+
 		//Autoloaded service providers
 		//The service providers listed here will be automatically loaded on the
 		//request to your application. Feel free to add your own services to
@@ -53,10 +56,12 @@ func init() {
 			&console.ServiceProvider{},
 			&database.ServiceProvider{},
 			&cache.ServiceProvider{},
+			&http.ServiceProvider{},
 			&foundationProviders.ArtisanServiceProvider{},
 			&route.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
+			&providers.GrpcServiceProvider{},
 		},
 	})
 }

@@ -9,9 +9,9 @@ import (
 func Web() {
 	facades.Route.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "pong",
+			"Hello": "Goravel",
 		})
 	})
 
-	facades.Route.GET("/users", controllers.UserController{}.Show)
+	facades.Route.GET("/user", controllers.UserController{}.Show)
 }
