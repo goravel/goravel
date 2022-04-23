@@ -10,5 +10,7 @@ func main() {
 	bootstrap.Boot()
 
 	//Start http server by facades.Route.
-	facades.Route.Run(facades.Config.GetString("app.host"))
+	go facades.Route.Run(facades.Config.GetString("app.host"))
+
+	select {}
 }

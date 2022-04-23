@@ -3,12 +3,13 @@ package config
 import (
 	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/console"
+	"github.com/goravel/framework/contracts"
 	"github.com/goravel/framework/database"
-	foundationProviders "github.com/goravel/framework/foundation/providers"
+	foundation "github.com/goravel/framework/foundation/providers"
 	"github.com/goravel/framework/http"
 	"github.com/goravel/framework/log"
 	"github.com/goravel/framework/route"
-	"github.com/goravel/framework/support"
+	"github.com/goravel/framework/schedule"
 	"github.com/goravel/framework/support/facades"
 	"goravel/app/providers"
 )
@@ -51,17 +52,19 @@ func init() {
 		//The service providers listed here will be automatically loaded on the
 		//request to your application. Feel free to add your own services to
 		//this array to grant expanded functionality to your applications.
-		"providers": []support.ServiceProvider{
+		"providers": []contracts.ServiceProvider{
 			&log.ServiceProvider{},
 			&console.ServiceProvider{},
 			&database.ServiceProvider{},
 			&cache.ServiceProvider{},
 			&http.ServiceProvider{},
-			&foundationProviders.ArtisanServiceProvider{},
+			&foundation.ArtisanServiceProvider{},
 			&route.ServiceProvider{},
+			&schedule.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
 			&providers.GrpcServiceProvider{},
+			&providers.ConsoleServiceProvider{},
 		},
 	})
 }

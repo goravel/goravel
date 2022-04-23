@@ -7,6 +7,8 @@ English | [中文](README_cn.md)
 Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
 Golang developers quickly build their own applications.
 
+> This is a development version now, the new upgrade may not be forward compatible, please use it carefully in a production environment.
+
 ## Main Function
 
 - [x] Config
@@ -16,8 +18,9 @@ Golang developers quickly build their own applications.
 - [x] Logger
 - [x] Cache
 - [x] Grpc
+- [x] Command
+- [x] Schedule
 - [ ] Queue
-- [ ] Schedule
 - [ ] Event
 - [ ] Mail
 
