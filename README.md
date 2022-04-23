@@ -2,7 +2,7 @@
 
 English | [中文](README_cn.md)
 
-# Abuout Goravel
+# About Goravel
 
 Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
 Golang developers quickly build their own applications.
