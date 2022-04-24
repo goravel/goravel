@@ -18,8 +18,8 @@ Golang developers quickly build their own applications.
 - [x] Logger
 - [x] Cache
 - [x] Grpc
-- [x] Command
-- [x] Schedule
+- [x] Artisan Console
+- [x] Task Scheduling
 - [ ] Queue
 - [ ] Event
 - [ ] Mail
