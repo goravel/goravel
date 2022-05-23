@@ -20,7 +20,7 @@ Golang developers quickly build their own applications.
 - [x] Grpc
 - [x] Artisan Console
 - [x] Task Scheduling
-- [ ] Queue
+- [x] Queue
 - [ ] Event
 - [ ] Mail
 
