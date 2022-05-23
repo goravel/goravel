@@ -9,7 +9,7 @@ import (
 type RouteServiceProvider struct {
 }
 
-func (router *RouteServiceProvider) Boot() {
+func (receiver *RouteServiceProvider) Boot() {
 	//Add HTTP middlewares.
 	facades.Route.Use(http.Kernel{}.Middleware()...)
 
@@ -17,6 +17,6 @@ func (router *RouteServiceProvider) Boot() {
 	routes.Web()
 }
 
-func (router *RouteServiceProvider) Register() {
+func (receiver *RouteServiceProvider) Register() {
 
 }

@@ -8,11 +8,11 @@ import (
 type ConsoleServiceProvider struct {
 }
 
-func (router *ConsoleServiceProvider) Boot() {
+func (receiver *ConsoleServiceProvider) Boot() {
 	facades.Schedule.Register(console.Kernel{}.Schedule())
 	facades.Artisan.Register(console.Kernel{}.Commands())
 }
 
-func (router *ConsoleServiceProvider) Register() {
+func (receiver *ConsoleServiceProvider) Register() {
 
 }

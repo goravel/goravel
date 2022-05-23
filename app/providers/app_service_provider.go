@@ -3,9 +3,9 @@ package providers
 type AppServiceProvider struct {
 }
 
-func (router *AppServiceProvider) Boot() {
+func (receiver *AppServiceProvider) Boot() {
 }
 
-func (router *AppServiceProvider) Register() {
+func (receiver *AppServiceProvider) Register() {
 
 }

@@ -3,10 +3,10 @@ package providers
 type GrpcServiceProvider struct {
 }
 
-func (router *GrpcServiceProvider) Boot() {
+func (receiver *GrpcServiceProvider) Boot() {
 
 }
 
-func (router *GrpcServiceProvider) Register() {
+func (receiver *GrpcServiceProvider) Register() {
 
 }
