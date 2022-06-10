@@ -6,6 +6,7 @@ import (
 	"github.com/goravel/framework/contracts"
 	"github.com/goravel/framework/database"
 	foundation "github.com/goravel/framework/foundation/providers"
+	"github.com/goravel/framework/grpc"
 	"github.com/goravel/framework/http"
 	"github.com/goravel/framework/log"
 	"github.com/goravel/framework/queue"
@@ -49,7 +50,7 @@ func init() {
 
 		"grpc_host": config.Env("GRPC_HOST", ""),
 
-		//Autoloaded service providers
+		//Autoload service providers
 		//The service providers listed here will be automatically loaded on the
 		//request to your application. Feel free to add your own services to
 		//this array to grant expanded functionality to your applications.
@@ -63,6 +64,7 @@ func init() {
 			&route.ServiceProvider{},
 			&schedule.ServiceProvider{},
 			&queue.ServiceProvider{},
+			&grpc.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
 			&providers.GrpcServiceProvider{},
