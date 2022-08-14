@@ -21,7 +21,7 @@ Golang developers quickly build their own applications.
 - [x] Artisan Console
 - [x] Task Scheduling
 - [x] Queue
-- [ ] Event
+- [x] Event
 - [ ] Mail
 
 ## Documentation

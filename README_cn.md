@@ -20,7 +20,7 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 - [x] Artisan 命令行
 - [x] 任务调度
 - [x] 队列
-- [ ] 事件系统
+- [x] 事件系统
 - [ ] 邮件
 
 ## 文档
@@ -41,7 +41,8 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 [sirupsen/logrus](https://github.com/sirupsen/logrus) 、
 [go-gorm/gorm](https://github.com/go-gorm/gorm) ；
 
-文档参考了 [LearnKu 社区](https://learnku.com/) 的 [Laravel 中文文档](https://learnku.com/docs/laravel/8.x/structure/9356) ；
+文档参考了 [LearnKu 社区](https://learnku.com/)
+的 [Laravel 中文文档](https://learnku.com/docs/laravel/8.x/structure/9356) ；
 
 向他们致敬！
 

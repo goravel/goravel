@@ -9,10 +9,10 @@ type ConsoleServiceProvider struct {
 }
 
 func (receiver *ConsoleServiceProvider) Boot() {
-	facades.Schedule.Register(console.Kernel{}.Schedule())
-	facades.Artisan.Register(console.Kernel{}.Commands())
+
 }
 
 func (receiver *ConsoleServiceProvider) Register() {
-
+	facades.Schedule.Register(console.Kernel{}.Schedule())
+	facades.Artisan.Register(console.Kernel{}.Commands())
 }
