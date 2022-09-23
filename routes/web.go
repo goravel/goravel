@@ -13,5 +13,6 @@ func Web() {
 		})
 	})
 
-	facades.Route.GET("/user", controllers.UserController{}.Show)
+	userController := controllers.NewUserController()
+	facades.Route.GET("/user", userController.Show)
 }

@@ -13,9 +13,34 @@ func init() {
 		//Database connections
 		"connections": map[string]interface{}{
 			"mysql": map[string]interface{}{
+				"driver":   "mysql",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
 				"port":     config.Env("DB_PORT", "3306"),
-				"database": config.Env("DB_DATABASE", "nft"),
+				"database": config.Env("DB_DATABASE", "forge"),
+				"username": config.Env("DB_USERNAME", ""),
+				"password": config.Env("DB_PASSWORD", ""),
+				"charset":  "utf8mb4",
+				"loc":      "local",
+			},
+			"postgresql": map[string]interface{}{
+				"driver":   "postgresql",
+				"host":     config.Env("DB_HOST", "127.0.0.1"),
+				"port":     config.Env("DB_PORT", "3306"),
+				"database": config.Env("DB_DATABASE", "forge"),
+				"username": config.Env("DB_USERNAME", ""),
+				"password": config.Env("DB_PASSWORD", ""),
+				"sslmode":  "disable",
+				"timezone": "UTC", //Asia/Shanghai
+			},
+			"sqlite": map[string]interface{}{
+				"driver":   "sqlite",
+				"database": config.Env("DB_DATABASE", "forge"),
+			},
+			"sqlserver": map[string]interface{}{
+				"driver":   "sqlserver",
+				"host":     config.Env("DB_HOST", "127.0.0.1"),
+				"port":     config.Env("DB_PORT", "3306"),
+				"database": config.Env("DB_DATABASE", "forge"),
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"charset":  "utf8mb4",

@@ -15,7 +15,8 @@ func (receiver *RouteServiceProvider) Boot() {
 
 func (receiver *RouteServiceProvider) Register() {
 	//Add HTTP middlewares.
-	facades.Route.Use(http.Kernel{}.Middleware()...)
+	kernel := http.Kernel{}
+	facades.Route.Use(kernel.Middleware()...)
 
 	//Add routes
 	routes.Web()
