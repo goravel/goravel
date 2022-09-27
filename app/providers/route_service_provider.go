@@ -1,7 +1,7 @@
 package providers
 
 import (
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/facades"
 	"goravel/app/http"
 	"goravel/routes"
 )

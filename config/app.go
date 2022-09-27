@@ -6,14 +6,14 @@ import (
 	"github.com/goravel/framework/contracts"
 	"github.com/goravel/framework/database"
 	"github.com/goravel/framework/events"
-	foundation "github.com/goravel/framework/foundation/providers"
+	"github.com/goravel/framework/facades"
 	"github.com/goravel/framework/grpc"
 	"github.com/goravel/framework/http"
 	"github.com/goravel/framework/log"
 	"github.com/goravel/framework/queue"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/schedule"
-	"github.com/goravel/framework/support/facades"
+
 	"goravel/app/providers"
 )
 
@@ -61,7 +61,6 @@ func init() {
 			&database.ServiceProvider{},
 			&cache.ServiceProvider{},
 			&http.ServiceProvider{},
-			&foundation.ArtisanServiceProvider{},
 			&route.ServiceProvider{},
 			&schedule.ServiceProvider{},
 			&events.ServiceProvider{},

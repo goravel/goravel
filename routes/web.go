@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/facades"
 	"goravel/app/http/controllers"
 )
 

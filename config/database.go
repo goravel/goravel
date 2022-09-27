@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/facades"
 )
 
 func init() {
@@ -20,7 +20,7 @@ func init() {
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"charset":  "utf8mb4",
-				"loc":      "local",
+				"loc":      "Local",
 			},
 			"postgresql": map[string]interface{}{
 				"driver":   "postgresql",

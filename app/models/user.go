@@ -1,15 +1,12 @@
 package models
 
-import (
-	"time"
-)
+import "github.com/goravel/framework/contracts/database/orm"
 
 type User struct {
-	ID        uint64
-	Name      string
-	Phone     string
-	Email     string
-	Password  string
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	orm.Model
+	Name     string
+	Phone    string
+	Email    string
+	Password string
+	orm.SoftDeletes
 }
