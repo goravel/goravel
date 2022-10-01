@@ -1,8 +1,7 @@
 package controllers
 
 import (
-	"github.com/gin-gonic/gin"
-
+	"github.com/goravel/framework/contracts/http"
 	"github.com/goravel/framework/facades"
 )
 
@@ -16,8 +15,8 @@ func NewUserController() *UserController {
 	}
 }
 
-func (r *UserController) Show(ctx *gin.Context) {
-	facades.Response.Success(ctx, gin.H{
+func (r *UserController) Show(request http.Request) {
+	facades.Response.Success().Json(http.Json{
 		"Hello": "Goravel",
 	})
 }

@@ -2,7 +2,7 @@ package providers
 
 import (
 	"github.com/goravel/framework/contracts/events"
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/facades"
 )
 
 type EventServiceProvider struct {
