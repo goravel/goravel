@@ -2,7 +2,7 @@ package providers
 
 import (
 	"github.com/goravel/framework/facades"
-	
+
 	"goravel/app/console"
 )
 
