@@ -1,6 +1,7 @@
 package testing
 
 import (
+	"goravel/bootstrap"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -10,6 +11,8 @@ import (
 )
 
 func TestRoute(t *testing.T) {
+	bootstrap.Boot()
+
 	tests := []struct {
 		name       string
 		method     string
@@ -153,113 +156,6 @@ func TestRoute(t *testing.T) {
 			expectCode: http.StatusOK,
 			expectBody: "{\"ctx\":\"Goravel\",\"ctx2\":\"World\",\"id\":\"1\"}",
 		},
-
-		//{
-		//	name:   "Post+Form",
-		//	method: "POST",
-		//	url:    "/post-form",
-		//	setup: func(method, url string) error {
-		//		payload := &bytes.Buffer{}
-		//		writer := multipart.NewWriter(payload)
-		//		if err := writer.WriteField("name", "Goravel"); err != nil {
-		//			return err
-		//		}
-		//		if err := writer.Close(); err != nil {
-		//			return err
-		//		}
-		//
-		//		req, _ = http.NewRequest(method, url, payload)
-		//		req.Header.Set("Content-Type", writer.FormDataContentType())
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusOK,
-		//	expectBody: "{\"name\":\"Goravel\"}",
-		//},
-		//{
-		//	name:   "AbortMiddleware",
-		//	method: "POST",
-		//	url:    "/middleware/1",
-		//	setup: func(method, url string) error {
-		//		req, _ = http.NewRequest(method, url, nil)
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusNonAuthoritativeInfo,
-		//	//expectBody: "{\"id\":\"1\"}",
-		//},
-		//{
-		//	name:   "Prefix+Put+Query+String",
-		//	method: "PUT",
-		//	url:    "/prefix/put?id=2",
-		//	setup: func(method, url string) error {
-		//		req, _ = http.NewRequest(method, url, nil)
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusOK,
-		//	expectBody: "2",
-		//},
-		//{
-		//	name:   "Prefix+Prefix+Put+Query+String",
-		//	method: "PUT",
-		//	url:    "/prefix1/prefix2/put?id=2",
-		//	setup: func(method, url string) error {
-		//		req, _ = http.NewRequest(method, url, nil)
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusOK,
-		//	expectBody: "2",
-		//},
-		//{
-		//	name:   "Group+Delete",
-		//	method: "DELETE",
-		//	url:    "/group/1",
-		//	setup: func(method, url string) error {
-		//		req, _ = http.NewRequest(method, url, nil)
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusOK,
-		//	expectBody: "1",
-		//},
-		//{
-		//	name:   "Middleware+Context+Group",
-		//	method: "GET",
-		//	url:    "/middleware-group/1",
-		//	setup: func(method, url string) error {
-		//		req, _ = http.NewRequest(method, url, nil)
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusOK,
-		//	expectBody: "{\"ctx\":\"Goravel\",\"id\":\"1\"}",
-		//},
-		//{
-		//	name:   "Prefix+Middleware+Context+Group",
-		//	method: "GET",
-		//	url:    "/prefix/middleware-group/1",
-		//	setup: func(method, url string) error {
-		//		req, _ = http.NewRequest(method, url, nil)
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusOK,
-		//	expectBody: "{\"ctx\":\"Goravel\",\"id\":\"1\"}",
-		//},
-		//{
-		//	name:   "Prefix+Middleware+Context+Group",
-		//	method: "GET",
-		//	url:    "/prefix1/prefix2/middleware-group/1",
-		//	setup: func(method, url string) error {
-		//		req, _ = http.NewRequest(method, url, nil)
-		//
-		//		return nil
-		//	},
-		//	expectCode: http.StatusOK,
-		//	expectBody: "{\"ctx\":\"Goravel\",\"ctx1\":\"Hello\",\"id\":\"1\"}",
-		//},
 	}
 
 	for _, test := range tests {

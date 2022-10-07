@@ -1,17 +1,10 @@
 package testing
 
-import (
-	"os"
-	"testing"
-
-	"goravel/bootstrap"
-)
-
-func TestMain(m *testing.M) {
-	bootstrap.Boot()
-
-	os.Exit(m.Run())
-}
+//func TestMain(m *testing.M) {
+//	bootstrap.Boot()
+//
+//	os.Exit(m.Run())
+//}
 
 //func TestCache(t *testing.T) {
 //	mockCache := mocks.Cache()

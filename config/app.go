@@ -10,6 +10,7 @@ import (
 	"github.com/goravel/framework/grpc"
 	"github.com/goravel/framework/http"
 	"github.com/goravel/framework/log"
+	"github.com/goravel/framework/mail"
 	"github.com/goravel/framework/queue"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/schedule"
@@ -37,6 +38,12 @@ func init() {
 
 		//Application Debug Mode
 		"debug": config.Env("APP_DEBUG", false),
+
+		//Application Timezone
+		//Here you may specify the default timezone for your application, which
+		//will be used by the PHP date and date-time functions. We have gone
+		//ahead and set this to a sensible default for you out of the box.
+		"timezone": "UTC",
 
 		//Encryption Key
 		//32 character string, otherwise these encrypted strings
@@ -66,6 +73,7 @@ func init() {
 			&events.ServiceProvider{},
 			&queue.ServiceProvider{},
 			&grpc.ServiceProvider{},
+			&mail.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
 			&providers.GrpcServiceProvider{},

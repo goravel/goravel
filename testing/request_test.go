@@ -2,6 +2,7 @@ package testing
 
 import (
 	"bytes"
+	"goravel/bootstrap"
 	"io"
 	"mime/multipart"
 	"net/http"
@@ -17,13 +18,11 @@ import (
 )
 
 func TestRequest(t *testing.T) {
+	bootstrap.Boot()
+
 	var (
 		req *http.Request
 	)
-
-	beforeEach := func() {
-
-	}
 
 	tests := []struct {
 		name       string
@@ -95,7 +94,7 @@ func TestRequest(t *testing.T) {
 			url:    "/request/bind",
 			setup: func(method, url string) error {
 				payload := strings.NewReader(`{
-					"name": "Goravel"
+					"Name": "Goravel"
 				}`)
 				req, _ = http.NewRequest(method, url, payload)
 				req.Header.Set("Content-Type", "application/json")
@@ -112,10 +111,10 @@ func TestRequest(t *testing.T) {
 			setup: func(method, url string) error {
 				payload := &bytes.Buffer{}
 				writer := multipart.NewWriter(payload)
-				file, errFile1 := os.Open("./public/logo.png")
-				defer file.Close()
-				part1, errFile1 := writer.CreateFormFile("file", filepath.Base("./public/logo.png"))
-				_, errFile1 = io.Copy(part1, file)
+				logo, errFile1 := os.Open("./resources/logo.png")
+				defer logo.Close()
+				part1, errFile1 := writer.CreateFormFile("file", filepath.Base("./resources/logo.png"))
+				_, errFile1 = io.Copy(part1, logo)
 				if errFile1 != nil {
 					return errFile1
 				}
@@ -135,7 +134,6 @@ func TestRequest(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		beforeEach()
 		err := test.setup(test.method, test.url)
 		assert.Nil(t, err)
 
@@ -147,6 +145,6 @@ func TestRequest(t *testing.T) {
 		}
 		assert.Equal(t, test.expectCode, w.Code, test.name)
 
-		file.Remove("./public/test.png")
+		file.Remove("./resources/test.png")
 	}
 }

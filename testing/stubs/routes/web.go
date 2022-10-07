@@ -77,7 +77,7 @@ func Web() {
 	})
 
 	facades.Route.Static("static", "./public")
-	facades.Route.StaticFile("static-file", "./public/logo.png")
+	facades.Route.StaticFile("static-file", "./resources/logo.png")
 	facades.Route.StaticFS("static-fs", nethttp.Dir("./public"))
 
 	facades.Route.Middleware(TestAbortMiddleware()).Get("/middleware/{id}", func(request http.Request) {
@@ -127,7 +127,7 @@ func Web() {
 		})
 		route.Post("/bind", func(request http.Request) {
 			type Test struct {
-				Name string `json:"name"`
+				Name string
 			}
 			var test Test
 			_ = request.Bind(&test)
@@ -141,7 +141,7 @@ func Web() {
 				facades.Response.Success().String("get file error")
 				return
 			}
-			path := "./public/test.png"
+			path := "./resources/test.png"
 			if err := file.Store(path); err != nil {
 				facades.Response.Success().String("store file error: " + err.Error())
 				return
@@ -174,10 +174,10 @@ func Web() {
 			facades.Response.Success().String("Goravel")
 		})
 		route.Get("/file", func(request http.Request) {
-			facades.Response.File("./public/logo.png")
+			facades.Response.File("./resources/logo.png")
 		})
 		route.Get("/download", func(request http.Request) {
-			facades.Response.Download("./public/logo.png", "1.png")
+			facades.Response.Download("./resources/logo.png", "1.png")
 		})
 		route.Get("/header", func(request http.Request) {
 			facades.Response.Header("Hello", "goravel").String(nethttp.StatusOK, "Goravel")

@@ -2,6 +2,7 @@ package testing
 
 import (
 	"github.com/goravel/framework/support/file"
+	"goravel/bootstrap"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -12,13 +13,11 @@ import (
 )
 
 func TestResponse(t *testing.T) {
+	bootstrap.Boot()
+
 	var (
 		req *http.Request
 	)
-
-	beforeEach := func() {
-
-	}
 
 	tests := []struct {
 		name         string
@@ -143,7 +142,6 @@ func TestResponse(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		beforeEach()
 		err := test.setup(test.method, test.url)
 		assert.Nil(t, err)
 
@@ -158,6 +156,6 @@ func TestResponse(t *testing.T) {
 		}
 		assert.Equal(t, test.expectCode, w.Code, test.name)
 
-		file.Remove("./public/test.png")
+		file.Remove("./resources/test.png")
 	}
 }
