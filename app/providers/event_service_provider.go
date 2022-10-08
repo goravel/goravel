@@ -1,11 +1,8 @@
 package providers
 
 import (
-	contractevent "github.com/goravel/framework/contracts/events"
+	contractevent "github.com/goravel/framework/contracts/event"
 	"github.com/goravel/framework/facades"
-
-	"goravel/app/events"
-	"goravel/app/listeners"
 )
 
 type EventServiceProvider struct {
@@ -20,7 +17,5 @@ func (receiver *EventServiceProvider) Register() {
 }
 
 func (receiver *EventServiceProvider) listen() map[contractevent.Event][]contractevent.Listener {
-	return map[contractevent.Event][]contractevent.Listener{
-		&events.Test{}: {&listeners.TestListener{}},
-	}
+	return map[contractevent.Event][]contractevent.Listener{}
 }

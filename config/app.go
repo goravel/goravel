@@ -5,7 +5,7 @@ import (
 	"github.com/goravel/framework/console"
 	"github.com/goravel/framework/contracts"
 	"github.com/goravel/framework/database"
-	"github.com/goravel/framework/events"
+	"github.com/goravel/framework/event"
 	"github.com/goravel/framework/facades"
 	"github.com/goravel/framework/grpc"
 	"github.com/goravel/framework/http"
@@ -70,7 +70,7 @@ func init() {
 			&http.ServiceProvider{},
 			&route.ServiceProvider{},
 			&schedule.ServiceProvider{},
-			&events.ServiceProvider{},
+			&event.ServiceProvider{},
 			&queue.ServiceProvider{},
 			&grpc.ServiceProvider{},
 			&mail.ServiceProvider{},
