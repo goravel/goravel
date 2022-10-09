@@ -1,6 +1,6 @@
 <p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p>
 
-English | [中文](./README_cn.md)
+English | [中文](./README_zh.md)
 
 ## About Goravel
 
@@ -29,7 +29,7 @@ Golang developers quickly build their own applications.
 
 ## Documentation
 
-Online documentation [https://www.goravel.dev/en](https://www.goravel.dev/en)
+Online documentation [https://www.goravel.dev](https://www.goravel.dev)
 
 > To optimize the documentation, please submit a PR to the documentation
 > repository [https://github.com/goravel/docs](https://github.com/goravel/docs)
