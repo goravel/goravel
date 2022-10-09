@@ -1,6 +1,6 @@
-<!-- <p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p> -->
+<p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p>
 
-English | [中文](../zh/README.md)
+English | [中文](./README_cn.md)
 
 ## About Goravel
 
