@@ -6,6 +6,9 @@
 
 Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
 
+> 重要：Goravel v1 进行了较大的升级与重构，与 v0 版本不兼容，v0
+> 版本不再进行更新维护，但其文档可以前往 [v0](https://github.com/goravel/docs/tree/master/v0) 查看。
+
 ## 主要功能
 
 - [x] 自定义配置
@@ -27,6 +30,16 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 在线文档 [https://www.goravel.dev/cn](https://www.goravel.dev/cn)
 
 > 优化文档，请提交 PR 至文档仓库 [https://github.com/goravel/docs](https://github.com/goravel/docs)
+
+## Group
+
+欢迎在 Discord 中更多交流。
+
+[https://discord.gg/cFc5csczzS](https://discord.gg/cFc5csczzS)
+
+微信入群
+
+![](https://user-images.githubusercontent.com/24771476/194740900-cee4aa43-7c22-42b6-ada9-42bc160cd797.JPG)
 
 ## 致敬 Laravel
 
