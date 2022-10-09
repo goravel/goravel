@@ -1,7 +1,7 @@
 package providers
 
 import (
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/facades"
 	"goravel/app/http"
 	"goravel/routes"
 )
@@ -15,7 +15,8 @@ func (receiver *RouteServiceProvider) Boot() {
 
 func (receiver *RouteServiceProvider) Register() {
 	//Add HTTP middlewares.
-	facades.Route.Use(http.Kernel{}.Middleware()...)
+	kernel := http.Kernel{}
+	facades.Route.Middleware(kernel.Middleware()...)
 
 	//Add routes
 	routes.Web()

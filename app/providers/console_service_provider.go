@@ -1,7 +1,8 @@
 package providers
 
 import (
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/facades"
+
 	"goravel/app/console"
 )
 
@@ -13,6 +14,7 @@ func (receiver *ConsoleServiceProvider) Boot() {
 }
 
 func (receiver *ConsoleServiceProvider) Register() {
-	facades.Schedule.Register(console.Kernel{}.Schedule())
-	facades.Artisan.Register(console.Kernel{}.Commands())
+	kernel := console.Kernel{}
+	facades.Schedule.Register(kernel.Schedule())
+	facades.Artisan.Register(kernel.Commands())
 }

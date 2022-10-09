@@ -1,12 +1,13 @@
-<p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p>
+<!-- <p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p> -->
 
-[English](README.md) | 中文
+[English](../README.md) | 中文
 
 # 关于 Goravel
 
-Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。 作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
+Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
 
-> 目前为开发版，新升级有可能未向前兼容，请慎重用于生产环境。
+> 重要：Goravel v1 进行了较大的升级与重构，与 v0 版本不兼容，v0
+> 版本不再进行更新维护，但其文档可以前往 [v0](https://github.com/goravel/docs/tree/master/v0) 查看。
 
 ## 主要功能
 
@@ -21,30 +22,28 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 - [x] 任务调度
 - [x] 队列
 - [x] 事件系统
-- [ ] 邮件
+- [x] 邮件
+- [x] Mock
 
 ## 文档
 
 在线文档 [https://www.goravel.dev/cn](https://www.goravel.dev/cn)
 
-文档仓库 [https://github.com/goravel/docs](https://github.com/goravel/docs)
+> 优化文档，请提交 PR 至文档仓库 [https://github.com/goravel/docs](https://github.com/goravel/docs)
 
-## 感谢
+## Group
 
-框架参考了 [Laravel](https://github.com/laravel/laravel) 的设计思想；
+欢迎在 Discord 中更多交流。
 
-核心功能使用知名的 Golang 组件， 包括但不限于：
-[spf13/viper](https://github.com/spf13/viper) 、
-[gin-gonic/gin](https://github.com/gin-gonic/gin) 、
-[go-redis/redis](https://github.com/go-redis/redis) 、
-[urfave/cli](https://github.com/urfave/cli) 、
-[sirupsen/logrus](https://github.com/sirupsen/logrus) 、
-[go-gorm/gorm](https://github.com/go-gorm/gorm) ；
+[https://discord.gg/cFc5csczzS](https://discord.gg/cFc5csczzS)
 
-文档参考了 [LearnKu 社区](https://learnku.com/)
-的 [Laravel 中文文档](https://learnku.com/docs/laravel/8.x/structure/9356) ；
+微信入群
 
-向他们致敬！
+![](https://user-images.githubusercontent.com/24771476/194740900-cee4aa43-7c22-42b6-ada9-42bc160cd797.JPG)
+
+## 致敬 Laravel
+
+框架与 [Laravel](https://github.com/laravel/laravel) 保持高度一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！
 
 ## 开源许可
 

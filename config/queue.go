@@ -1,14 +1,14 @@
 package config
 
 import (
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/facades"
 )
 
 func init() {
 	config := facades.Config
 	config.Add("queue", map[string]interface{}{
 		//Default Queue Connection Name
-		"default": config.Env("QUEUE_CONNECTION", "redis"),
+		"default": config.Env("QUEUE_CONNECTION", "sync"),
 
 		//Queue Connections
 		//Here you may configure the connection information for each server that is used by your application.
@@ -18,9 +18,9 @@ func init() {
 				"driver": "sync",
 			},
 			"redis": map[string]interface{}{
-				"driver":      "redis",
-				"connection":  "default",
-				"queue":       config.Env("REDIS_QUEUE", "default"),
+				"driver":     "redis",
+				"connection": "default",
+				"queue":      config.Env("REDIS_QUEUE", "default"),
 			},
 		},
 	})

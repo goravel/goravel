@@ -1,16 +1,15 @@
 package http
 
 import (
-	"github.com/gin-gonic/gin"
-	"goravel/app/http/middleware"
+	"github.com/goravel/framework/contracts/http"
+	"github.com/goravel/framework/http/middleware"
 )
 
 type Kernel struct {
 }
 
-func (kernel Kernel) Middleware() []gin.HandlerFunc {
-	return []gin.HandlerFunc{
-		gin.Logger(),
+func (kernel *Kernel) Middleware() []http.Middleware {
+	return []http.Middleware{
 		middleware.Cors(),
 	}
 }

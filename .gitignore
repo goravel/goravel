@@ -1,4 +1,3 @@
 .idea
-.env
-go.sum
 .DS_Store
+.env

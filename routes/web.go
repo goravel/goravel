@@ -1,17 +1,19 @@
 package routes
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/goravel/framework/support/facades"
+	"github.com/goravel/framework/contracts/http"
+	"github.com/goravel/framework/facades"
+
 	"goravel/app/http/controllers"
 )
 
 func Web() {
-	facades.Route.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
+	facades.Route.Get("/", func(request http.Request) {
+		facades.Response.Json(200, http.Json{
 			"Hello": "Goravel",
 		})
 	})
 
-	facades.Route.GET("/user", controllers.UserController{}.Show)
+	userController := controllers.NewUserController()
+	facades.Route.Get("/users/{id}", userController.Show)
 }
