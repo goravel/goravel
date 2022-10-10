@@ -31,13 +31,13 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 
 > 优化文档，请提交 PR 至文档仓库 [https://github.com/goravel/docs](https://github.com/goravel/docs)
 
-## Group
+## 群组
 
 欢迎在 Discord 中更多交流。
 
 [https://discord.gg/cFc5csczzS](https://discord.gg/cFc5csczzS)
 
-微信入群
+微信入群，请备注 Goravel
 
 ![](https://user-images.githubusercontent.com/24771476/194740900-cee4aa43-7c22-42b6-ada9-42bc160cd797.JPG)
 
