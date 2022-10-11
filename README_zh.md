@@ -25,6 +25,11 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 - [x] 邮件
 - [x] Mock
 
+## 路线图
+
+- [ ] 优化微服务使用体验
+- [ ] Orm 关联关系
+
 ## 文档
 
 在线文档 [https://www.goravel.dev/zh](https://www.goravel.dev/zh)
