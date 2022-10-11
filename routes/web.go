@@ -8,8 +8,8 @@ import (
 )
 
 func Web() {
-	facades.Route.Get("/", func(request http.Request) {
-		facades.Response.Json(200, http.Json{
+	facades.Route.Get("/", func(ctx http.Context) {
+		ctx.Response().Json(200, http.Json{
 			"Hello": "Goravel",
 		})
 	})
