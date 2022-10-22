@@ -2,7 +2,6 @@ package config
 
 import (
 	"github.com/goravel/framework/facades"
-	"goravel/app/models"
 )
 
 func init() {
@@ -30,31 +29,8 @@ func init() {
 		//Supported: "jwt"
 		"guards": map[string]interface{}{
 			"user": map[string]interface{}{
-				"driver":   "jwt",
-				"provider": "users",
+				"driver": "jwt",
 			},
-		},
-
-		//User Providers
-		//
-		//All authentication drivers have a user provider. This defines how the
-		//users are actually retrieved out of your database or other storage
-		//mechanisms used by this application to persist your user's data.
-		//
-		//If you have multiple user tables or models you may configure multiple
-		//sources which represent each model / table. These sources may then
-		//be assigned to any extra authentication guards you have defined.
-		//
-		//Supported: "database", "orm"
-		"providers": map[string]interface{}{
-			"users": map[string]interface{}{
-				"driver": "orm",
-				"model":  models.User{},
-			},
-			//"users": map[string]interface{}{
-			//	"driver": "database",
-			//	"table":  "users",
-			//},
 		},
 	})
 }

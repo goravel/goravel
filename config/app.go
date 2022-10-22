@@ -1,6 +1,7 @@
 package config
 
 import (
+	"github.com/goravel/framework/auth"
 	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/console"
 	"github.com/goravel/framework/contracts"
@@ -74,6 +75,7 @@ func init() {
 			&queue.ServiceProvider{},
 			&grpc.ServiceProvider{},
 			&mail.ServiceProvider{},
+			&auth.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
 			&providers.GrpcServiceProvider{},
