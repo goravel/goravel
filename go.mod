@@ -2,7 +2,7 @@ module goravel
 
 go 1.18
 
-require github.com/goravel/framework v1.2.0
+require github.com/goravel/framework v1.2.1
 
 require (
 	cloud.google.com/go v0.100.2 // indirect
@@ -32,6 +32,7 @@ require (
 	github.com/go-redsync/redsync/v4 v4.0.4 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
+	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
 	github.com/golang-migrate/migrate/v4 v4.15.1 // indirect
 	github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe // indirect
 	github.com/golang-sql/sqlexp v0.0.0-20170517235910-f1bb20e5a188 // indirect
