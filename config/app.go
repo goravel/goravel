@@ -1,6 +1,8 @@
 package config
 
 import (
+	"goravel/app/providers"
+
 	"github.com/goravel/framework/auth"
 	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/console"
@@ -15,8 +17,6 @@ import (
 	"github.com/goravel/framework/queue"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/schedule"
-
-	"goravel/app/providers"
 )
 
 //Boot Start all init methods of the current folder to bootstrap all config.
