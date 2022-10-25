@@ -1,9 +1,10 @@
 package providers
 
 import (
-	"github.com/goravel/framework/facades"
 	"goravel/app/http"
 	"goravel/routes"
+
+	"github.com/goravel/framework/facades"
 )
 
 type RouteServiceProvider struct {

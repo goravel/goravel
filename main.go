@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/goravel/framework/facades"
-
 	"goravel/bootstrap"
+
+	"github.com/goravel/framework/facades"
 )
 
 func main() {

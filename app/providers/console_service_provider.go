@@ -1,9 +1,9 @@
 package providers
 
 import (
-	"github.com/goravel/framework/facades"
-
 	"goravel/app/console"
+
+	"github.com/goravel/framework/facades"
 )
 
 type ConsoleServiceProvider struct {

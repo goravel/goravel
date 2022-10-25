@@ -1,10 +1,10 @@
 package routes
 
 import (
+	"goravel/app/http/controllers"
+
 	"github.com/goravel/framework/contracts/http"
 	"github.com/goravel/framework/facades"
-
-	"goravel/app/http/controllers"
 )
 
 func Web() {
