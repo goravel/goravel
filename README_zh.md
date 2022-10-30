@@ -32,7 +32,7 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 - [ ] Orm 关联关系
 - [ ] Request 校验
 - [ ] 自定义 .env 路径
-- [ ] Config cors
+- [ ] 用户授权
 
 ## 文档
 
