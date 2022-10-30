@@ -2,7 +2,7 @@ module goravel
 
 go 1.18
 
-require github.com/goravel/framework v1.2.3
+require github.com/goravel/framework v1.3.0
 
 require (
 	cloud.google.com/go v0.100.2 // indirect

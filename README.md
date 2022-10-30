@@ -34,7 +34,7 @@ Golang developers quickly build their own applications.
 - [ ] Orm relationships
 - [ ] Request validator
 - [ ] Custom .env path
-- [ ] Config cors
+- [ ] Authorization
 
 ## Documentation
 
