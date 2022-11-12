@@ -1,0 +1,5 @@
+package routes
+
+func Grpc() {
+
+}

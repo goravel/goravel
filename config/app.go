@@ -57,8 +57,6 @@ func init() {
 		//Application host, http server listening address.
 		"host": config.Env("APP_HOST", "127.0.0.1:3000"),
 
-		"grpc_host": config.Env("GRPC_HOST", ""),
-
 		//Autoload service providers
 		//The service providers listed here will be automatically loaded on the
 		//request to your application. Feel free to add your own services to
