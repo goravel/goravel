@@ -10,15 +10,13 @@ import (
 type RouteServiceProvider struct {
 }
 
-func (receiver *RouteServiceProvider) Boot() {
-
-}
-
 func (receiver *RouteServiceProvider) Register() {
-	//Add HTTP middlewares.
+	//Add HTTP middlewares
 	kernel := http.Kernel{}
 	facades.Route.GlobalMiddleware(kernel.Middleware()...)
+}
 
+func (receiver *RouteServiceProvider) Boot() {
 	//Add routes
 	routes.Web()
 }
