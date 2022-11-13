@@ -15,16 +15,22 @@ around Golang! Tribute Laravel!
 ```
 // Generate APP_KEY
 go run . artisan key:generate
+
 // Route
 facades.Route.Get("/", userController.Show)
+
 // ORM
 facades.Orm.Query().First(&user)
+
 // Task Scheduling
 facades.Schedule.Command("send:emails name").EveryMinute()
+
 // Log
 facades.Log.Debug(message)
+
 // Cache
 value := facades.Cache.Get("goravel", "default")
+
 // Queues
 err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 ```
