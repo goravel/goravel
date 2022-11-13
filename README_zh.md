@@ -13,16 +13,22 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 ```
 // 生成 APP_KEY
 go run . artisan key:generate
+
 // 定义路由
 facades.Route.Get("/", userController.Show)
+
 // 数据库查询
 facades.Orm.Query().First(&user)
+
 // 任务调度
 facades.Schedule.Command("send:emails name").EveryMinute()
+
 // 记录 Log
 facades.Log.Debug(message)
+
 // 获取缓存
 value := facades.Cache.Get("goravel", "default")
+
 // 队列
 err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 ```
