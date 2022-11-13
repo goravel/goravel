@@ -6,8 +6,26 @@
 
 Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
 
-> 重要：Goravel v1 进行了较大的升级与重构，与 v0 版本不兼容，v0
-> 版本不再进行更新维护，但其文档可以前往 [v0](https://github.com/goravel/docs/tree/master/v0) 查看。
+框架风格与 Laravel 保持一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！致敬 Laravel！
+
+## 快速上手
+
+```
+// 生成 APP_KEY
+go run . artisan key:generate
+// 定义路由
+facades.Route.Get("/", userController.Show)
+// 数据库查询
+facades.Orm.Query().First(&user)
+// 任务调度
+facades.Schedule.Command("send:emails name").EveryMinute()
+// 记录 Log
+facades.Log.Debug(message)
+// 获取缓存
+value := facades.Cache.Get("goravel", "default")
+// 队列
+err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
+```
 
 ## 主要功能
 
@@ -50,10 +68,6 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 微信入群，请备注 Goravel
 
 ![](https://user-images.githubusercontent.com/24771476/194740900-cee4aa43-7c22-42b6-ada9-42bc160cd797.JPG)
-
-## 致敬 Laravel
-
-框架与 [Laravel](https://github.com/laravel/laravel) 保持高度一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！
 
 ## 开源许可
 

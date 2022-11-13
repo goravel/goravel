@@ -7,9 +7,27 @@ English | [中文](./README_zh.md)
 Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
 Golang developers quickly build their own applications.
 
-> IMPORTANT：Goravel v1 has been greatly upgraded and refactored, not compatible with v0, the v0 version is no longer
-> updated and maintained, but its documentation can be found on [v0](https://github.com/goravel/docs/tree/master/v0)
-> .
+The framework style is consistent with Laravel, let PHPer don't need to learn a new framework, but also happy to play
+around Golang! Tribute Laravel!
+
+## Getting started
+
+```
+// Generate APP_KEY
+go run . artisan key:generate
+// Route
+facades.Route.Get("/", userController.Show)
+// ORM
+facades.Orm.Query().First(&user)
+// Task Scheduling
+facades.Schedule.Command("send:emails name").EveryMinute()
+// Log
+facades.Log.Debug(message)
+// Cache
+value := facades.Cache.Get("goravel", "default")
+// Queues
+err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
+```
 
 ## Main Function
 
@@ -49,10 +67,6 @@ Online documentation [https://www.goravel.dev](https://www.goravel.dev)
 Welcome more exchanges in Discord.
 
 [https://discord.gg/cFc5csczzS](https://discord.gg/cFc5csczzS)
-
-## Tribute Laravel
-
-Goravel and Laravel remain highly consistent, let PHPer play Golang happily without learning a new framework!
 
 ## License
 
