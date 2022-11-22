@@ -7,16 +7,18 @@ import (
 func init() {
 	config := facades.Config
 	config.Add("logging", map[string]interface{}{
-		//Default Log Channel
-		//This option defines the default log channel that gets used when writing
-		//messages to the logs. The name specified in this option should match
-		//one of the channels defined in the "channels" configuration array.
+		// Default Log Channel
+		//
+		// This option defines the default log channel that gets used when writing
+		// messages to the logs. The name specified in this option should match
+		// one of the channels defined in the "channels" configuration array.
 		"default": config.Env("LOG_CHANNEL", "stack"),
 
-		//Log Channels
-		//Here you may configure the log channels for your application.
-		//Available Drivers: "single", "daily", "custom", "stack"
-		//Available Level: "debug", "info", "warning", "error", "fatal", "panic"
+		// Log Channels
+		//
+		// Here you may configure the log channels for your application.
+		// Available Drivers: "single", "daily", "custom", "stack"
+		// Available Level: "debug", "info", "warning", "error", "fatal", "panic"
 		"channels": map[string]interface{}{
 			"stack": map[string]interface{}{
 				"driver":   "stack",

@@ -5,18 +5,14 @@ import "github.com/goravel/framework/facades"
 func init() {
 	config := facades.Config
 	facades.Config.Add("mail", map[string]interface{}{
-		// --------------------------------------------------------------------------
 		// SMTP Host Address
-		// --------------------------------------------------------------------------
 		//
 		// Here you may provide the host address of the SMTP server used by your
 		// applications. A default option is provided that is compatible with
 		// the Mailgun mail service which will provide reliable deliveries.
 		"host": config.Env("MAIL_HOST", ""),
 
-		// --------------------------------------------------------------------------
 		// SMTP Host Port
-		// --------------------------------------------------------------------------
 		//
 		// This is the SMTP port used by your application to deliver e-mails to
 		// users of the application. Like the host we have set this value to
@@ -35,9 +31,7 @@ func init() {
 			"name":    config.Env("MAIL_FROM_NAME", "Example"),
 		},
 
-		// --------------------------------------------------------------------------
 		// SMTP Server Username
-		// --------------------------------------------------------------------------
 		//
 		// If your SMTP server requires a username for authentication, you should
 		// set it here. This will get used to authenticate with your server on
