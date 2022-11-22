@@ -7,10 +7,10 @@ import (
 func init() {
 	config := facades.Config
 	config.Add("database", map[string]interface{}{
-		//Default database connection name, only support Mysql now.
+		// Default database connection name, only support Mysql now.
 		"default": config.Env("DB_CONNECTION", "mysql"),
 
-		//Database connections
+		// Database connections
 		"connections": map[string]interface{}{
 			"mysql": map[string]interface{}{
 				"driver":   "mysql",
@@ -47,16 +47,18 @@ func init() {
 			},
 		},
 
-		//Migration Repository Table
-		//This table keeps track of all the migrations that have already run for
-		//your application. Using this information, we can determine which of
-		//the migrations on disk haven't actually been run in the database.
+		// Migration Repository Table
+		//
+		// This table keeps track of all the migrations that have already run for
+		// your application. Using this information, we can determine which of
+		// the migrations on disk haven't actually been run in the database.
 		"migrations": "migrations",
 
-		//Redis Databases
-		//Redis is an open source, fast, and advanced key-value store that also
-		//provides a richer body of commands than a typical key-value system
-		//such as APC or Memcached.
+		// Redis Databases
+		//
+		// Redis is an open source, fast, and advanced key-value store that also
+		// provides a richer body of commands than a typical key-value system
+		// such as APC or Memcached.
 		"redis": map[string]interface{}{
 			"default": map[string]interface{}{
 				"host":     config.Env("REDIS_HOST", ""),
