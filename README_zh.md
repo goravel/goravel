@@ -8,6 +8,8 @@ Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框�
 
 框架风格与 Laravel 保持一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！致敬 Laravel！
 
+欢迎 Star, PR, Issues！
+
 ## 快速上手
 
 ```
@@ -47,12 +49,12 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] 任务调度
 - [x] 队列
 - [x] 事件系统
+- [x] 文件存储
 - [x] 邮件
 - [x] Mock
 
 ## 路线图
 
-- [ ] 文件存储
 - [ ] 用户授权
 - [ ] Request 校验
 - [ ] 优化迁移

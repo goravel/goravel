@@ -10,6 +10,8 @@ Golang developers quickly build their own applications.
 The framework style is consistent with Laravel, let PHPer don't need to learn a new framework, but also happy to play
 around Golang! Tribute Laravel!
 
+Welcome star, PR and issues！
+
 ## Getting started
 
 ```
@@ -49,12 +51,12 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] Task Scheduling
 - [x] Queue
 - [x] Event
+- [x] FileStorage
 - [x] Mail
 - [x] Mock
 
 ## Roadmap
 
-- [ ] FileStorage
 - [ ] Authorization
 - [ ] Request validator
 - [ ] Optimize migration
