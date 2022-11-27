@@ -9,12 +9,12 @@ import (
 type ConsoleServiceProvider struct {
 }
 
-func (receiver *ConsoleServiceProvider) Boot() {
-
-}
-
 func (receiver *ConsoleServiceProvider) Register() {
 	kernel := console.Kernel{}
 	facades.Schedule.Register(kernel.Schedule())
 	facades.Artisan.Register(kernel.Commands())
+}
+
+func (receiver *ConsoleServiceProvider) Boot() {
+
 }
