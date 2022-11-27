@@ -7,7 +7,8 @@ English | [中文](./README_zh.md)
 Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
 Golang developers quickly build their own applications.
 
-The framework style is consistent with Laravel, let PHPer don't need to learn a new framework, but also happy to play
+The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let PHPer don't need to learn a
+new framework, but also happy to play
 around Golang! Tribute Laravel!
 
 Welcome star, PR and issues！
@@ -42,6 +43,7 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] Config
 - [x] Http
 - [x] Authentication
+- [x] Authorization
 - [x] Orm
 - [x] Migrate
 - [x] Logger
@@ -57,7 +59,6 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## Roadmap
 
-- [ ] Authorization
 - [ ] Request validator
 - [ ] Optimize migration
 - [ ] Orm relationships

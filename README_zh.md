@@ -6,7 +6,8 @@
 
 Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
 
-框架风格与 Laravel 保持一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！致敬 Laravel！
+框架风格与 [Laravel](https://github.com/laravel/laravel) 保持一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！致敬
+Laravel！
 
 欢迎 Star, PR, Issues！
 
@@ -40,6 +41,7 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] 自定义配置
 - [x] HTTP 服务
 - [x] 用户认证
+- [x] 用户授权
 - [x] 数据库 ORM
 - [x] 数据库迁移
 - [x] 日志
@@ -55,7 +57,6 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 路线图
 
-- [ ] 用户授权
 - [ ] Request 校验
 - [ ] 优化迁移
 - [ ] Orm 关联关系

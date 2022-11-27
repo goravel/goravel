@@ -82,6 +82,7 @@ func init() {
 			&auth.ServiceProvider{},
 			&filesystem.ServiceProvider{},
 			&providers.AppServiceProvider{},
+			&providers.AuthServiceProvider{},
 			&providers.RouteServiceProvider{},
 			&providers.GrpcServiceProvider{},
 			&providers.ConsoleServiceProvider{},
