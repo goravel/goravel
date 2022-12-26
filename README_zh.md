@@ -53,11 +53,11 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] 事件系统
 - [x] 文件存储
 - [x] 邮件
+- [x] 表单验证
 - [x] Mock
 
 ## 路线图
 
-- [ ] Request 校验
 - [ ] 优化迁移
 - [ ] Orm 关联关系
 - [ ] 自定义 .env 路径

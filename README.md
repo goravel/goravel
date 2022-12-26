@@ -55,11 +55,11 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] Event
 - [x] FileStorage
 - [x] Mail
+- [x] Validation
 - [x] Mock
 
 ## Roadmap
 
-- [ ] Request validator
 - [ ] Optimize migration
 - [ ] Orm relationships
 - [ ] Custom .env path
