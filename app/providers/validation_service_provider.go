@@ -3,8 +3,6 @@ package providers
 import (
 	"github.com/goravel/framework/contracts/validation"
 	"github.com/goravel/framework/facades"
-
-	"goravel/app/rules"
 )
 
 type ValidationServiceProvider struct {
@@ -21,7 +19,5 @@ func (receiver *ValidationServiceProvider) Boot() {
 }
 
 func (receiver *ValidationServiceProvider) rules() []validation.Rule {
-	return []validation.Rule{
-		&rules.Uppercase{},
-	}
+	return []validation.Rule{}
 }
