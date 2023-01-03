@@ -1,4 +1,4 @@
-<p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/24771476/210227277-d2bbf608-1535-417a-98f0-a1103b813465.png" width="300"></p>
 
 [English](./README.md) | 中文
 
