@@ -61,6 +61,7 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [ ] 优化迁移
 - [ ] Orm 关联关系
 - [ ] 自定义 .env 路径
+- [ ] 数据库读写分离
 
 ## 文档
 

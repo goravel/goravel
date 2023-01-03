@@ -63,6 +63,7 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [ ] Optimize migration
 - [ ] Orm relationships
 - [ ] Custom .env path
+- [ ] Database read-write separation
 
 ## Documentation
 
