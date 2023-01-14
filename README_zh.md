@@ -62,6 +62,7 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [ ] Orm 关联关系
 - [ ] 自定义 .env 路径
 - [ ] 数据库读写分离
+- [ ] 扩展 Redis 驱动
 
 ## 文档
 
