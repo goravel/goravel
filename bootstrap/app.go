@@ -1,9 +1,9 @@
 package bootstrap
 
 import (
-	"goravel/config"
-
 	"github.com/goravel/framework/foundation"
+
+	"goravel/config"
 )
 
 func Boot() {
