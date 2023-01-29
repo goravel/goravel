@@ -60,8 +60,6 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## Roadmap
 
-- [ ] Optimize migration
-- [ ] Orm relationships
 - [ ] Custom .env path
 - [ ] Database read-write separation
 - [ ] Extend Redis driver
