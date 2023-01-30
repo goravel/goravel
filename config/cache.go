@@ -33,6 +33,6 @@ func init() {
 		// be other applications utilizing the same cache. So, we'll specify a
 		// value to get prefixed to all our keys, so we can avoid collisions.
 		// Must: a-zA-Z0-9_-
-		"prefix": "goravel_cache",
+		"prefix": config.GetString("APP_NAME", "goravel") + "_cache",
 	})
 }

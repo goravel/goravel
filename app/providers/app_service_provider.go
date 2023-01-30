@@ -8,5 +8,5 @@ func (receiver *AppServiceProvider) Register() {
 }
 
 func (receiver *AppServiceProvider) Boot() {
-	
+
 }
