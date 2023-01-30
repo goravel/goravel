@@ -1,10 +1,10 @@
 package providers
 
 import (
+	"github.com/goravel/framework/facades"
+
 	"goravel/app/grpc"
 	"goravel/routes"
-
-	"github.com/goravel/framework/facades"
 )
 
 type GrpcServiceProvider struct {
