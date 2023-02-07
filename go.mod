@@ -3,7 +3,7 @@ module goravel
 go 1.18
 
 require (
-	github.com/goravel/framework v1.8.2
+	github.com/goravel/framework v1.8.3
 	google.golang.org/grpc v1.50.1
 )
 
@@ -132,6 +132,7 @@ require (
 	github.com/subosito/gotenv v1.2.0 // indirect
 	github.com/tencentyun/cos-go-sdk-v5 v0.7.40 // indirect
 	github.com/ugorji/go/codec v1.2.6 // indirect
+	github.com/unrolled/secure v1.13.0 // indirect
 	github.com/urfave/cli/v2 v2.3.0 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.0.2 // indirect
