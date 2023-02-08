@@ -4,7 +4,7 @@ import "github.com/goravel/framework/facades"
 
 func init() {
 	config := facades.Config
-	facades.Config.Add("mail", map[string]interface{}{
+	facades.Config.Add("mail", map[string]any{
 		// SMTP Host Address
 		//
 		// Here you may provide the host address of the SMTP server used by your
@@ -26,7 +26,7 @@ func init() {
 		// You may wish for all e-mails sent by your application to be sent from
 		// the same address. Here, you may specify a name and address that is
 		// used globally for all e-mails that are sent by your application.
-		"from": map[string]interface{}{
+		"from": map[string]any{
 			"address": config.Env("MAIL_FROM_ADDRESS", "hello@example.com"),
 			"name":    config.Env("MAIL_FROM_NAME", "Example"),
 		},

@@ -6,7 +6,7 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("grpc", map[string]interface{}{
+	config.Add("grpc", map[string]any{
 		// Grpc Configuration
 		//
 		// Configure your server host

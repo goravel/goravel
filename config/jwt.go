@@ -6,7 +6,7 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("jwt", map[string]interface{}{
+	config.Add("jwt", map[string]any{
 		// JWT Authentication Secret
 		//
 		// Don't forget to set this in your .env file, as it will be used to sign
