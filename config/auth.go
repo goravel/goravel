@@ -6,13 +6,13 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("auth", map[string]interface{}{
+	config.Add("auth", map[string]any{
 		// Authentication Defaults
 		//
 		// This option controls the default authentication "guard"
 		// reset options for your application. You may change these defaults
 		// as required, but they're a perfect start for most applications.
-		"defaults": map[string]interface{}{
+		"defaults": map[string]any{
 			"guard": "user",
 		},
 
@@ -27,8 +27,8 @@ func init() {
 		// mechanisms used by this application to persist your user's data.
 		//
 		// Supported: "jwt"
-		"guards": map[string]interface{}{
-			"user": map[string]interface{}{
+		"guards": map[string]any{
+			"user": map[string]any{
 				"driver": "jwt",
 			},
 		},

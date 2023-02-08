@@ -26,7 +26,7 @@ func Boot() {}
 
 func init() {
 	config := facades.Config
-	config.Add("app", map[string]interface{}{
+	config.Add("app", map[string]any{
 		// Application Name
 		//
 		// This value is the name of your application. This value is used when the

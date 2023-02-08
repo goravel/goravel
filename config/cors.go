@@ -6,7 +6,7 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("cors", map[string]interface{}{
+	config.Add("cors", map[string]any{
 		// Cross-Origin Resource Sharing (CORS) Configuration
 		//
 		// Here you may configure your settings for cross-origin resource sharing

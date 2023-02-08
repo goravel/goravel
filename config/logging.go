@@ -6,7 +6,7 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("logging", map[string]interface{}{
+	config.Add("logging", map[string]any{
 		// Default Log Channel
 		//
 		// This option defines the default log channel that gets used when writing
@@ -19,17 +19,17 @@ func init() {
 		// Here you may configure the log channels for your application.
 		// Available Drivers: "single", "daily", "custom", "stack"
 		// Available Level: "debug", "info", "warning", "error", "fatal", "panic"
-		"channels": map[string]interface{}{
-			"stack": map[string]interface{}{
+		"channels": map[string]any{
+			"stack": map[string]any{
 				"driver":   "stack",
 				"channels": []string{"daily"},
 			},
-			"single": map[string]interface{}{
+			"single": map[string]any{
 				"driver": "single",
 				"path":   "storage/logs/goravel.log",
 				"level":  config.Env("LOG_LEVEL", "debug"),
 			},
-			"daily": map[string]interface{}{
+			"daily": map[string]any{
 				"driver": "daily",
 				"path":   "storage/logs/goravel.log",
 				"level":  config.Env("LOG_LEVEL", "debug"),
