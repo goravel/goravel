@@ -58,9 +58,14 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 路线图
 
-- [ ] 自定义 .env 路径
-- [ ] 数据库读写分离
-- [ ] 扩展 Redis 驱动
+- [ ] Hash
+- [ ] Crypt
+- [ ] Websocket 支持
+- [ ] 广播系统
+- [ ] 延迟队列
+- [ ] 队列支持 DB 驱动
+- [ ] 消息通知
+- [ ] 完善单元测试
 
 ## 文档
 
