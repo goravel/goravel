@@ -15,7 +15,7 @@ func init() {
 			"mysql": map[string]any{
 				"driver":   "mysql",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
-				"port":     config.Env("DB_PORT", "3306"),
+				"port":     config.Env("DB_PORT", 3306),
 				"database": config.Env("DB_DATABASE", "forge"),
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
@@ -25,7 +25,7 @@ func init() {
 			"postgresql": map[string]any{
 				"driver":   "postgresql",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
-				"port":     config.Env("DB_PORT", "3306"),
+				"port":     config.Env("DB_PORT", 5432),
 				"database": config.Env("DB_DATABASE", "forge"),
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
@@ -39,12 +39,46 @@ func init() {
 			"sqlserver": map[string]any{
 				"driver":   "sqlserver",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
-				"port":     config.Env("DB_PORT", "3306"),
+				"port":     config.Env("DB_PORT", 1433),
 				"database": config.Env("DB_DATABASE", "forge"),
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"charset":  "utf8mb4",
 			},
+		},
+
+		// Set pool configuration
+		"pool": map[string]any{
+			// Sets the maximum number of connections in the idle
+			// connection pool.
+			//
+			// If MaxOpenConns is greater than 0 but less than the new MaxIdleConns,
+			// then the new MaxIdleConns will be reduced to match the MaxOpenConns limit.
+			//
+			// If n <= 0, no idle connections are retained.
+			"max_idle_conns": 10,
+			// Sets the maximum number of open connections to the database.
+			//
+			// If MaxIdleConns is greater than 0 and the new MaxOpenConns is less than
+			// MaxIdleConns, then MaxIdleConns will be reduced to match the new
+			// MaxOpenConns limit.
+			//
+			// If n <= 0, then there is no limit on the number of open connections.
+			"max_open_conns": 100,
+			// Sets the maximum amount of time a connection may be idle.
+			//
+			// Expired connections may be closed lazily before reuse.
+			//
+			// If d <= 0, connections are not closed due to a connection's idle time.
+			// Unit: Second
+			"conn_max_idletime": 3600,
+			// Sets the maximum amount of time a connection may be reused.
+			//
+			// Expired connections may be closed lazily before reuse.
+			//
+			// If d <= 0, connections are not closed due to a connection's age.
+			// Unit: Second
+			"conn_max_lifetime": 3600,
 		},
 
 		// Migration Repository Table
