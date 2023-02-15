@@ -1,4 +1,4 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/24771476/210227277-d2bbf608-1535-417a-98f0-a1103b813465.png" width="300"></p>
+<p align="center"><img src="https://www.goravel.dev/logo.png" width="300"></p>
 
 [English](./README.md) | 中文
 
@@ -6,8 +6,7 @@
 
 Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
 
-框架风格与 [Laravel](https://github.com/laravel/laravel) 保持一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！致敬
-Laravel！
+框架风格与 [Laravel](https://github.com/laravel/laravel) 保持一致，让 PHPer 不用学习新的框架，也可以愉快的玩转 Golang！致敬 Laravel！
 
 欢迎 Star, PR, Issues！
 
@@ -21,7 +20,7 @@ go run . artisan key:generate
 facades.Route.Get("/", userController.Show)
 
 // 数据库查询
-facades.Orm.Query().First(&user)
+facades.Orm.Query().With("Author").First(&user)
 
 // 任务调度
 facades.Schedule.Command("send:emails name").EveryMinute()
@@ -75,13 +74,13 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 群组
 
-欢迎在 Discord 中更多交流。
-
-[https://discord.gg/cFc5csczzS](https://discord.gg/cFc5csczzS)
-
 微信入群，请备注 Goravel
 
-![](https://user-images.githubusercontent.com/24771476/194740900-cee4aa43-7c22-42b6-ada9-42bc160cd797.JPG)
+<p align="left"><img src="https://www.goravel.dev/wechat.jpg" width="200"></p>
+
+## 赞赏
+
+<p align="left"><img src="https://www.goravel.dev/reward.jpg" width="200"></p>
 
 ## 开源许可
 

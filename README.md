@@ -1,15 +1,12 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/24771476/210227277-d2bbf608-1535-417a-98f0-a1103b813465.png" width="300"></p>
+<p align="center"><img src="https://www.goravel.dev/logo.png" width="300"></p>
 
 English | [中文](./README_zh.md)
 
 ## About Goravel
 
-Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
-Golang developers quickly build their own applications.
+Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help Gophper quickly build their own applications.
 
-The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let PHPer don't need to learn a
-new framework, but also happy to play
-around Golang! Tribute Laravel!
+The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let PHPer don't need to learn a new framework, but also happy to play around Golang! Tribute Laravel!
 
 Welcome star, PR and issues！
 
@@ -23,7 +20,7 @@ go run . artisan key:generate
 facades.Route.Get("/", userController.Show)
 
 // ORM
-facades.Orm.Query().First(&user)
+facades.Orm.Query().With("Author").First(&user)
 
 // Task Scheduling
 facades.Schedule.Command("send:emails name").EveryMinute()
@@ -78,9 +75,11 @@ Online documentation [https://www.goravel.dev](https://www.goravel.dev)
 
 ## Group
 
-Welcome more exchanges in Discord.
+Welcome more discussion in Telegram.
 
-[https://discord.gg/cFc5csczzS](https://discord.gg/cFc5csczzS)
+[https://t.me/goravel](https://t.me/goravel)
+
+<p align="left"><img src="https://www.goravel.dev/telegram.jpg" width="200"></p>
 
 ## License
 
