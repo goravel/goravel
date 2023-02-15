@@ -1,5 +1,6 @@
 # These are supported funding model platforms
 
-github: [hwbrzzl]
+#github: [ hwbrzzl ]
 #patreon: hwbrzzl
-custom: ["https://www.paypal.me/hanwenbo1024"]
+#open_collective: goravel
+custom: [ "https://www.paypal.me/hanwenbo1024" ]
