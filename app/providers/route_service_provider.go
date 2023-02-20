@@ -12,11 +12,15 @@ type RouteServiceProvider struct {
 
 func (receiver *RouteServiceProvider) Register() {
 	//Add HTTP middlewares
-	kernel := http.Kernel{}
-	facades.Route.GlobalMiddleware(kernel.Middleware()...)
+	facades.Route.GlobalMiddleware(http.Kernel{}.Middleware()...)
 }
 
 func (receiver *RouteServiceProvider) Boot() {
-	//Add routes
+	receiver.configureRateLimiting()
+
 	routes.Web()
+}
+
+func (receiver *RouteServiceProvider) configureRateLimiting() {
+
 }
