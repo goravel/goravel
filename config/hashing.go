@@ -28,13 +28,13 @@ func init() {
 		},
 
 		// Bcrypt Hashing Options
-		// cost: The cost factor that should be used to compute the bcrypt hash.
+		// rounds: The cost factor that should be used to compute the bcrypt hash.
 		// The cost factor controls how much time is needed to compute a single bcrypt hash.
 		// The higher the cost factor, the more hashing rounds are done. Increasing the cost
 		// factor by 1 doubles the necessary time. After a certain point, the returns on
 		// hashing time versus attacker time are diminishing, so choose your cost factor wisely.
 		"bcrypt": map[string]any{
-			"cost": 10,
+			"rounds": 10,
 		},
 	})
 }
