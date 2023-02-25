@@ -14,7 +14,7 @@ func init() {
 		// HTTPS Configuration
 		"tls": map[string]any{
 			// HTTPS Host
-			"host": config.Env("APP_HOST", "127.0.0.1:3000"),
+			"host": config.Env("APP_HOST", "127.0.0.1"),
 			// HTTP Port
 			"port": config.Env("APP_PORT", "3000"),
 			// SSL Certificate
