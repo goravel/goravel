@@ -5,11 +5,13 @@ import (
 	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/console"
 	"github.com/goravel/framework/contracts"
+	"github.com/goravel/framework/crypt"
 	"github.com/goravel/framework/database"
 	"github.com/goravel/framework/event"
 	"github.com/goravel/framework/facades"
 	"github.com/goravel/framework/filesystem"
 	"github.com/goravel/framework/grpc"
+	"github.com/goravel/framework/hash"
 	"github.com/goravel/framework/http"
 	"github.com/goravel/framework/log"
 	"github.com/goravel/framework/mail"
@@ -21,7 +23,7 @@ import (
 	"goravel/app/providers"
 )
 
-//Boot Start all init methods of the current folder to bootstrap all config.
+// Boot Start all init methods of the current folder to bootstrap all config.
 func Boot() {}
 
 func init() {
@@ -81,6 +83,8 @@ func init() {
 			&grpc.ServiceProvider{},
 			&mail.ServiceProvider{},
 			&auth.ServiceProvider{},
+			&hash.ServiceProvider{},
+			&crypt.ServiceProvider{},
 			&filesystem.ServiceProvider{},
 			&validation.ServiceProvider{},
 			&providers.AppServiceProvider{},
