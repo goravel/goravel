@@ -12,7 +12,8 @@ func main() {
 
 	// Start http server by facades.Route.
 	go func() {
-		if err := facades.Route.Run(facades.Config.GetString("app.host")); err != nil {
+		app_host := facades.Config.GetString("app.host") + ":" + facades.Config.GetString("app.port")
+		if err := facades.Route.Run(app_host); err != nil {
 			facades.Log.Errorf("Route run error: %v", err)
 		}
 	}()
