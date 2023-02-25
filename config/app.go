@@ -63,7 +63,7 @@ func init() {
 		// Application host, http server listening address.
 		"host": config.Env("APP_HOST", "127.0.0.1"),
 
-		// Application host, http server listening address.
+		// Application port, http server listening port.
 		"port": config.Env("APP_PORT", "3000"),
 
 		// Autoload service providers
