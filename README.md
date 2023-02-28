@@ -4,9 +4,11 @@ English | [中文](./README_zh.md)
 
 ## About Goravel
 
-Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help Gopher quickly build their own applications.
+Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
+Gopher quickly build their own applications.
 
-The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let Phper don't need to learn a new framework, but also happy to play around Golang! Tribute Laravel!
+The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let Phper don't need to learn a
+new framework, but also happy to play around Golang! Tribute Laravel!
 
 Welcome to star, PR and issues！
 
@@ -81,6 +83,7 @@ This project exists thanks to all the people who contribute.
 <a href="https://github.com/merouanekhalili" target="_blank"><img src="https://avatars.githubusercontent.com/u/1122628?v=4" width="48" height="48"></a>
 <a href="https://github.com/hongyukeji" target="_blank"><img src="https://avatars.githubusercontent.com/u/23145983?v=4" width="48" height="48"></a>
 <a href="https://github.com/DevHaoZi" target="_blank"><img src="https://avatars.githubusercontent.com/u/115467771?v=4" width="48" height="48"></a>
+<a href="https://github.com/sidshrivastav" target="_blank"><img src="https://avatars.githubusercontent.com/u/28773690?v=4" width="48" height="48"></a>
 
 ## Group
 
