@@ -3,7 +3,7 @@ module goravel
 go 1.18
 
 require (
-	github.com/goravel/framework v1.9.0
+	github.com/goravel/framework v1.9.1
 	google.golang.org/grpc v1.50.1
 )
 
