@@ -21,7 +21,7 @@ import (
 	"goravel/app/providers"
 )
 
-//Boot Start all init methods of the current folder to bootstrap all config.
+// Boot Start all init methods of the current folder to bootstrap all config.
 func Boot() {}
 
 func init() {
@@ -61,7 +61,10 @@ func init() {
 		"url": config.Env("APP_URL", "http://localhost"),
 
 		// Application host, http server listening address.
-		"host": config.Env("APP_HOST", "127.0.0.1:3000"),
+		"host": config.Env("APP_HOST", "127.0.0.1"),
+
+		// Application port, http server listening port.
+		"port": config.Env("APP_PORT", "3000"),
 
 		// Autoload service providers
 		//
