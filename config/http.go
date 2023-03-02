@@ -6,7 +6,9 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("route", map[string]any{
+	config.Add("http", map[string]any{
+		// HTTP URL
+		"url": config.Env("APP_URL", "http://localhost"),
 		// HTTP Host
 		"host": config.Env("APP_HOST", "127.0.0.1"),
 		// HTTP Port
@@ -15,9 +17,9 @@ func init() {
 		"tls": map[string]any{
 			// HTTPS Host
 			"host": config.Env("APP_HOST", "127.0.0.1"),
-			// HTTP Port
+			// HTTPS Port
 			"port": config.Env("APP_PORT", "3000"),
-			// SSL Certificate
+			// SSL Certificate, you can put the certificate in /public folder
 			"ssl": map[string]any{
 				// ca.pem
 				"cert": "",
