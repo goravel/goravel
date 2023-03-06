@@ -88,10 +88,11 @@ func init() {
 		// the migrations on disk haven't actually been run in the database.
 		"migrations": "migrations",
 
-		// Set database table prefix
+		// Set database table prefix, example: "goravel_"
 		"prefix": "",
 
-		// Table name is singular
+		// Table name is singular, example: the table name defaults to `users`,
+		// if singular_table is true, the table name should be `user`.
 		"singular_table": false,
 
 		// Redis Databases
