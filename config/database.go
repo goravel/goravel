@@ -88,6 +88,12 @@ func init() {
 		// the migrations on disk haven't actually been run in the database.
 		"migrations": "migrations",
 
+		// Set database table prefix
+		"prefix": "",
+
+		// Table name is singular
+		"singular_table": false,
+
 		// Redis Databases
 		//
 		// Redis is an open source, fast, and advanced key-value store that also
