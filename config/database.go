@@ -21,6 +21,8 @@ func init() {
 				"password": config.Env("DB_PASSWORD", ""),
 				"charset":  "utf8mb4",
 				"loc":      "Local",
+				"prefix":   "",
+				"singular": false, // Table name is singular
 			},
 			"postgresql": map[string]any{
 				"driver":   "postgresql",
@@ -31,10 +33,14 @@ func init() {
 				"password": config.Env("DB_PASSWORD", ""),
 				"sslmode":  "disable",
 				"timezone": "UTC", //Asia/Shanghai
+				"prefix":   "",
+				"singular": false, // Table name is singular
 			},
 			"sqlite": map[string]any{
 				"driver":   "sqlite",
 				"database": config.Env("DB_DATABASE", "forge"),
+				"prefix":   "",
+				"singular": false, // Table name is singular
 			},
 			"sqlserver": map[string]any{
 				"driver":   "sqlserver",
@@ -44,6 +50,8 @@ func init() {
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"charset":  "utf8mb4",
+				"prefix":   "",
+				"singular": false, // Table name is singular
 			},
 		},
 
@@ -87,13 +95,6 @@ func init() {
 		// your application. Using this information, we can determine which of
 		// the migrations on disk haven't actually been run in the database.
 		"migrations": "migrations",
-
-		// Set database table prefix, example: "goravel_"
-		"prefix": "",
-
-		// Table name is singular, example: the table name defaults to `users`,
-		// if singular_table is true, the table name should be `user`.
-		"singular_table": false,
 
 		// Redis Databases
 		//
