@@ -9,7 +9,7 @@ import (
 
 func Web() {
 	facades.Route.Get("/", func(ctx http.Context) {
-		ctx.Response().Json(200, http.Json{
+		ctx.Response().Json(http.StatusOK, http.Json{
 			"Hello": "Goravel",
 		})
 	})
