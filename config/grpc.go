@@ -11,7 +11,7 @@ func init() {
 		"host": config.Env("GRPC_HOST", ""),
 
 		// Configure your server port
-		"port": config.Env("GRPC_port", ""),
+		"port": config.Env("GRPC_PORT", ""),
 
 		// Configure your client host and interceptors.
 		// Interceptors can be the group name of UnaryClientInterceptorGroups in app/grpc/kernel.go.
