@@ -36,6 +36,14 @@ value := facades.Cache.Get("goravel", "default")
 err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 ```
 
+## 文档
+
+在线文档 [https://www.goravel.dev/zh](https://www.goravel.dev/zh)
+
+示例 [https://github.com/goravel/example](https://github.com/goravel/example)
+
+> 优化文档，请提交 PR 至文档仓库 [https://github.com/goravel/docs](https://github.com/goravel/docs)
+
 ## 主要功能
 
 - [x] 自定义配置
@@ -55,23 +63,12 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] 邮件
 - [x] 表单验证
 - [x] Mock
+- [x] Hash
+- [x] Crypt
 
 ## 路线图
 
-- [ ] Hash
-- [ ] Crypt
-- [ ] Websocket 支持
-- [ ] 广播系统
-- [ ] 延迟队列
-- [ ] 队列支持 DB 驱动
-- [ ] 消息通知
-- [ ] 完善单元测试
-
-## 文档
-
-在线文档 [https://www.goravel.dev/zh](https://www.goravel.dev/zh)
-
-> 优化文档，请提交 PR 至文档仓库 [https://github.com/goravel/docs](https://github.com/goravel/docs)
+[查看详情](https://github.com/goravel/goravel/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
 
 ## 贡献者
 
