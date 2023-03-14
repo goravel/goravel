@@ -37,6 +37,15 @@ value := facades.Cache.Get("goravel", "default")
 err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 ```
 
+## Documentation
+
+Online documentation [https://www.goravel.dev](https://www.goravel.dev)
+
+Example [https://github.com/goravel/example](https://github.com/goravel/example)
+
+> To optimize the documentation, please submit a PR to the documentation
+> repository [https://github.com/goravel/docs](https://github.com/goravel/docs)
+
 ## Main Function
 
 - [x] Config
@@ -56,24 +65,12 @@ err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 - [x] Mail
 - [x] Validation
 - [x] Mock
+- [x] Hash
+- [x] Crypt
 
 ## Roadmap
 
-- [ ] Hash
-- [ ] Crypt
-- [ ] Support Websocket
-- [ ] Broadcasting
-- [ ] Delay Queue
-- [ ] Queue supports DB driver
-- [ ] Notifications
-- [ ] Optimize unit tests
-
-## Documentation
-
-Online documentation [https://www.goravel.dev](https://www.goravel.dev)
-
-> To optimize the documentation, please submit a PR to the documentation
-> repository [https://github.com/goravel/docs](https://github.com/goravel/docs)
+[For Detail](https://github.com/goravel/goravel/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
 
 ## Contributors
 
