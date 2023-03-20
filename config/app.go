@@ -48,9 +48,9 @@ func init() {
 
 		// Application Timezone
 		//
-		// Here you may specify the default timezone for your application, which
-		// will be used by the PHP date and date-time functions. We have gone
-		// ahead and set this to a sensible default for you out of the box.
+		// Here you may specify the default timezone for your application.
+		// Example: UTC, Asia/Shanghai
+		// More: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 		"timezone": "UTC",
 
 		// Encryption Key
