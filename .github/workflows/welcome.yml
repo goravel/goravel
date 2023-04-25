@@ -1,0 +1,35 @@
+name: Welcome
+on:
+  pull_request:
+    types: [opened, closed]
+  issues:
+    types: [opened]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/welcome@v1
+        with:
+          FIRST_ISSUE: |
+            Hi @{{ author }}! 👋
+
+            感谢您向 Goravel 提出此问题！ 💖
+            Thanks for opening this issue to Goravel! 💖
+
+            看起来这是您在 `Goravel` 的第一个问题。请确保遵循问题模板！
+            It looks like this is your first issue to `Goravel`. Please ensure to follow the issue template!
+
+          FIRST_PR: |
+            Hi @{{ author }}! 👋
+
+            感谢您向 Goravel 打开此拉取请求！ 💖
+            Thanks for opening this pull request to Goravel!  💖
+
+            看起来这是您在 `Goravel` 的第一个拉取请求。不要忘记先查看我们的贡献指南。
+            It looks like this is your first pull request to `Goravel`. Don't forget to check out our contributing guidelines first.
+
+          FIRST_PR_MERGED: |
+            🎉 @{{ author }}
+            Congrats on merging your first pull request! We here at Goravel are proud of you!
+
+          STAR_MESSAGE: If you like this project, please ⭐star⭐ our repository to support us!
