@@ -13,8 +13,18 @@ func init() {
 		// by the framework hash facade.
 		// Default driver is "argon2id", because it is the most secure.
 		//
-		// Supported Drivers: "argon2id", "bcrypt"
-		"driver": "argon2id",
+		// Supported Drivers: "bcrypt", "argon2id"
+		"driver": "bcrypt",
+
+		// Bcrypt Hashing Options
+		// rounds: The cost factor that should be used to compute the bcrypt hash.
+		// The cost factor controls how much time is needed to compute a single bcrypt hash.
+		// The higher the cost factor, the more hashing rounds are done. Increasing the cost
+		// factor by 1 doubles the necessary time. After a certain point, the returns on
+		// hashing time versus attacker time are diminishing, so choose your cost factor wisely.
+		"bcrypt": map[string]any{
+			"rounds": 10,
+		},
 
 		// Argon2id Hashing Options
 		// memory: A memory cost, which defines the memory usage, given in kibibytes.
@@ -25,16 +35,6 @@ func init() {
 			"memory":  65536,
 			"time":    4,
 			"threads": 1,
-		},
-
-		// Bcrypt Hashing Options
-		// rounds: The cost factor that should be used to compute the bcrypt hash.
-		// The cost factor controls how much time is needed to compute a single bcrypt hash.
-		// The higher the cost factor, the more hashing rounds are done. Increasing the cost
-		// factor by 1 doubles the necessary time. After a certain point, the returns on
-		// hashing time versus attacker time are diminishing, so choose your cost factor wisely.
-		"bcrypt": map[string]any{
-			"rounds": 10,
 		},
 	})
 }
