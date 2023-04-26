@@ -11,7 +11,7 @@ func init() {
 		//
 		// This option controls the default diver that gets used
 		// by the framework hash facade.
-		// Default driver is "argon2id", because it is the most secure.
+		// Default driver is "bcrypt".
 		//
 		// Supported Drivers: "bcrypt", "argon2id"
 		"driver": "bcrypt",
