@@ -1,0 +1,67 @@
+name: Issue Auto Reply
+
+on:
+  issues:
+    types: [ labeled ]
+
+permissions:
+  contents: read
+
+jobs:
+  issue-reply:
+    permissions:
+      issues: write  # for actions-cool/issues-helper to update issues
+      pull-requests: write  # for actions-cool/issues-helper to update PRs
+    runs-on: ubuntu-latest
+    steps:
+      - name: bug or enhancement
+        if: github.event.label.name == 'bug' || github.event.label.name == 'good first issue' || github.event.label.name == 'enhancement'
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，我们完全同意你的提议/反馈，欢迎直接在此仓库 [创建一个 拉取请求](https://help.github.com/en/articles/creating-a-pull-request) 来解决这个问题。请将 Pull Request 发到正确的分支（新特性发到 feature 分支，其他发到 master 分支）并链接到此 Issue，务必提供改动所需相应的测试用例、文档等，并确保 CI 通过，我们会尽快进行 Review，提前感谢和期待您的贡献。
+
+            Hello @${{ github.event.issue.user.login }}. We totally like your proposal/feedback, welcome to [send us a Pull Request](https://help.github.com/en/articles/creating-a-pull-request) for it. Please send your Pull Request to proper branch (feature branch for the new feature, master for bugfix and other changes) and link to this Issue, provide documentation/test cases if needed and make sure CI passed, we will review it soon. We appreciate your effort in advance and looking forward to your contribution!
+
+            ![giphy](https://user-images.githubusercontent.com/507615/62342668-4735dc00-b51a-11e9-92a7-d46fbb1cc0c7.gif)
+
+      - name: question or help wanted
+        if: github.event.label.name == 'question' || github.event.label.name == 'help wanted'
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}, 我们需要你提供一个重现实例以便于我们帮你排查问题。你可以通过分叉[example](https://github.com/goravel/example)仓库来创建一个重现实例，然后将链接贴到这里。3 天内未跟进此 Issue 将会被自动关闭。
+
+            Hello @${{ github.event.issue.user.login }}, we need you to provide a reproduction link so that we can help you troubleshoot the problem. You can create a reproduction link by forking [example](https://github.com/goravel/example) repository, and then paste the link here. This issue will be closed automatically if there is no follow-up within 3 days.
+
+            ![](https://gw.alipayobjects.com/zos/antfincdn/y9kwg7DVCd/reproduce.gif)
+
+      - name: documentation
+        if: github.event.label.name == 'documentation'
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'create-comment,close-issue'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，Goravel 的 Issues 板块是用于 Bug 反馈 与 需求讨论 的地方。请勿询问"如何使用"问题。 [文档](https://www.goravel.dev/zh/)
+
+            Hello @${{ github.event.issue.user.login }}, Goravel's Issues board is used for Bug feedback and feature discussion. Please do not ask "how to use" problem. [Documentation](https://www.goravel.dev/)
+
+      - name: invalid or duplicate or wontfix
+        if: github.event.label.name == 'invalid' || github.event.label.name == 'duplicate' || github.event.label.name == 'wontfix'
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'create-comment,close-issue'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，你的 Issue 因为不符合要求而被自动关闭。
+
+            Hello @${{ github.event.issue.user.login }}, your issue has been closed because it does not conform to our issue requirements.
