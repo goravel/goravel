@@ -3,7 +3,7 @@ module goravel
 go 1.18
 
 require (
-	github.com/goravel/framework v1.10.0
+	github.com/goravel/framework v1.11.0
 	google.golang.org/grpc v1.50.1
 )
 
@@ -53,6 +53,8 @@ require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.8.2 // indirect
+	github.com/glebarez/go-sqlite v1.21.1 // indirect
+	github.com/glebarez/sqlite v1.8.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.11.2 // indirect
@@ -105,7 +107,6 @@ require (
 	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/manifoldco/promptui v0.9.0 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
-	github.com/mattn/go-sqlite3 v1.14.15 // indirect
 	github.com/microsoft/go-mssqldb v0.19.0 // indirect
 	github.com/minio/md5-simd v1.1.2 // indirect
 	github.com/minio/minio-go/v7 v7.0.49 // indirect
@@ -125,6 +126,7 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
 	github.com/rifflock/lfshook v0.0.0-20180920164130-b9218ef580f5 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/rs/cors v1.8.3-0.20221003140808-fcebdb403f4d // indirect
@@ -173,8 +175,11 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/driver/mysql v1.4.5 // indirect
 	gorm.io/driver/postgres v1.4.6 // indirect
-	gorm.io/driver/sqlite v1.4.4 // indirect
 	gorm.io/driver/sqlserver v1.4.2 // indirect
-	gorm.io/gorm v1.24.5 // indirect
+	gorm.io/gorm v1.24.6 // indirect
 	gorm.io/plugin/dbresolver v1.4.1 // indirect
+	modernc.org/libc v1.22.3 // indirect
+	modernc.org/mathutil v1.5.0 // indirect
+	modernc.org/memory v1.5.0 // indirect
+	modernc.org/sqlite v1.21.1 // indirect
 )
