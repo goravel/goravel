@@ -14,7 +14,7 @@ func init() {
 		// Default driver is "argon2id", because it is the most secure.
 		//
 		// Supported Drivers: "bcrypt", "argon2id"
-		"driver": "bcrypt",
+		"driver": "argon2id",
 
 		// Bcrypt Hashing Options
 		// rounds: The cost factor that should be used to compute the bcrypt hash.
