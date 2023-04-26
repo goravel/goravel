@@ -1,10 +1,7 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/goravel/framework/facades"
-	"github.com/goravel/framework/support/time"
 
 	"goravel/bootstrap"
 )
@@ -19,10 +16,6 @@ func main() {
 			facades.Log.Errorf("Route run error: %v", err)
 		}
 	}()
-
-	fmt.Println("hwb---", time.Now())
-	facades.Hash.Make("123")
-	fmt.Println("hwb---", time.Now())
 
 	select {}
 }
