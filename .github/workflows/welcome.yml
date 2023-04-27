@@ -13,19 +13,19 @@ jobs:
           FIRST_ISSUE: |
             Hi @{{ author }}! 👋
 
-            感谢您向 Goravel 提出此问题！ 💖
+            感谢您向 Goravel 提出此 Issue！ 💖
             Thanks for opening this issue to Goravel! 💖
 
-            看起来这是您在 `Goravel` 的第一个问题。请确保遵循问题模板！
+            看起来这是您在 `Goravel` 的第一个 Issue。请确保遵循 Issue 模板！
             It looks like this is your first issue to `Goravel`. Please ensure to follow the issue template!
 
           FIRST_PR: |
             Hi @{{ author }}! 👋
 
-            感谢您向 Goravel 打开此拉取请求！ 💖
+            感谢您向 Goravel 打开此 Pull Request！ 💖
             Thanks for opening this pull request to Goravel!  💖
 
-            看起来这是您在 `Goravel` 的第一个拉取请求。不要忘记先查看我们的贡献指南。
+            看起来这是您在 `Goravel` 的第一个 Pull Request。不要忘记先查看我们的贡献指南。
             It looks like this is your first pull request to `Goravel`. Don't forget to check out our contributing guidelines first.
 
           FIRST_PR_MERGED: |
