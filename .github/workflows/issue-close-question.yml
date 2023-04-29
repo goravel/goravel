@@ -10,8 +10,8 @@ permissions:
 jobs:
   issue-close-require:
     permissions:
-      issues: write  # for actions-cool/issues-helper to update issues
-      pull-requests: write  # for actions-cool/issues-helper to update PRs
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: needs more info
@@ -21,7 +21,6 @@ jobs:
           labels: 'question'
           inactive-day: 3
           body: |
-            由于该 Issue 3 天未收到回应。现已被自动关闭，若有任何问题，可评论回复。
-
             This issue has been closed automatically because it has not had recent activity for 3 days. If you have any questions, please comment here.
-            
+            由于该 Issue 3天未收到回应，现已被自动关闭，若有任何问题，可评论回复。
+

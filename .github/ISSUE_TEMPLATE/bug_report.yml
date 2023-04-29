@@ -1,100 +1,44 @@
-name: 🐛 报告问题 (Bug Report)
-description: 创建一个报告以帮助我们改进 (Create a report to help us improve)
-title: "🐛[Bug Report]: "
+name: 🐛 Bug Feedback (问题反馈)
+description: Create a feedback to help us improve (创建一个反馈以帮助我们改进)
+title: "🐛 [Bug] "
 labels: ["bug"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        **请仅使用 简体中文 或 英文 进行填写**
-        **Please only use Simplified Chinese or English to fill in**
+        **Please only use English or Chinese to fill in**
+        **请仅使用英文或中文进行填写**
   - type: checkboxes
     id: checks
     attributes:
-      label: 在提问之前 (Before asking)
-      description: |
-        提问之前，先回答几个小问题。
-        Before asking questions, answer a few quick questions.
+      label: Before feedback (在反馈之前)
       options:
-        - label: 我已经搜索了现有的 Issues 和 Discussions (I've searched the existing Issues and Discussions)
+        - label: I've searched the existing Issues, Discussions and Google (我已经搜索了现有的 Issues, Discussions 和 Google)
           required: true
-        - label: 我已经阅读了 README 中除版本记录以外的所有内容 (I've read everything in the README except the version notes)
-          required: true
-        - label: 我在提问题之前至少花费了 5 分钟来思考和准备 (I spend at least 5 minutes thinking and preparing before asking a question)
-          required: true
-        - label: 这个问题出现在最新版的 Goravel 上 (This question appears on the latest version of Goravel)
+        - label: The problem can be stably reproduced (这个问题可以被稳定复现)
           required: false
-        - label: 我使用过旧版的 Goravel 并且没有出现这个问题 (I've used an older version of Goravel and didn't have this problem)
-          required: false
-        - label: 这个问题出现了至少 3 次 (This question has occurred at least 3 times)
+        - label: The problem is generated after upgrading Goravel (问题是在升级 Goravel 后产生的)
           required: false
   - type: textarea
     id: describe
     attributes:
-      label: 描述问题 (Describe the problem)
-      description: |
-        简明概要地描述你遇到的问题。
-        Briefly describe the problem you are having.
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: 预期行为 (Expected behavior)
-      description: |
-        简明概要地描述你期望发生的事情。
-        Briefly describe what you expect to happen.
+      label: Describe The Problem (描述问题)
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
-      label: 如何复现 (How to reproduce)
-      description: |
-        重现该问题的详细步骤。
-        Detailed steps to reproduce the problem.
-      value: |
-        1. Create Goravel project
-        2. Use xxx method
-        3. See error
+      label: Reproduction Code (复现代码或截图)
     validations:
-      required: false
-  - type: textarea
-    id: logs
-    attributes:
-      label: 相关日志 (Related logs)
-      description: |
-        请复制并粘贴任何相关的日志输出。
-        Please copy and paste any relevant log output.
-        可以把文件拖入这个区域以添加日志文件。
-        Files can be dragged into this area to add log files.
-        日志文件可通过 开启 Goravel APP_DEBUG 或 Log facades 获取。
-        Log files can be accessed by enabling Goravel APP_DEBUG or Log facades.
-      render: Text
-    validations:
-      required: false
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: 截图 (Screenshots)
-      description: |
-        如果有，添加屏幕截图可帮助更快定位你的问题。
-        If so, adding screenshots can help locate your issue faster.
-        可以复制图片后在此区域内粘贴以添加图片。
-        Pictures can be copied and pasted in this area to add pictures.
-        如有必要，使用马赛克遮盖敏感信息。
-        Use a mosaic to obscure sensitive information if necessary.
-    validations:
-      required: false
+      required: true
   - type: textarea
     id: others
     attributes:
-      label: 还有别的吗 (Anything else)
-      description: |
-        运行环境？浏览器？Goravel 版本？相关的配置？链接？参考资料？
-        Environment? Browser? Goravel version? Related configuration? Link? References?
-        任何能让我们对你所遇到的问题有更多了解的东西。
-        Anything that can give us more insight into the problem you're having.
+      label: Environment (运行环境)
+      value: |
+        System: Linux/Mac/Windows
+        Golang Version: 
+        Goravel Version:
     validations:
-      required: false
+      required: true

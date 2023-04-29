@@ -1,55 +1,26 @@
-name: ✨ 功能请求 (Feature request)
-description: 为这个项目提出一个想法 (Suggest an idea for this project)
-title: "✨[Feature Request]: "
+name: ✨ Feature (功能请求)
+description: Suggest an great idea for Goravel (为 Goravel 提案一个新功能)
+title: "✨ [Feature] "
 labels: ["enhancement"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        **请仅使用 简体中文 或 英文 进行填写**
-        **Please only use Simplified Chinese or English to fill in**
+        **Please only use English or Chinese to fill in**
+        **请仅使用英文或中文进行填写**
   - type: checkboxes
     attributes:
-      label: 在提问之前 (Before asking)
-      description: |
-        提问之前，先回答几个小问题。
-        Before asking questions, answer a few quick questions.
+      label: Before feedback (在反馈之前)
       options:
-        - label: 我已经搜索了全部 Issues 和 Commits (I have searched all Issues and Commits)
-          required: true
-        - label: 它们当中没有我将要提交的新功能 (None of them have new feature that I'm going to submit)
+        - label: There are no features that I want to submit in Issues (当前 Issues 中没有我将要提交的新功能)
           required: true
   - type: textarea
     id: feature
     attributes:
-      label: 描述功能 (Describe feature)
+      label: Describe Feature (描述功能)
       description: |
-        简明概要地描述你的新功能，以及它将解决什么问题。
-        Briefly describe your new feature and what problem it will solve.
+        Please describe the feature you want as much detail as possible, including code and pictures.
+        请尽可能详细的描述你想要实现的功能，可以包含代码与图片。
     validations:
       required: true
-  - type: textarea
-    id: workflow
-    attributes:
-      label: 工作流程 (Workflow)
-      description: |
-        请向我们提供有关该功能的实现流程。
-        Please provide us with the implementation flow for this feature.
-      value: |
-        1. Create file ....
-        2. Add function ....
-        3. ...
-    validations:
-      required: true
-  - type: textarea
-    id: others
-    attributes:
-      label: 还有别的吗 (Anything else)
-      description: |
-        运行环境？浏览器？Goravel 版本？相关的配置？链接？参考资料？
-        Environment? Browser? Goravel version? Related configuration? Link? References?
-        任何能让我们对该功能的实现有更多帮助的东西。
-        Anything that can help us more with the implementation of this feature.
-    validations:
-      required: false
