@@ -11,25 +11,23 @@ jobs:
       - uses: wow-actions/welcome@v1
         with:
           FIRST_ISSUE: |
-            Hi @{{ author }}! 👋
+            Hi @{{ author }} 👋
 
-            感谢您向 Goravel 提出此 Issue！ 💖
-            Thanks for opening this issue to Goravel! 💖
-
-            看起来这是您在 `Goravel` 的第一个 Issue。请确保遵循 Issue 模板！
-            It looks like this is your first issue to `Goravel`. Please ensure to follow the issue template!
+            Thanks for opening this issue to Goravel, we will respond as soon as possible! 💖
+            感谢您向 Goravel 提出此 Issue，我们将尽快反馈！ 💖
 
           FIRST_PR: |
-            Hi @{{ author }}! 👋
+            Hi @{{ author }} 👋
 
-            感谢您向 Goravel 打开此 Pull Request！ 💖
-            Thanks for opening this pull request to Goravel!  💖
-
-            看起来这是您在 `Goravel` 的第一个 Pull Request。不要忘记先查看我们的贡献指南。
-            It looks like this is your first pull request to `Goravel`. Don't forget to check out our contributing guidelines first.
+            Thanks for opening this PR to Goravel, we will review it as soon as possible! 💖
+            感谢您向 Goravel 提交此 PR，我们将尽快 Review！ 💖
 
           FIRST_PR_MERGED: |
-            🎉 @{{ author }}
-            Congrats on merging your first pull request! We here at Goravel are proud of you!
+            Hi @{{ author }} 🎉
+            
+            Congrats on merging your first PR! Goravel is better because of you! 💖
+            恭喜您的第一个 PR 被合并，Goravel因您而更好！ 💖
 
-          STAR_MESSAGE: If you like this project, please ⭐star⭐ our repository to support us!
+          STAR_MESSAGE: | 
+            If you like this project, please ⭐star⭐ our repository to support us!
+            如果您喜欢这个项目，请 Star 仓库给予我们支持！
