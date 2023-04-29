@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: ❓ 讨论、问答和非项目问题 (Discussions, questions, and non-project issues)
-    url: https://github.com/goravel/goravel#Group
-    about: 其他不明之处，请移步我们的交流群 https://t.me/goravel (For other unclear things, please move to our group https://t.me/goravel)
+  - name: ❓ Discussions, Questions, etc. (讨论、问答等其他内容)
+    url: https://github.com/goravel/goravel/discussions
+    about: Or join the group to discuss directly (或者可以进群直接讨论)
