@@ -1,7 +1,6 @@
 name: ✨ Feature (功能请求)
 description: Suggest an great idea for Goravel (为 Goravel 提案一个新功能)
 title: "✨ [Feature] "
-labels: ["enhancement"]
 
 body:
   - type: markdown
