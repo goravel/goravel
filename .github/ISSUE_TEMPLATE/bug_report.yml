@@ -1,7 +1,6 @@
 name: 🐛 Bug Feedback (问题反馈)
 description: Create a feedback to help us improve (创建一个反馈以帮助我们改进)
 title: "🐛 [Bug] "
-labels: ["bug"]
 
 body:
   - type: markdown
