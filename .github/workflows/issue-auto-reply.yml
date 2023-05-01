@@ -22,6 +22,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           body: |
-
-            Hi @${{ github.event.issue.user.login }}, we think your feedback is very valuable! If you are interested, please submit a PR, please include test cases, documentation, etc., and ensure that the CI is passed, thank you and look forward to your contribution! 
-            Hi @${{ github.event.issue.user.login }}，我们认为您的反馈非常有价值！如果有兴趣欢迎提交 PR，请包含相应的测试用例、文档等，并确保 CI 通过，感谢和期待您的贡献！
+            Hi @${{ github.event.issue.user.login }} 👋
+            
+            We think your feedback is very valuable! If you are interested, please submit a PR, please include test cases, documentation, etc., and ensure that the CI is passed, thank you and look forward to your contribution! 
+            我们认为您的反馈非常有价值！如果有兴趣欢迎提交 PR，请包含相应的测试用例、文档等，并确保 CI 通过，感谢和期待您的贡献！

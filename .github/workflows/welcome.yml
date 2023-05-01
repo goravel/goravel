@@ -26,7 +26,7 @@ jobs:
             Hi @{{ author }} 🎉
             
             Congrats on merging your first PR! Goravel is better because of you! 💖
-            恭喜您的第一个 PR 被合并，Goravel因您而更好！ 💖
+            恭喜您的第一个 PR 被合并，Goravel 因您而更好！ 💖
 
           STAR_MESSAGE: | 
             If you like this project, please ⭐star⭐ our repository to support us!
