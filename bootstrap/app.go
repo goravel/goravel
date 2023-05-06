@@ -7,7 +7,7 @@ import (
 )
 
 func Boot() {
-	app := foundation.Application{}
+	app := foundation.NewApplication()
 
 	//Bootstrap the application
 	app.Boot()

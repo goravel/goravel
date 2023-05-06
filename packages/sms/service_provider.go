@@ -1,31 +1,27 @@
 package sms
 
 import (
-	configcontract "github.com/goravel/framework/contracts/config"
-	"github.com/goravel/framework/contracts/foundation"
-	"github.com/goravel/framework/support"
+	foundationcontract "github.com/goravel/framework/contracts/foundation"
+	"github.com/goravel/framework/foundation"
 )
 
-var App foundation.Application
+const Binding = "sms"
+
+var App foundationcontract.Application
 
 type ServiceProvider struct {
-	support.ServiceProvider
+	foundation.ServiceProvider
 }
 
-func (receiver *ServiceProvider) Register(app foundation.Application) {
+func (receiver *ServiceProvider) Register(app foundationcontract.Application) {
 	//receiver.Publishes(map[string]string{"a": "b"})
 	App = app
 
-	app.Bind("sms", func() (any, error) {
-		config, err := app.Make("config")
-		if err != nil {
-			return nil, err
-		}
-
-		return NewSms(config.(configcontract.Config)), nil
+	app.Bind(Binding, func() (any, error) {
+		return NewSms(app.MakeConfig()), nil
 	})
 }
 
-func (receiver *ServiceProvider) Boot(app foundation.Application) {
+func (receiver *ServiceProvider) Boot(app foundationcontract.Application) {
 
 }

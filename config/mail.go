@@ -4,7 +4,7 @@ import "github.com/goravel/framework/facades"
 
 func init() {
 	config := facades.Config
-	facades.Config.Add("mail", map[string]any{
+	config.Add("mail", map[string]any{
 		// SMTP Host Address
 		//
 		// Here you may provide the host address of the SMTP server used by your

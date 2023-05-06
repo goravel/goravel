@@ -1,26 +1,12 @@
 package config
 
 import (
-	"github.com/goravel/framework/auth"
-	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/console"
-	"github.com/goravel/framework/contracts"
-	"github.com/goravel/framework/crypt"
-	"github.com/goravel/framework/database"
-	"github.com/goravel/framework/event"
+	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
-	"github.com/goravel/framework/filesystem"
-	"github.com/goravel/framework/grpc"
-	"github.com/goravel/framework/hash"
-	"github.com/goravel/framework/http"
 	"github.com/goravel/framework/log"
-	"github.com/goravel/framework/mail"
-	"github.com/goravel/framework/queue"
-	"github.com/goravel/framework/route"
-	"github.com/goravel/framework/schedule"
-	"github.com/goravel/framework/validation"
 
-	"goravel/app/providers"
+	"goravel/packages/sms"
 )
 
 // Boot Start all init methods of the current folder to bootstrap all config.
@@ -64,31 +50,32 @@ func init() {
 		// The service providers listed here will be automatically loaded on the
 		// request to your application. Feel free to add your own services to
 		// this array to grant expanded functionality to your applications.
-		"providers": []contracts.ServiceProvider{
+		"providers": []foundation.ServiceProvider{
 			&log.ServiceProvider{},
 			&console.ServiceProvider{},
-			&database.ServiceProvider{},
-			&cache.ServiceProvider{},
-			&http.ServiceProvider{},
-			&route.ServiceProvider{},
-			&schedule.ServiceProvider{},
-			&event.ServiceProvider{},
-			&queue.ServiceProvider{},
-			&grpc.ServiceProvider{},
-			&mail.ServiceProvider{},
-			&auth.ServiceProvider{},
-			&hash.ServiceProvider{},
-			&crypt.ServiceProvider{},
-			&filesystem.ServiceProvider{},
-			&validation.ServiceProvider{},
-			&providers.AppServiceProvider{},
-			&providers.AuthServiceProvider{},
-			&providers.RouteServiceProvider{},
-			&providers.GrpcServiceProvider{},
-			&providers.ConsoleServiceProvider{},
-			&providers.QueueServiceProvider{},
-			&providers.EventServiceProvider{},
-			&providers.ValidationServiceProvider{},
+			//&database.ServiceProvider{},
+			//&cache.ServiceProvider{},
+			//&http.ServiceProvider{},
+			//&route.ServiceProvider{},
+			//&schedule.ServiceProvider{},
+			//&event.ServiceProvider{},
+			//&queue.ServiceProvider{},
+			//&grpc.ServiceProvider{},
+			//&mail.ServiceProvider{},
+			//&auth.ServiceProvider{},
+			//&hash.ServiceProvider{},
+			//&crypt.ServiceProvider{},
+			//&filesystem.ServiceProvider{},
+			//&validation.ServiceProvider{},
+			//&providers.AppServiceProvider{},
+			//&providers.AuthServiceProvider{},
+			//&providers.RouteServiceProvider{},
+			//&providers.GrpcServiceProvider{},
+			//&providers.ConsoleServiceProvider{},
+			//&providers.QueueServiceProvider{},
+			//&providers.EventServiceProvider{},
+			//&providers.ValidationServiceProvider{},
+			&sms.ServiceProvider{},
 		},
 	})
 }

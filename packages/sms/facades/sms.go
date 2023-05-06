@@ -3,12 +3,12 @@ package facades
 import (
 	"log"
 
-	"github.com/goravel/framework/services/sms"
-	"github.com/goravel/framework/services/sms/contracts"
+	"goravel/packages/sms"
+	"goravel/packages/sms/contracts"
 )
 
 func Sms() contracts.Sms {
-	instance, err := sms.App.Make("sms")
+	instance, err := sms.App.Make(sms.Binding)
 	if err != nil {
 		log.Fatalln(err)
 		return nil
