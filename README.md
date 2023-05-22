@@ -19,22 +19,22 @@ Welcome to star, PR and issues！
 go run . artisan key:generate
 
 // Route
-facades.Route.Get("/", userController.Show)
+facades.Route().Get("/", userController.Show)
 
 // ORM
-facades.Orm.Query().With("Author").First(&user)
+facades.Orm().Query().With("Author").First(&user)
 
 // Task Scheduling
-facades.Schedule.Command("send:emails name").EveryMinute()
+facades.Schedule().Command("send:emails name").EveryMinute()
 
 // Log
-facades.Log.Debug(message)
+facades.Log().Debug(message)
 
 // Cache
-value := facades.Cache.Get("goravel", "default")
+value := facades.Cache().Get("goravel", "default")
 
 // Queues
-err := facades.Queue.Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
+err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 ```
 
 ## Documentation

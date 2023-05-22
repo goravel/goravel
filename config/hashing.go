@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	config := facades.Config
+	config := facades.Config()
 	config.Add("hashing", map[string]any{
 		// Hashing Driver
 		//

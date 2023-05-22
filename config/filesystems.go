@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	config := facades.Config
+	config := facades.Config()
 	config.Add("filesystems", map[string]any{
 		// Default Filesystem Disk
 		//

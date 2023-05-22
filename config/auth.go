@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	config := facades.Config
+	config := facades.Config()
 	config.Add("auth", map[string]any{
 		// Authentication Defaults
 		//
