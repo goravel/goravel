@@ -23,4 +23,3 @@ jobs:
           body: |
             This issue has been closed automatically because it has not had recent activity for 3 days. If you have any questions, please comment here.
             由于该 Issue 3天未收到回应，现已被自动关闭，若有任何问题，可评论回复。
-
