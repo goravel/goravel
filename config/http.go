@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	config := facades.Config
+	config := facades.Config()
 	config.Add("http", map[string]any{
 		// HTTP URL
 		"url": config.Env("APP_URL", "http://localhost"),

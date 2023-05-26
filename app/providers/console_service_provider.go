@@ -1,6 +1,7 @@
 package providers
 
 import (
+	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
 
 	"goravel/app/console"
@@ -9,12 +10,12 @@ import (
 type ConsoleServiceProvider struct {
 }
 
-func (receiver *ConsoleServiceProvider) Register() {
+func (receiver *ConsoleServiceProvider) Register(app foundation.Application) {
 	kernel := console.Kernel{}
-	facades.Schedule.Register(kernel.Schedule())
-	facades.Artisan.Register(kernel.Commands())
+	facades.Schedule().Register(kernel.Schedule())
+	facades.Artisan().Register(kernel.Commands())
 }
 
-func (receiver *ConsoleServiceProvider) Boot() {
+func (receiver *ConsoleServiceProvider) Boot(app foundation.Application) {
 
 }

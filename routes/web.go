@@ -8,12 +8,12 @@ import (
 )
 
 func Web() {
-	facades.Route.Get("/", func(ctx http.Context) {
+	facades.Route().Get("/", func(ctx http.Context) {
 		ctx.Response().Json(http.StatusOK, http.Json{
 			"Hello": "Goravel",
 		})
 	})
 
 	userController := controllers.NewUserController()
-	facades.Route.Get("/users/{id}", userController.Show)
+	facades.Route().Get("/users/{id}", userController.Show)
 }
