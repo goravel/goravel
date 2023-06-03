@@ -15,5 +15,5 @@ func NewSms(config config.Config) *Sms {
 }
 
 func (s *Sms) Send() {
-	fmt.Println(s.config.Get("app.key"))
+	fmt.Println(s.config.Get("app.key"), s.config.Get("sms.driver"))
 }

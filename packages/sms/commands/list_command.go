@@ -1,4 +1,4 @@
-package sms
+package commands
 
 import (
 	"github.com/goravel/framework/contracts/console"
