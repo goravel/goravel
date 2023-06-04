@@ -4,7 +4,6 @@ import (
 	"github.com/goravel/framework/facades"
 
 	"goravel/bootstrap"
-	smsfacades "goravel/packages/sms/facades"
 )
 
 func main() {
@@ -17,9 +16,6 @@ func main() {
 			facades.Log().Errorf("Route run error: %v", err)
 		}
 	}()
-
-	sms := smsfacades.Sms()
-	sms.Send()
 
 	select {}
 }
