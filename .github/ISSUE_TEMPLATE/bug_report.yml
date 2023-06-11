@@ -1,0 +1,43 @@
+name: 🐛 Bug Feedback (问题反馈)
+description: Create a feedback to help us improve (创建一个反馈以帮助我们改进)
+title: "🐛 [Bug] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please only use English or Chinese to fill in**
+        **请仅使用英文或中文进行填写**
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before feedback (在反馈之前)
+      options:
+        - label: I've searched the existing Issues, Discussions and Google (我已经搜索了现有的 Issues, Discussions 和 Google)
+          required: true
+        - label: The problem can be stably reproduced (这个问题可以被稳定复现)
+          required: false
+        - label: The problem is generated after upgrading Goravel (问题是在升级 Goravel 后产生的)
+          required: false
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe The Problem (描述问题)
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction Code (复现代码或截图)
+    validations:
+      required: true
+  - type: textarea
+    id: others
+    attributes:
+      label: Environment (运行环境)
+      value: |
+        System: Linux/Mac/Windows
+        Golang Version: 
+        Goravel Version:
+    validations:
+      required: true

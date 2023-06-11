@@ -1,0 +1,25 @@
+name: ✨ Feature (功能请求)
+description: Suggest an great idea for Goravel (为 Goravel 提案一个新功能)
+title: "✨ [Feature] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please only use English or Chinese to fill in**
+        **请仅使用英文或中文进行填写**
+  - type: checkboxes
+    attributes:
+      label: Before feedback (在反馈之前)
+      options:
+        - label: There are no features that I want to submit in Issues (当前 Issues 中没有我将要提交的新功能)
+          required: true
+  - type: textarea
+    id: feature
+    attributes:
+      label: Describe Feature (描述功能)
+      description: |
+        Please describe the feature you want as much detail as possible, including code and pictures.
+        请尽可能详细的描述你想要实现的功能，可以包含代码与图片。
+    validations:
+      required: true

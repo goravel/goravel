@@ -1,0 +1,33 @@
+name: Welcome
+on:
+  pull_request:
+    types: [opened, closed]
+  issues:
+    types: [opened]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/welcome@v1
+        with:
+          FIRST_ISSUE: |
+            Hi @{{ author }} 👋
+
+            Thanks for opening this issue to Goravel, we will respond as soon as possible! 💖
+            感谢您向 Goravel 提出此 Issue，我们将尽快反馈！ 💖
+
+          FIRST_PR: |
+            Hi @{{ author }} 👋
+
+            Thanks for opening this PR to Goravel, we will review it as soon as possible! 💖
+            感谢您向 Goravel 提交此 PR，我们将尽快 Review！ 💖
+
+          FIRST_PR_MERGED: |
+            Hi @{{ author }} 🎉
+            
+            Congrats on merging your first PR! Goravel is better because of you! 💖
+            恭喜您的第一个 PR 被合并，Goravel 因您而更好！ 💖
+
+          STAR_MESSAGE: | 
+            If you like this project, please ⭐star⭐ our repository to support us!
+            如果您喜欢这个项目，请 Star 仓库给予我们支持！

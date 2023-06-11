@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ❓ Discussions, Questions, etc. (讨论、问答等其他内容)
+    url: https://github.com/goravel/goravel/discussions
+    about: Or join the group to discuss directly (或者可以进群直接讨论)

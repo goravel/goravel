@@ -1,0 +1,28 @@
+name: Issue Auto Reply
+
+on:
+  issues:
+    types: [ labeled ]
+
+permissions:
+  contents: read
+
+jobs:
+  issue-reply:
+    permissions:
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: bug or enhancement
+        if: github.event.label.name == 'bug' || github.event.label.name == 'enhancement'
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Hi @${{ github.event.issue.user.login }} 👋
+            
+            We think your feedback is very valuable! If you are interested, please submit a PR, please include test cases, documentation, etc., and ensure that the CI is passed, thank you and look forward to your contribution! 
+            我们认为您的反馈非常有价值！如果有兴趣欢迎提交 PR，请包含相应的测试用例、文档等，并确保 CI 通过，感谢和期待您的贡献！
