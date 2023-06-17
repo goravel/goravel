@@ -18,6 +18,7 @@ import (
 	"github.com/goravel/framework/queue"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/schedule"
+	"github.com/goravel/framework/support/carbon"
 	"github.com/goravel/framework/validation"
 
 	"goravel/app/providers"
@@ -51,7 +52,7 @@ func init() {
 		// Here you may specify the default timezone for your application.
 		// Example: UTC, Asia/Shanghai
 		// More: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-		"timezone": "UTC",
+		"timezone": carbon.UTC,
 
 		// Encryption Key
 		//
