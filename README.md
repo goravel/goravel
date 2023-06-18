@@ -48,29 +48,22 @@ Example [https://github.com/goravel/example](https://github.com/goravel/example)
 
 ## Main Function
 
-- [x] Config
-- [x] Http
-- [x] Authentication
-- [x] Authorization
-- [x] Orm
-- [x] Migrate
-- [x] Logger
-- [x] Cache
-- [x] Grpc
-- [x] Artisan Console
-- [x] Task Scheduling
-- [x] Queue
-- [x] Event
-- [x] FileStorage
-- [x] Mail
-- [x] Validation
-- [x] Mock
-- [x] Hash
-- [x] Crypt
+|             |                      |                      |                      |
+| ----------  | --------------       | --------------       | --------------       |
+| [Config](https://www.goravel.dev/getting-started/configuration.html)   | [Http](https://www.goravel.dev/the-basics/routing.html)  | [Authentication](https://www.goravel.dev/security/authentication.html)  | [Authorization](https://www.goravel.dev/security/authorization.html)  |
+| [Orm](https://www.goravel.dev/ORM/getting-started.html)   | [Migrate](https://www.goravel.dev/ORM/migrations.html)  | [Logger](https://www.goravel.dev/the-basics/logging.html)  | [Cache](https://www.goravel.dev/digging-deeper/cache.html)  |
+| [Grpc](https://www.goravel.dev/the-basics/grpc.html)   | [Artisan Console](https://www.goravel.dev/digging-deeper/artisan-console.html)  | [Task Scheduling](https://www.goravel.dev/digging-deeper/task-scheduling.html)  | [Queue](https://www.goravel.dev/digging-deeper/queues.html)  |
+| [Event](https://www.goravel.dev/digging-deeper/event.html)   | [FileStorage](https://www.goravel.dev/digging-deeper/filesystem.html)  | [Mail](https://www.goravel.dev/digging-deeper/mail.html)  | [Validation](https://www.goravel.dev/the-basics/validation.html)  |
+| [Mock](https://www.goravel.dev/digging-deeper/mock.html)   | [Hash](https://www.goravel.dev/security/hashing.html)  | [Crypt](https://www.goravel.dev/security/encryption.html)  | [Carbon](https://www.goravel.dev/digging-deeper/helpers.html)  |
+| [Package Development](https://www.goravel.dev/digging-deeper/package-development.html)   |  |   |   |
 
 ## Roadmap
 
 [For Detail](https://github.com/goravel/goravel/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+## Excellent Extend Packages
+
+[For Detail](https://goravel.dev/prologue/packages.html)
 
 ## Contributors
 
@@ -84,6 +77,7 @@ This project exists thanks to all the people who contribute.
 <a href="https://github.com/Juneezee" target="_blank"><img src="https://avatars.githubusercontent.com/u/20135478?v=4" width="48" height="48"></a>
 <a href="https://github.com/dragoonchang" target="_blank"><img src="https://avatars.githubusercontent.com/u/1432336?v=4" width="48" height="48"></a>
 <a href="https://github.com/dhanusaputra" target="_blank"><img src="https://avatars.githubusercontent.com/u/35093673?v=4" width="48" height="48"></a>
+<a href="https://github.com/mauri870" target="_blank"><img src="https://avatars.githubusercontent.com/u/10168637?v=4" width="48" height="48"></a>
 
 ## Group
 
