@@ -24,10 +24,6 @@ func init() {
 			"memory": map[string]any{
 				"driver": "memory",
 			},
-			"redis": map[string]any{
-				"driver":     "redis",
-				"connection": "default",
-			},
 		},
 
 		// Cache Key Prefix
