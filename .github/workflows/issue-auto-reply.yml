@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: bug or enhancement
-        if: github.event.label.name == 'bug' || github.event.label.name == 'enhancement'
+        if: github.event.label.name == '☢️ Bug' || github.event.label.name == '✏️ Feature'
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'create-comment'
