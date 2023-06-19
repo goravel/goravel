@@ -67,7 +67,7 @@ Example [https://github.com/goravel/example](https://github.com/goravel/example)
 
 ## Contributors
 
-This project exists thanks to all the people who contribute, to participate in the contribution, please see [Contribution](/prologue/contributions.html).
+This project exists thanks to all the people who contribute, to participate in the contribution, please see [Contribution](https://goravel.dev/prologue/contributions.html).
 
 <a href="https://github.com/hwbrzzl" target="_blank"><img src="https://avatars.githubusercontent.com/u/24771476?v=4" width="48" height="48"></a>
 <a href="https://github.com/DevHaoZi" target="_blank"><img src="https://avatars.githubusercontent.com/u/115467771?v=4" width="48" height="48"></a>

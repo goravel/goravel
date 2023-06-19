@@ -65,7 +65,7 @@ err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 贡献者
 
-这个项目的存在要归功于所有做出贡献的人，参与贡献请查看[贡献指南](/zh/prologue/contributions.html)。
+这个项目的存在要归功于所有做出贡献的人，参与贡献请查看[贡献指南](https://goravel.dev/zh/prologue/contributions.html)。
 
 <a href="https://github.com/hwbrzzl" target="_blank"><img src="https://avatars.githubusercontent.com/u/24771476?v=4" width="48" height="48"></a>
 <a href="https://github.com/DevHaoZi" target="_blank"><img src="https://avatars.githubusercontent.com/u/115467771?v=4" width="48" height="48"></a>
