@@ -20,6 +20,7 @@ import (
 	"github.com/goravel/framework/schedule"
 	"github.com/goravel/framework/support/carbon"
 	"github.com/goravel/framework/validation"
+	"goravel/app/exceptions"
 
 	"goravel/app/providers"
 )
@@ -72,6 +73,7 @@ func init() {
 			&cache.ServiceProvider{},
 			&http.ServiceProvider{},
 			&route.ServiceProvider{},
+			&exceptions.Handler{},
 			&schedule.ServiceProvider{},
 			&event.ServiceProvider{},
 			&queue.ServiceProvider{},
