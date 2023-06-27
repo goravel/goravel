@@ -12,11 +12,11 @@ type DatabaseServiceProvider struct {
 }
 
 func (receiver *DatabaseServiceProvider) Register(app foundation.Application) {
-	facades.Seeder().Register([]seeder.Seeder{
-		&seeders.DatabaseSeeder{},
-	})
+
 }
 
 func (receiver *DatabaseServiceProvider) Boot(app foundation.Application) {
-
+	facades.Seeder().Register([]seeder.Seeder{
+		&seeders.DatabaseSeeder{},
+	})
 }
