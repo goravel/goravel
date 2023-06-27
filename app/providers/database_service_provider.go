@@ -1,11 +1,11 @@
 package providers
 
 import (
-	"goravel/database/seeders"
-
 	"github.com/goravel/framework/contracts/database/seeder"
 	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
+	
+	"goravel/database/seeders"
 )
 
 type DatabaseServiceProvider struct {
