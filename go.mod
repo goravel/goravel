@@ -3,8 +3,8 @@ module goravel
 go 1.18
 
 require (
-	github.com/goravel/framework v1.12.4
-	google.golang.org/grpc v1.56.0
+	github.com/goravel/framework v1.12.5
+	google.golang.org/grpc v1.56.1
 )
 
 require (
@@ -24,7 +24,7 @@ require (
 	github.com/RichardKnop/logging v0.0.0-20190827224416-1a693bdd4fae // indirect
 	github.com/RichardKnop/machinery/v2 v2.0.11 // indirect
 	github.com/aws/aws-sdk-go v1.37.16 // indirect
-	github.com/bytedance/sonic v1.9.1 // indirect
+	github.com/bytedance/sonic v1.9.2 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
