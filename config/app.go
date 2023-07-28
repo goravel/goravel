@@ -90,6 +90,7 @@ func init() {
 			&providers.QueueServiceProvider{},
 			&providers.EventServiceProvider{},
 			&providers.ValidationServiceProvider{},
+			&providers.DatabaseServiceProvider{},
 		},
 	})
 }
