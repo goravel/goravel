@@ -16,7 +16,7 @@ func init() {
 		// To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 		"paths":                []string{"*"},
 		"allowed_methods":      []string{"*"},
-		"allowed_origins":      []string{"https://www.goravel.com"},
+		"allowed_origins":      []string{"*"},
 		"allowed_headers":      []string{"*"},
 		"exposed_headers":      []string{""},
 		"max_age":              0,
