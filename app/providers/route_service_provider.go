@@ -12,14 +12,16 @@ type RouteServiceProvider struct {
 }
 
 func (receiver *RouteServiceProvider) Register(app foundation.Application) {
-	//Add HTTP middlewares
-	facades.Route().GlobalMiddleware(http.Kernel{}.Middleware()...)
 }
 
 func (receiver *RouteServiceProvider) Boot(app foundation.Application) {
+	//Add HTTP middleware
+	facades.Route().GlobalMiddleware(http.Kernel{}.Middleware()...)
+
 	receiver.configureRateLimiting()
 
 	routes.Web()
+	routes.Api()
 }
 
 func (receiver *RouteServiceProvider) configureRateLimiting() {

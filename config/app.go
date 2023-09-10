@@ -21,6 +21,7 @@ import (
 	"github.com/goravel/framework/support/carbon"
 	"github.com/goravel/framework/testing"
 	"github.com/goravel/framework/validation"
+	"github.com/goravel/gin"
 
 	"goravel/app/providers"
 )
@@ -93,6 +94,7 @@ func init() {
 			&providers.EventServiceProvider{},
 			&providers.ValidationServiceProvider{},
 			&providers.DatabaseServiceProvider{},
+			&gin.ServiceProvider{},
 		},
 	})
 }

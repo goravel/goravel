@@ -32,7 +32,7 @@ func init() {
 		// the original token being created until they must re-authenticate.
 		// Defaults to 2 weeks.
 		//
-		// You can also set this to null, to yield an infinite refresh time.
+		// You can also set this to 0, to yield an infinite refresh time.
 		// Some may want this instead of never expiring tokens for e.g. a mobile app.
 		// This is not particularly recommended, so make sure you have appropriate
 		// systems in place to revoke the token if necessary.
