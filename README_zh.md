@@ -65,7 +65,7 @@ err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 | [Grpc](https://www.goravel.dev/zh/the-basics/grpc.html)   | [Artisan 命令行](https://www.goravel.dev/zh/digging-deeper/artisan-console.html)  | [任务调度](https://www.goravel.dev/zh/digging-deeper/task-scheduling.html)  | [队列](https://www.goravel.dev/zh/digging-deeper/queues.html)  |
 | [事件系统](https://www.goravel.dev/zh/digging-deeper/event.html)   | [文件存储](https://www.goravel.dev/zh/digging-deeper/filesystem.html)  | [邮件](https://www.goravel.dev/zh/digging-deeper/mail.html)  | [表单验证](https://www.goravel.dev/zh/the-basics/validation.html)  |
 | [Mock](https://www.goravel.dev/zh/digging-deeper/mock.html)   | [Hash](https://www.goravel.dev/zh/security/hashing.html)  | [Crypt](https://www.goravel.dev/zh/security/encryption.html)  | [Carbon](https://www.goravel.dev/zh/digging-deeper/helpers.html)  |
-| [扩展包开发](https://www.goravel.dev/zh/digging-deeper/package-development.html)   |  |   |   |
+| [扩展包开发](https://www.goravel.dev/zh/digging-deeper/package-development.html)   | [测试](https://www.goravel.dev/zh/testing/getting-started.html) |   |   |
 
 ## 路线图
 

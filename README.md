@@ -67,7 +67,7 @@ Example [https://github.com/goravel/example](https://github.com/goravel/example)
 | [Grpc](https://www.goravel.dev/the-basics/grpc.html)   | [Artisan Console](https://www.goravel.dev/digging-deeper/artisan-console.html)  | [Task Scheduling](https://www.goravel.dev/digging-deeper/task-scheduling.html)  | [Queue](https://www.goravel.dev/digging-deeper/queues.html)  |
 | [Event](https://www.goravel.dev/digging-deeper/event.html)   | [FileStorage](https://www.goravel.dev/digging-deeper/filesystem.html)  | [Mail](https://www.goravel.dev/digging-deeper/mail.html)  | [Validation](https://www.goravel.dev/the-basics/validation.html)  |
 | [Mock](https://www.goravel.dev/digging-deeper/mock.html)   | [Hash](https://www.goravel.dev/security/hashing.html)  | [Crypt](https://www.goravel.dev/security/encryption.html)  | [Carbon](https://www.goravel.dev/digging-deeper/helpers.html)  |
-| [Package Development](https://www.goravel.dev/digging-deeper/package-development.html)   |  |   |   |
+| [Package Development](https://www.goravel.dev/digging-deeper/package-development.html)   | [Testing](https://www.goravel.dev/testing/getting-started.html) |   |   |
 
 ## Roadmap
 
