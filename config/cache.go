@@ -19,7 +19,7 @@ func init() {
 		// Here you may define all the cache "stores" for your application as
 		// well as their drivers. You may even define multiple stores for the
 		// same cache driver to group types of items stored in your caches.
-		// Available Drivers: "memory", "redis", "custom"
+		// Available Drivers: "memory", "custom"
 		"stores": map[string]any{
 			"memory": map[string]any{
 				"driver": "memory",
