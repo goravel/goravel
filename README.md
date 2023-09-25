@@ -96,6 +96,12 @@ This project exists thanks to all the people who contribute, to participate in t
 <a href="https://github.com/flc1125" target="_blank"><img src="https://avatars.githubusercontent.com/u/14297703?v=4" width="48" height="48"></a>
 <a href="https://github.com/zzpwestlife" target="_blank"><img src="https://avatars.githubusercontent.com/u/12382180?v=4" width="48" height="48"></a>
 
+## Sponsor
+
+Better development of the project is inseparable from your support, reward us by [Open Collective](https://opencollective.com/goravel).
+
+<p align="left"><img src="https://www.goravel.dev/reward.png" width="200"></p>
+
 ## Group
 
 Welcome more discussion in Telegram.
