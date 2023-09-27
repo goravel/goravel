@@ -92,6 +92,13 @@ err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 <a href="https://github.com/Marian0" target="_blank"><img src="https://avatars.githubusercontent.com/u/624592?v=4" width="48" height="48"></a>
 <a href="https://github.com/ahmed3mar" target="_blank"><img src="https://avatars.githubusercontent.com/u/12982325?v=4" width="48" height="48"></a>
 <a href="https://github.com/flc1125" target="_blank"><img src="https://avatars.githubusercontent.com/u/14297703?v=4" width="48" height="48"></a>
+<a href="https://github.com/zzpwestlife" target="_blank"><img src="https://avatars.githubusercontent.com/u/12382180?v=4" width="48" height="48"></a>
+
+## 打赏
+
+开源项目的发展离不开您的支持，感谢微信打赏。
+
+<p align="left"><img src="https://www.goravel.dev/reward-wechat.jpg" width="200"></p>
 
 ## 群组
 
