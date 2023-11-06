@@ -19,8 +19,8 @@ English | [中文](./README_zh.md)
 Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
 Gopher quickly build their own applications.
 
-The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let Phper don't need to learn a
-new framework, but also happy to play around Golang! Tribute Laravel!
+The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let Php developer don't need to learn a
+new framework, but also happy to play around Golang! In tribute to Laravel!
 
 Welcome to star, PR and issues！
 

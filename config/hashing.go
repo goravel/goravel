@@ -23,7 +23,7 @@ func init() {
 		// factor by 1 doubles the necessary time. After a certain point, the returns on
 		// hashing time versus attacker time are diminishing, so choose your cost factor wisely.
 		"bcrypt": map[string]any{
-			"rounds": 10,
+			"rounds": 12,
 		},
 
 		// Argon2id Hashing Options
