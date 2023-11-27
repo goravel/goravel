@@ -17,6 +17,8 @@ func init() {
 				"route": func() (route.Route, error) {
 					return ginfacades.Route("gin"), nil
 				},
+				// Optional, default is 4096 KB
+				"body_limit": 4096,
 			},
 		},
 		// HTTP URL
