@@ -1,8 +1,10 @@
 package config
 
 import (
+	"github.com/gin-gonic/gin/render"
 	"github.com/goravel/framework/contracts/route"
 	"github.com/goravel/framework/facades"
+	"github.com/goravel/gin"
 	ginfacades "github.com/goravel/gin/facades"
 )
 
