@@ -21,7 +21,7 @@ func init() {
 		// may even configure multiple disks of the same driver. Defaults have
 		// been set up for each driver as an example of the required values.
 		//
-		// Supported Drivers: "local", "s3", "oss", "cos", "minio", "custom"
+		// Supported Drivers: "local", "custom"
 		"disks": map[string]any{
 			"local": map[string]any{
 				"driver": "local",
