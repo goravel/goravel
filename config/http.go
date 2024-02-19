@@ -20,6 +20,10 @@ func init() {
 				"route": func() (route.Route, error) {
 					return ginfacades.Route("gin"), nil
 				},
+				// Optional, default is http/template
+			        "template": func() (render.HTMLRender, error) {
+			            return gin.DefaultTemplate()
+			        },
 			},
 		},
 		// HTTP URL
