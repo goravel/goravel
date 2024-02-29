@@ -18,8 +18,10 @@ import (
 	"github.com/goravel/framework/queue"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/schedule"
+	"github.com/goravel/framework/session"
 	"github.com/goravel/framework/support/carbon"
 	"github.com/goravel/framework/testing"
+	"github.com/goravel/framework/translation"
 	"github.com/goravel/framework/validation"
 	"github.com/goravel/gin"
 
@@ -98,6 +100,8 @@ func init() {
 			&crypt.ServiceProvider{},
 			&filesystem.ServiceProvider{},
 			&validation.ServiceProvider{},
+			&session.ServiceProvider{},
+			&translation.ServiceProvider{},
 			&testing.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.AuthServiceProvider{},
