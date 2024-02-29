@@ -37,6 +37,6 @@ func init() {
 		// Here you may change the name of the cookie used to identify a session
 		// in the application. The name specified here will get used every time
 		// a new session cookie is created by the framework for every driver.
-		"cookie": config.Env("SESSION_COOKIE", str.Of(config.GetString("app.name")).Lower().Snake("_").String()+"_session"),
+		"cookie": config.Env("SESSION_COOKIE", str.Of(config.GetString("app.name")).Snake().Lower().String()+"_session"),
 	})
 }
