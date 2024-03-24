@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/goravel/framework v1.13.7
-	github.com/goravel/gin v1.1.6
+	github.com/goravel/gin v1.1.7
 	github.com/stretchr/testify v1.8.4
 	google.golang.org/grpc v1.58.2
 )
