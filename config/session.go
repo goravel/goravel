@@ -22,7 +22,8 @@ func init() {
 		//
 		// Here you may specify the number of minutes that you wish the session
 		// to be allowed to remain idle before it expires. If you want them
-		// to immediately expire on the browser closing, set that option.
+		// to immediately expire when the browser is closed, then you may
+		// indicate that via the expire_on_close configuration option.
 		"lifetime": config.Env("SESSION_LIFETIME", 120),
 
 		"expire_on_close": config.Env("SESSION_EXPIRE_ON_CLOSE", false),
