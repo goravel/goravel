@@ -58,14 +58,13 @@ err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 主要功能
 
-|             |                      |                      |                      |
-| ----------  | --------------       | --------------       | --------------       |
-| [自定义配置](https://www.goravel.dev/zh/getting-started/configuration.html)   | [HTTP 服务](https://www.goravel.dev/zh/the-basics/routing.html)  | [用户认证](https://www.goravel.dev/zh/security/authentication.html)  | [用户授权](https://www.goravel.dev/zh/security/authorization.html)  |
-| [数据库 ORM](https://www.goravel.dev/zh/ORM/getting-started.html)   | [数据库迁移](https://www.goravel.dev/zh/ORM/migrations.html)  | [日志](https://www.goravel.dev/zh/the-basics/logging.html)  | [缓存](https://www.goravel.dev/zh/digging-deeper/cache.html)  |
-| [Grpc](https://www.goravel.dev/zh/the-basics/grpc.html)   | [Artisan 命令行](https://www.goravel.dev/zh/digging-deeper/artisan-console.html)  | [任务调度](https://www.goravel.dev/zh/digging-deeper/task-scheduling.html)  | [队列](https://www.goravel.dev/zh/digging-deeper/queues.html)  |
-| [事件系统](https://www.goravel.dev/zh/digging-deeper/event.html)   | [文件存储](https://www.goravel.dev/zh/digging-deeper/filesystem.html)  | [邮件](https://www.goravel.dev/zh/digging-deeper/mail.html)  | [表单验证](https://www.goravel.dev/zh/the-basics/validation.html)  |
-| [Mock](https://www.goravel.dev/zh/digging-deeper/mock.html)   | [Hash](https://www.goravel.dev/zh/security/hashing.html)  | [Crypt](https://www.goravel.dev/zh/security/encryption.html)  | [Carbon](https://www.goravel.dev/zh/digging-deeper/helpers.html)  |
-| [扩展包开发](https://www.goravel.dev/zh/digging-deeper/package-development.html)   | [测试](https://www.goravel.dev/zh/testing/getting-started.html) |   |   |
+|             |                      |                      |                      |                      |
+| ----------  | --------------       | --------------       | --------------       | --------------       |
+| [自定义配置](https://www.goravel.dev/zh/getting-started/configuration.html)   | [HTTP 服务](https://www.goravel.dev/zh/the-basics/routing.html)  | [用户认证](https://www.goravel.dev/zh/security/authentication.html)  | [用户授权](https://www.goravel.dev/zh/security/authorization.html)  | [数据库 ORM](https://www.goravel.dev/zh/orm/getting-started.html)   |
+| [数据库迁移](https://www.goravel.dev/zh/orm/migrations.html)  | [日志](https://www.goravel.dev/zh/the-basics/logging.html)  | [缓存](https://www.goravel.dev/zh/digging-deeper/cache.html)  | [Grpc](https://www.goravel.dev/zh/the-basics/grpc.html)   | [Artisan 命令行](https://www.goravel.dev/zh/digging-deeper/artisan-console.html)  |
+| [任务调度](https://www.goravel.dev/zh/digging-deeper/task-scheduling.html)  | [队列](https://www.goravel.dev/zh/digging-deeper/queues.html)  | [事件系统](https://www.goravel.dev/zh/digging-deeper/event.html)   | [文件存储](https://www.goravel.dev/zh/digging-deeper/filesystem.html)  | [邮件](https://www.goravel.dev/zh/digging-deeper/mail.html)  |
+| [表单验证](https://www.goravel.dev/zh/the-basics/validation.html)  | [Mock](https://www.goravel.dev/zh/digging-deeper/mock.html)   | [Hash](https://www.goravel.dev/zh/security/hashing.html)  | [Crypt](https://www.goravel.dev/zh/security/encryption.html)  | [Carbon](https://www.goravel.dev/zh/digging-deeper/helpers.html)  |
+| [扩展包开发](https://www.goravel.dev/zh/digging-deeper/package-development.html)   | [测试](https://www.goravel.dev/zh/testing/getting-started.html) | [本地化](https://www.goravel.dev/zh/digging-deeper/localization.html)  | [Session](https://www.goravel.dev/zh/the-basics/session.html)  | |
 
 ## 路线图
 
@@ -73,11 +72,11 @@ err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 优秀扩展包
 
-[查看详情](https://goravel.dev/zh/prologue/packages.html)
+[查看详情](https://www.goravel.dev/zh/prologue/packages.html)
 
 ## 贡献者
 
-这个项目的存在要归功于所有做出贡献的人，参与贡献请查看[贡献指南](https://goravel.dev/zh/prologue/contributions.html)。
+这个项目的存在要归功于所有做出贡献的人，参与贡献请查看[贡献指南](https://www.goravel.dev/zh/prologue/contributions.html)。
 
 <a href="https://github.com/hwbrzzl" target="_blank"><img src="https://avatars.githubusercontent.com/u/24771476?v=4" width="48" height="48"></a>
 <a href="https://github.com/DevHaoZi" target="_blank"><img src="https://avatars.githubusercontent.com/u/115467771?v=4" width="48" height="48"></a>
