@@ -24,7 +24,7 @@ func init() {
 				"prefix":   "",
 				"singular": false, // Table name is singular
 			},
-			"postgresql": map[string]any{
+			"postgres": map[string]any{
 				"driver":   "postgresql",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
 				"port":     config.Env("DB_PORT", 5432),
@@ -32,7 +32,7 @@ func init() {
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"sslmode":  "disable",
-				"timezone": "UTC", //Asia/Shanghai
+				"timezone": "UTC", // Asia/Shanghai
 				"prefix":   "",
 				"singular": false, // Table name is singular
 			},
