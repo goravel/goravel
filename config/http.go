@@ -17,15 +17,15 @@ func init() {
 		"drivers": map[string]any{
 			"gin": map[string]any{
 				// Optional, default is 4096 KB
-				"body_limit": 4096,
+				"body_limit":   4096,
 				"header_limit": 4096,
 				"route": func() (route.Route, error) {
 					return ginfacades.Route("gin"), nil
 				},
 				// Optional, default is http/template
-			        "template": func() (render.HTMLRender, error) {
-			            return gin.DefaultTemplate()
-			        },
+				"template": func() (render.HTMLRender, error) {
+					return gin.DefaultTemplate()
+				},
 			},
 		},
 		// HTTP URL

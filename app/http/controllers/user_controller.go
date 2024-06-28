@@ -5,12 +5,12 @@ import (
 )
 
 type UserController struct {
-	//Dependent services
+	// Dependent services
 }
 
 func NewUserController() *UserController {
 	return &UserController{
-		//Inject services
+		// Inject services
 	}
 }
 
