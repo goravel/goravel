@@ -2,8 +2,6 @@
 
 <img src="https://www.goravel.dev/logo.png?v=1.14.x" width="300" alt="Logo">
 
-<a href="https://trendshift.io/repositories/7188" target="_blank"><img src="https://trendshift.io/api/badge/repositories/7188" alt="goravel%2Fgoravel | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
 [![Doc](https://pkg.go.dev/badge/github.com/goravel/framework)](https://pkg.go.dev/github.com/goravel/framework)
 [![Go](https://img.shields.io/github/go-mod/go-version/goravel/framework)](https://go.dev/)
 [![Release](https://img.shields.io/github/release/goravel/framework.svg)](https://github.com/goravel/framework/releases)
