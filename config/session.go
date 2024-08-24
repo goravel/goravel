@@ -35,12 +35,12 @@ func init() {
 		// different location may be specified. This is only needed for file sessions.
 		"files": path.Storage("framework/sessions"),
 
-		// Session Sweeping Lottery
+		// Session Garbage Collection Running Time Interval (in minutes)
 		//
-		// Some session drivers must manually sweep their storage location to get
-		// rid of old sessions from storage. Here are the chances out of 100 that
-		// the sweeper will sweep the storage location. The default is 2 out of 100.
-		"lottery": []int{2, 100},
+		// Here you may specify how many minutes you want the session to be allowed
+		// to remain idle before its garbage collection routine runs. If you want
+		// to avoid hitting the garbage collection routine, you may set this value to -1.
+		"gc_interval": config.Env("SESSION_GC_INTERVAL", 30),
 
 		// Session Cookie Name
 		//
