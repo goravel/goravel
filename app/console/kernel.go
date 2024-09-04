@@ -9,6 +9,8 @@ type Kernel struct {
 }
 
 func (kernel *Kernel) Schedule() []schedule.Event {
+	// When you add some commands to run scheduled tasks
+	// Remove comments from the 'main.go' file
 	return []schedule.Event{}
 }
 
