@@ -18,7 +18,7 @@ func main() {
 	quit := make(chan os.Signal)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
 
-	//Start http server by facades.Route().
+	// Start http server by facades.Route().
 	go func() {
 		if err := facades.Route().Run(); err != nil {
 			facades.Log().Errorf("Route Run error: %v", err)
