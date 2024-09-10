@@ -29,7 +29,7 @@ func main() {
 	go func() {
 		<-quit
 		if err := facades.Route().Shutdown(); err != nil {
-			facades.Log().Errorf("Route Rhutdown error: %v", err)
+			facades.Log().Errorf("Route Shutdown error: %v", err)
 		}
 
 		os.Exit(0)
