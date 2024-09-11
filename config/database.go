@@ -32,7 +32,7 @@ func init() {
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"sslmode":  "disable",
-				"timezone": "UTC", //Asia/Shanghai
+				"timezone": "UTC", // Asia/Shanghai
 				"prefix":   "",
 				"singular": false, // Table name is singular
 			},

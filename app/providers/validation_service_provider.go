@@ -17,8 +17,15 @@ func (receiver *ValidationServiceProvider) Boot(app foundation.Application) {
 	if err := facades.Validation().AddRules(receiver.rules()); err != nil {
 		facades.Log().Errorf("add rules error: %+v", err)
 	}
+	if err := facades.Validation().AddFilters(receiver.filters()); err != nil {
+		facades.Log().Errorf("add filters error: %+v", err)
+	}
 }
 
 func (receiver *ValidationServiceProvider) rules() []validation.Rule {
 	return []validation.Rule{}
+}
+
+func (receiver *ValidationServiceProvider) filters() []validation.Filter {
+	return []validation.Filter{}
 }

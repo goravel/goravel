@@ -1,9 +1,9 @@
 name: Welcome
 on:
   pull_request:
-    types: [opened, closed]
+    types: [ opened, closed ]
   issues:
-    types: [opened]
+    types: [ opened ]
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -28,6 +28,6 @@ jobs:
             Congrats on merging your first PR! Goravel is better because of you! 💖
             恭喜您的第一个 PR 被合并，Goravel 因您而更好！ 💖
 
-          STAR_MESSAGE: | 
+          STAR_MESSAGE: |
             If you like this project, please ⭐star⭐ our repository to support us!
             如果您喜欢这个项目，请 Star 仓库给予我们支持！
