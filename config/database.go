@@ -25,7 +25,7 @@ func init() {
 				"singular": false, // Table name is singular
 			},
 			"postgres": map[string]any{
-				"driver":   "postgresql",
+				"driver":   "postgres",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
 				"port":     config.Env("DB_PORT", 5432),
 				"database": config.Env("DB_DATABASE", "forge"),
