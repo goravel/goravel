@@ -1,11 +1,10 @@
 package providers
 
 import (
-	"github.com/goravel/framework/contracts/database/seeder"
 	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
 
-	"goravel/database/seeders"
+	"goravel/database"
 )
 
 type DatabaseServiceProvider struct {
@@ -16,7 +15,7 @@ func (receiver *DatabaseServiceProvider) Register(app foundation.Application) {
 }
 
 func (receiver *DatabaseServiceProvider) Boot(app foundation.Application) {
-	facades.Seeder().Register([]seeder.Seeder{
-		&seeders.DatabaseSeeder{},
-	})
+	kernel := database.Kernel{}
+	facades.Schema().Register(kernel.Migrations())
+	facades.Seeder().Register(kernel.Seeders())
 }
