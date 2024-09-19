@@ -4,8 +4,8 @@ go 1.21
 
 require (
 	github.com/gin-gonic/gin v1.10.0
-	github.com/goravel/framework v1.14.5
-	github.com/goravel/gin v1.2.4
+	github.com/goravel/framework v1.14.7
+	github.com/goravel/gin v1.2.5
 	github.com/stretchr/testify v1.9.0
 	google.golang.org/grpc v1.64.0
 )
