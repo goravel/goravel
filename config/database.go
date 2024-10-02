@@ -95,7 +95,7 @@ func init() {
 		// your application. Using this information, we can determine which of
 		// the migrations on disk haven't actually been run in the database.
 		// Available Drivers: "default", "sql"
-		"migration": map[string]any{
+		"migrations": map[string]any{
 			"driver": "default",
 			"table":  "migrations",
 		},
