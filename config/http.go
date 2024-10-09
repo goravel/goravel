@@ -26,6 +26,8 @@ func init() {
 				"template": func() (render.HTMLRender, error) {
 					return gin.DefaultTemplate()
 				},
+				// Optional, default is 3 Second
+				"timeout": 3,
 			},
 		},
 		// HTTP URL
