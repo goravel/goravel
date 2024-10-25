@@ -28,7 +28,7 @@ func main() {
 	// Listen for the OS signal
 	go func() {
 		<-quit
-		if err := facades.Route().Shutdown(); err != nil {
+		if err := facades.Route().Stop(); err != nil {
 			facades.Log().Errorf("Route Shutdown error: %v", err)
 		}
 
