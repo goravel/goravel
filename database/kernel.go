@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/goravel/framework/contracts/database/migration"
+	"github.com/goravel/framework/contracts/database/schema"
 	"github.com/goravel/framework/contracts/database/seeder"
 
 	"goravel/database/migrations"
@@ -11,8 +11,8 @@ import (
 type Kernel struct {
 }
 
-func (kernel Kernel) Migrations() []migration.Migration {
-	return []migration.Migration{
+func (kernel Kernel) Migrations() []schema.Migration {
+	return []schema.Migration{
 		&migrations.M20240915060148CreateUsersTable{},
 	}
 }
