@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	"github.com/goravel/framework/contracts/database/migration"
+	"github.com/goravel/framework/contracts/database/schema"
 	"github.com/goravel/framework/facades"
 )
 
@@ -14,8 +14,8 @@ func (r *M20240915060148CreateUsersTable) Signature() string {
 }
 
 // Up Run the migrations.
-func (r *M20240915060148CreateUsersTable) Up() {
-	facades.Schema().Create("users", func(table migration.Blueprint) {
+func (r *M20240915060148CreateUsersTable) Up() error {
+	return facades.Schema().Create("users", func(table schema.Blueprint) {
 		table.ID("id")
 		table.String("name")
 		table.String("email")
@@ -24,6 +24,6 @@ func (r *M20240915060148CreateUsersTable) Up() {
 }
 
 // Down Reverse the migrations.
-func (r *M20240915060148CreateUsersTable) Down() {
-	facades.Schema().DropIfExists("users")
+func (r *M20240915060148CreateUsersTable) Down() error {
+	return facades.Schema().DropIfExists("users")
 }
