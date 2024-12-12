@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/gin-gonic/gin v1.10.0
-	github.com/goravel/framework v1.14.8
+	github.com/goravel/framework v1.14.9
 	github.com/goravel/gin v1.2.6
 	github.com/stretchr/testify v1.9.0
 	google.golang.org/grpc v1.64.0
@@ -66,6 +66,7 @@ require (
 	github.com/go-redsync/redsync/v4 v4.8.1 // indirect
 	github.com/go-sql-driver/mysql v1.8.1 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
+	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
 	github.com/golang-jwt/jwt/v5 v5.2.1 // indirect
