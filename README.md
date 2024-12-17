@@ -112,11 +112,9 @@ Better development of the project is inseparable from your support, reward us by
 
 ## Group
 
-Welcome more discussion in Telegram.
+Welcome more discussion in Discord.
 
-[https://t.me/goravel](https://t.me/goravel)
-
-<p align="left"><img src="https://www.goravel.dev/telegram.jpg?v=1.14.x" width="200"></p>
+https://discord.gg/dMs73mSa
 
 ## License
 
