@@ -55,7 +55,7 @@ func init() {
 			},
 		},
 
-		// Set pool configuration
+		// Pool configuration
 		"pool": map[string]any{
 			// Sets the maximum number of connections in the idle
 			// connection pool.
@@ -88,6 +88,10 @@ func init() {
 			// Unit: Second
 			"conn_max_lifetime": 3600,
 		},
+
+		// Sets the threshold for slow queries in milliseconds, the slow query will be logged.
+		// Unit: Millisecond
+		"slow_threshold": 200,
 
 		// Migration Repository Table
 		//
