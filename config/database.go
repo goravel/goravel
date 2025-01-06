@@ -12,18 +12,6 @@ func init() {
 
 		// Database connections
 		"connections": map[string]any{
-			"mysql": map[string]any{
-				"driver":   "mysql",
-				"host":     config.Env("DB_HOST", "127.0.0.1"),
-				"port":     config.Env("DB_PORT", 3306),
-				"database": config.Env("DB_DATABASE", "forge"),
-				"username": config.Env("DB_USERNAME", ""),
-				"password": config.Env("DB_PASSWORD", ""),
-				"charset":  "utf8mb4",
-				"loc":      "Local",
-				"prefix":   "",
-				"singular": false, // Table name is singular
-			},
 			"postgres": map[string]any{
 				"driver":   "postgres",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
@@ -35,23 +23,9 @@ func init() {
 				"timezone": "UTC", // Asia/Shanghai
 				"prefix":   "",
 				"singular": false, // Table name is singular
-			},
-			"sqlite": map[string]any{
-				"driver":   "sqlite",
-				"database": config.Env("DB_DATABASE", "forge"),
-				"prefix":   "",
-				"singular": false, // Table name is singular
-			},
-			"sqlserver": map[string]any{
-				"driver":   "sqlserver",
-				"host":     config.Env("DB_HOST", "127.0.0.1"),
-				"port":     config.Env("DB_PORT", 1433),
-				"database": config.Env("DB_DATABASE", "forge"),
-				"username": config.Env("DB_USERNAME", ""),
-				"password": config.Env("DB_PASSWORD", ""),
-				"charset":  "utf8mb4",
-				"prefix":   "",
-				"singular": false, // Table name is singular
+				"via": func() {
+
+				},
 			},
 		},
 
