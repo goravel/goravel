@@ -1,7 +1,9 @@
 package config
 
 import (
+	"github.com/goravel/framework/contracts/database/orm"
 	"github.com/goravel/framework/facades"
+	postgresfacades "github.com/goravel/postgres/facades"
 )
 
 func init() {
@@ -22,9 +24,9 @@ func init() {
 				"sslmode":  "disable",
 				"timezone": "UTC", // Asia/Shanghai
 				"prefix":   "",
-				"singular": false, // Table name is singular
-				"via": func() {
-
+				"singular": false,
+				"via": func() (orm.Driver, error) {
+					return postgresfacades.Postgres("postgres"), nil
 				},
 			},
 		},
