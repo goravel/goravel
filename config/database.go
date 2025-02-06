@@ -22,7 +22,7 @@ func init() {
 				"charset":  "utf8mb4",
 				"loc":      "Local",
 				"prefix":   "",
-				"singular": false, // Table name is singular
+				"singular": false,
 			},
 			"postgres": map[string]any{
 				"driver":   "postgres",
@@ -34,13 +34,14 @@ func init() {
 				"sslmode":  "disable",
 				"timezone": "UTC", // Asia/Shanghai
 				"prefix":   "",
-				"singular": false, // Table name is singular
+				"singular": false,
+				"schema":   "",
 			},
 			"sqlite": map[string]any{
 				"driver":   "sqlite",
 				"database": config.Env("DB_DATABASE", "forge"),
 				"prefix":   "",
-				"singular": false, // Table name is singular
+				"singular": false,
 			},
 			"sqlserver": map[string]any{
 				"driver":   "sqlserver",
@@ -51,7 +52,7 @@ func init() {
 				"password": config.Env("DB_PASSWORD", ""),
 				"charset":  "utf8mb4",
 				"prefix":   "",
-				"singular": false, // Table name is singular
+				"singular": false,
 			},
 		},
 
