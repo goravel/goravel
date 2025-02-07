@@ -35,7 +35,7 @@ func init() {
 				"timezone": "UTC", // Asia/Shanghai
 				"prefix":   "",
 				"singular": false,
-				"schema":   "",
+				"schema":   config.Env("DB_SCHEMA", "public"),
 			},
 			"sqlite": map[string]any{
 				"driver":   "sqlite",
