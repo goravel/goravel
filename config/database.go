@@ -26,7 +26,7 @@ func init() {
 				"singular": false,
 				"schema":   config.Env("DB_SCHEMA", "public"),
 				"via": func() (driver.Driver, error) {
-					return postgresfacades.Postgres("postgres"), nil
+					return postgresfacades.Postgres("postgres")
 				},
 			},
 		},
