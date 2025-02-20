@@ -24,5 +24,14 @@ func init() {
 				"size": 100,
 			},
 		},
+
+		// Failed Queue Jobs
+		//
+		// These options configure the behavior of failed queue job logging so you
+		// can control how and where failed jobs are stored.
+		"failed": map[string]any{
+			"database": config.Env("DB_CONNECTION", "postgres"),
+			"table": "failed_jobs",
+		},
 	})
 }
