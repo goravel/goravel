@@ -5,8 +5,7 @@ import (
 	"github.com/goravel/framework/facades"
 )
 
-type M20240915060148CreateUsersTable struct {
-}
+type M20240915060148CreateUsersTable struct{}
 
 // Signature The unique signature for the migration.
 func (r *M20240915060148CreateUsersTable) Signature() string {

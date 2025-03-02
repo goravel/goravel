@@ -14,6 +14,7 @@ type Kernel struct {
 func (kernel Kernel) Migrations() []schema.Migration {
 	return []schema.Migration{
 		&migrations.M20240915060148CreateUsersTable{},
+		&migrations.M20250301000000CreateFailedJobsTable{},
 	}
 }
 

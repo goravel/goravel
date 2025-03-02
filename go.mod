@@ -1,8 +1,8 @@
 module goravel
 
-go 1.22.7
+go 1.23.0
 
-toolchain go1.23.3
+toolchain go1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.10.0
