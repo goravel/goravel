@@ -37,5 +37,16 @@ func init() {
 		// This is not particularly recommended, so make sure you have appropriate
 		// systems in place to revoke the token if necessary.
 		"refresh_ttl": config.Env("JWT_REFRESH_TTL", 20160),
+
+		// Enables or disables SSO (Single Sign-On) mode. Set to `true` to activate SSO functionality
+		//  or `false` to disable it. The value is fetched from the environment variable `JWT_SSO`
+		//  defaulting to `false` if not provided
+		"sso": config.Env("JWT_SSO", false),
+
+		// Defines the cache key used for storing SSO tokens.
+		// This key ensures unique token storage in the cache.
+		// The value is fetched from the environment variable `JWT_SSO_CACHE_KEY`
+		//  defaulting to `"jwt:auth"` if not provided
+		"sso_cache_key": config.Env("JWT_SSO_CACHE_KEY", "jwt:auth"),
 	})
 }
