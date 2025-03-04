@@ -53,11 +53,11 @@ func init() {
 		// HTTP Client Configuration
 		"client": map[string]any{
 			"base_url":                config.GetString("HTTP_CLIENT_BASE_URL"),
-			"timeout":                 config.GetInt("HTTP_CLIENT_TIMEOUT"),
+			"timeout":                 config.GetDuration("HTTP_CLIENT_TIMEOUT"),
 			"max_idle_conns":          config.GetInt("HTTP_CLIENT_MAX_IDLE_CONNS"),
 			"max_idle_conns_per_host": config.GetInt("HTTP_CLIENT_MAX_IDLE_CONNS_PER_HOST"),
 			"max_conns_per_host":      config.GetInt("HTTP_CLIENT_MAX_CONN_PER_HOST"),
-			"idle_conn_timeout":       config.GetInt("HTTP_CLIENT_IDLE_CONN_TIMEOUT"),
+			"idle_conn_timeout":       config.GetDuration("HTTP_CLIENT_IDLE_CONN_TIMEOUT"),
 		},
 	})
 }
