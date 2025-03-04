@@ -11,15 +11,6 @@ import (
 func init() {
 	config := facades.Config()
 	config.Add("http", map[string]any{
-		// HTTP Client Configuration
-		"client": map[string]any{
-			"base_url":                config.GetString("HTTP_CLIENT_BASE_URL"),
-			"timeout":                 config.GetInt("HTTP_CLIENT_TIMEOUT"),
-			"max_idle_conns":          config.GetInt("HTTP_CLIENT_MAX_IDLE_CONNS"),
-			"max_idle_conns_per_host": config.GetInt("HTTP_CLIENT_MAX_IDLE_CONNS_PER_HOST"),
-			"max_conns_per_host":      config.GetInt("HTTP_CLIENT_MAX_CONN_PER_HOST"),
-			"idle_conn_timeout":       config.GetInt("HTTP_CLIENT_IDLE_CONN_TIMEOUT"),
-		},
 		// HTTP Driver
 		"default": "gin",
 		// HTTP Drivers
@@ -58,6 +49,15 @@ func init() {
 				// ca.key
 				"key": "",
 			},
+		},
+		// HTTP Client Configuration
+		"client": map[string]any{
+			"base_url":                config.GetString("HTTP_CLIENT_BASE_URL"),
+			"timeout":                 config.GetInt("HTTP_CLIENT_TIMEOUT"),
+			"max_idle_conns":          config.GetInt("HTTP_CLIENT_MAX_IDLE_CONNS"),
+			"max_idle_conns_per_host": config.GetInt("HTTP_CLIENT_MAX_IDLE_CONNS_PER_HOST"),
+			"max_conns_per_host":      config.GetInt("HTTP_CLIENT_MAX_CONN_PER_HOST"),
+			"idle_conn_timeout":       config.GetInt("HTTP_CLIENT_IDLE_CONN_TIMEOUT"),
 		},
 	})
 }
