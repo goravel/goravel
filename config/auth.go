@@ -34,6 +34,7 @@ func init() {
 			},
 		},
 
+		// Supported: "orm"
 		"providers": map[string]any{
 			"user": map[string]any{
 				"driver": "orm",
