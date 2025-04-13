@@ -6,7 +6,7 @@ toolchain go1.23.3
 
 require (
 	github.com/gin-gonic/gin v1.10.0
-	github.com/goravel/framework v1.15.6
+	github.com/goravel/framework v1.15.7
 	github.com/goravel/gin v1.3.3
 	github.com/stretchr/testify v1.10.0
 	google.golang.org/grpc v1.70.0
@@ -51,7 +51,7 @@ require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.6 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
-	github.com/dromara/carbon/v2 v2.5.2 // indirect
+	github.com/dromara/carbon/v2 v2.5.6 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
