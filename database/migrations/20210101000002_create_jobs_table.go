@@ -5,15 +5,15 @@ import (
 	"github.com/goravel/framework/facades"
 )
 
-type M20250301000000CreateFailedJobsTable struct{}
+type M20210101000002CreateJobsTable struct{}
 
 // Signature The unique signature for the migration.
-func (r *M20250301000000CreateFailedJobsTable) Signature() string {
-	return "20250301000000_create_failed_jobs_table"
+func (r *M20210101000002CreateJobsTable) Signature() string {
+	return "20210101000002_create_jobs_table"
 }
 
 // Up Run the migrations.
-func (r *M20250301000000CreateFailedJobsTable) Up() error {
+func (r *M20210101000002CreateJobsTable) Up() error {
 	if !facades.Schema().HasTable("failed_jobs") {
 		return facades.Schema().Create("failed_jobs", func(table schema.Blueprint) {
 			table.ID()
@@ -31,6 +31,6 @@ func (r *M20250301000000CreateFailedJobsTable) Up() error {
 }
 
 // Down Reverse the migrations.
-func (r *M20250301000000CreateFailedJobsTable) Down() error {
+func (r *M20210101000002CreateJobsTable) Down() error {
 	return facades.Schema().DropIfExists("failed_jobs")
 }
