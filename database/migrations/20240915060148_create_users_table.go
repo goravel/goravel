@@ -20,6 +20,7 @@ func (r *M20240915060148CreateUsersTable) Up() error {
 		table.String("name")
 		table.String("email")
 		table.String("password")
+		table.Timestamps()
 	})
 }
 

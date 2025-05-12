@@ -6,7 +6,8 @@ import (
 
 type User struct {
 	orm.Model
-	Name   string
-	Avatar string
+	Name     string
+	Email    string
+	Password string
 	orm.SoftDeletes
 }
