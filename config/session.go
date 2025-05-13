@@ -18,6 +18,9 @@ func init() {
 		// Supported: "file"
 		"driver": config.Env("SESSION_DRIVER", "file"),
 
+		// Session drivers
+		"drivers": map[string]any{},
+
 		// Session Lifetime
 		//
 		// Here you may specify the number of minutes that you wish the session
