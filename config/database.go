@@ -77,19 +77,5 @@ func init() {
 		"migrations": map[string]any{
 			"table": "migrations",
 		},
-
-		// Redis Databases
-		//
-		// Redis is an open source, fast, and advanced key-value store that also
-		// provides a richer body of commands than a typical key-value system
-		// such as APC or Memcached.
-		"redis": map[string]any{
-			"default": map[string]any{
-				"host":     config.Env("REDIS_HOST", ""),
-				"password": config.Env("REDIS_PASSWORD", ""),
-				"port":     config.Env("REDIS_PORT", 6379),
-				"database": config.Env("REDIS_DB", 0),
-			},
-		},
 	})
 }
