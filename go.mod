@@ -6,7 +6,7 @@ toolchain go1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.10.0
-	github.com/goravel/framework v1.15.2-0.20250513024952-5c6bf415f2ed
+	github.com/goravel/framework v1.15.2-0.20250517143818-c86a9f13b663
 	github.com/goravel/gin v1.3.1-0.20250513051448-51a13beba50f
 	github.com/goravel/postgres v0.0.2-0.20250513045706-d077324f72e7
 	github.com/stretchr/testify v1.10.0
