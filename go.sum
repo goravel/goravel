@@ -91,6 +91,8 @@ github.com/gookit/validate v1.5.4/go.mod h1:p9sRPfpvYB4vXICBpEPzv8FoAky+XhUOhWQg
 github.com/goravel/file-rotatelogs/v2 v2.4.2/go.mod h1:23VuSW8cBS4ax5cmbV+5AaiLpq25b8UJ96IhbAkdo8I=
 github.com/goravel/framework v1.15.2-0.20250513024952-5c6bf415f2ed h1:GHtrocwQ7MmEXgDf9K6vM6KBcT1nbvuyEmQVra7b4N4=
 github.com/goravel/framework v1.15.2-0.20250513024952-5c6bf415f2ed/go.mod h1:8guNAbVJAc08KttpkwSPBUvVnbGWkoRDO8QIRoAL3f8=
+github.com/goravel/framework v1.15.2-0.20250517143818-c86a9f13b663 h1:h6K3U/NO+EgTnJmWU4zQsU3eLKk20MoM0SJjl53Dnwc=
+github.com/goravel/framework v1.15.2-0.20250517143818-c86a9f13b663/go.mod h1:8guNAbVJAc08KttpkwSPBUvVnbGWkoRDO8QIRoAL3f8=
 github.com/goravel/gin v1.3.1-0.20250513051448-51a13beba50f h1:WvuSK0XINGU+QUYNgcYKPo+Xp9QXnDuk72aQh+qK2vk=
 github.com/goravel/gin v1.3.1-0.20250513051448-51a13beba50f/go.mod h1:JbpzGbX6Pulbvxiyw7PMq712no7Bnt7jpWNC10Smshw=
 github.com/goravel/gin v1.3.1/go.mod h1:qEZUHzIHza9yXJpb9N4fWXUmy17IFhI5zV8vsGx4Ebo=
