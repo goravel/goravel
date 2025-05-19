@@ -53,6 +53,8 @@ github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f h1:lO4WD4F/r
 github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f/go.mod h1:cuUVRXasLTGF7a8hSLbxyZXjz+1KgoB3wDUb6vlszIc=
 github.com/dromara/carbon/v2 v2.6.4 h1:cpIansyiEIEed3OlEIqo1IXj86qu0x6pf/E2keL2wYo=
 github.com/dromara/carbon/v2 v2.6.4/go.mod h1:Baj3A1uBBctJmpZWJd6/+WWnmIuY2pobR6IOpB6xigc=
+github.com/dromara/carbon/v2 v2.6.6 h1:WWtCv23+5faQEtS6A4/Ci10YGefNDLo/WU4ciKBV5FY=
+github.com/dromara/carbon/v2 v2.6.6/go.mod h1:7GXqCUplwN1s1b4whGk2zX4+g4CMCoDIZzmjlyt0vLY=
 github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
 github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f/go.mod h1:vw97MGsxSvLiUE2X8qFplwetxpGLQrlU1Q9AUEIzCaM=
 github.com/fsnotify/fsnotify v1.8.0 h1:dAwr6QBTBZIkG8roQaJjGof0pp0EeF+tNV7YBP3F/8M=
@@ -93,6 +95,8 @@ github.com/goravel/framework v1.15.2-0.20250513024952-5c6bf415f2ed h1:GHtrocwQ7M
 github.com/goravel/framework v1.15.2-0.20250513024952-5c6bf415f2ed/go.mod h1:8guNAbVJAc08KttpkwSPBUvVnbGWkoRDO8QIRoAL3f8=
 github.com/goravel/framework v1.15.2-0.20250517143818-c86a9f13b663 h1:h6K3U/NO+EgTnJmWU4zQsU3eLKk20MoM0SJjl53Dnwc=
 github.com/goravel/framework v1.15.2-0.20250517143818-c86a9f13b663/go.mod h1:8guNAbVJAc08KttpkwSPBUvVnbGWkoRDO8QIRoAL3f8=
+github.com/goravel/framework v1.15.2-0.20250519085522-bbc370fe21ab h1:f1ZIcMazS08CAsy96pmBqVZjHbqxY9OKwmW1x8t0Wrk=
+github.com/goravel/framework v1.15.2-0.20250519085522-bbc370fe21ab/go.mod h1:x+6zeCJhz1WbqbV8+rhlyxVb9vTUtqMOFV3ZTz48ITg=
 github.com/goravel/gin v1.3.1-0.20250513051448-51a13beba50f h1:WvuSK0XINGU+QUYNgcYKPo+Xp9QXnDuk72aQh+qK2vk=
 github.com/goravel/gin v1.3.1-0.20250513051448-51a13beba50f/go.mod h1:JbpzGbX6Pulbvxiyw7PMq712no7Bnt7jpWNC10Smshw=
 github.com/goravel/gin v1.3.1/go.mod h1:qEZUHzIHza9yXJpb9N4fWXUmy17IFhI5zV8vsGx4Ebo=

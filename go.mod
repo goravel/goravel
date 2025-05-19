@@ -6,7 +6,7 @@ toolchain go1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.10.0
-	github.com/goravel/framework v1.15.2-0.20250517143818-c86a9f13b663
+	github.com/goravel/framework v1.15.2-0.20250519085522-bbc370fe21ab
 	github.com/goravel/gin v1.3.1-0.20250513051448-51a13beba50f
 	github.com/goravel/postgres v0.0.2-0.20250513045706-d077324f72e7
 	github.com/stretchr/testify v1.10.0
@@ -40,7 +40,7 @@ require (
 	github.com/dave/dst v0.27.3 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
-	github.com/dromara/carbon/v2 v2.6.4 // indirect
+	github.com/dromara/carbon/v2 v2.6.6 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
 	github.com/fsnotify/fsnotify v1.8.0 // indirect
