@@ -14,12 +14,15 @@ func init() {
 		// This option controls the default session "driver" that will be used on
 		// requests. By default, we will use the lightweight file session driver, but you
 		// may specify any of the other wonderful drivers provided here.
-		//
-		// Supported: "file"
 		"driver": config.Env("SESSION_DRIVER", "file"),
 
 		// Session drivers
-		"drivers": map[string]any{},
+		// Available Drivers: "file", "custom"
+		"drivers": map[string]any{
+			"file": map[string]any{
+				"driver": "file",
+			},
+		},
 
 		// Session Lifetime
 		//
