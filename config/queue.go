@@ -13,15 +13,22 @@ func init() {
 		// Queue Connections
 		//
 		// Here you may configure the connection information for each server that is used by your application.
-		// Drivers: "sync", "async", "custom"
+		// Drivers: "sync", "database", "machinery", "custom"
 		"connections": map[string]any{
 			"sync": map[string]any{
 				"driver": "sync",
 			},
-			"async": map[string]any{
-				"driver": "async",
-				"queue": "default",
-				"size": 100,
+			"database": map[string]any{
+				"driver":     "database",
+				"connection": "postgres",
+				"queue":      "default",
+				"concurrent": 1,
+			},
+			"machinery": map[string]any{
+				"driver":     "machinery",
+				"connection": "default",
+				"queue":      "default",
+				"concurrent": 1,
 			},
 		},
 
@@ -31,7 +38,7 @@ func init() {
 		// can control how and where failed jobs are stored.
 		"failed": map[string]any{
 			"database": config.Env("DB_CONNECTION", "postgres"),
-			"table": "failed_jobs",
+			"table":    "failed_jobs",
 		},
 	})
 }
