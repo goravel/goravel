@@ -14,17 +14,34 @@ func (r *M20210101000002CreateJobsTable) Signature() string {
 
 // Up Run the migrations.
 func (r *M20210101000002CreateJobsTable) Up() error {
+	if !facades.Schema().HasTable("jobs") {
+		if err := facades.Schema().Create("jobs", func(table schema.Blueprint) {
+			table.ID()
+			table.String("queue")
+			table.LongText("payload")
+			table.UnsignedTinyInteger("attempts").Default(0)
+			table.DateTimeTz("reserved_at").Nullable()
+			table.DateTimeTz("available_at")
+			table.DateTimeTz("created_at").UseCurrent()
+			table.Index("queue")
+		}); err != nil {
+			return err
+		}
+	}
+
 	if !facades.Schema().HasTable("failed_jobs") {
-		return facades.Schema().Create("failed_jobs", func(table schema.Blueprint) {
+		if err := facades.Schema().Create("failed_jobs", func(table schema.Blueprint) {
 			table.ID()
 			table.String("uuid")
-			table.Unique("uuid")
 			table.Text("connection")
 			table.Text("queue")
 			table.LongText("payload")
 			table.LongText("exception")
-			table.DateTime("failed_at").UseCurrent()
-		})
+			table.DateTimeTz("failed_at").UseCurrent()
+			table.Unique("uuid")
+		}); err != nil {
+			return err
+		}
 	}
 
 	return nil
@@ -32,5 +49,13 @@ func (r *M20210101000002CreateJobsTable) Up() error {
 
 // Down Reverse the migrations.
 func (r *M20210101000002CreateJobsTable) Down() error {
-	return facades.Schema().DropIfExists("failed_jobs")
+	if err := facades.Schema().DropIfExists("jobs"); err != nil {
+		return err
+	}
+
+	if err := facades.Schema().DropIfExists("failed_jobs"); err != nil {
+		return err
+	}
+
+	return nil
 }
