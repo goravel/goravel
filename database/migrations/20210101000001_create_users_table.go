@@ -19,7 +19,7 @@ func (r *M20210101000001CreateUsersTable) Up() error {
 		table.String("name")
 		table.String("email")
 		table.String("password")
-		table.Timestamps()
+		table.TimestampsTz()
 	})
 }
 
