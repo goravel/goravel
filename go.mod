@@ -5,10 +5,10 @@ go 1.23.0
 toolchain go1.24.0
 
 require (
-	github.com/gin-gonic/gin v1.10.0
-	github.com/goravel/framework v1.15.2-0.20250616035232-001bed6ee0fa
-	github.com/goravel/gin v1.3.1-0.20250513051448-51a13beba50f
-	github.com/goravel/postgres v0.0.2-0.20250513045706-d077324f72e7
+	github.com/gin-gonic/gin v1.10.1
+	github.com/goravel/framework v1.15.2-0.20250616071550-d52cfe968b80
+	github.com/goravel/gin v1.3.1-0.20250616074629-50b77c5a404d
+	github.com/goravel/postgres v0.0.2-0.20250616074745-2e740e8f4395
 	github.com/stretchr/testify v1.10.0
 	google.golang.org/grpc v1.73.0
 )
@@ -163,7 +163,7 @@ require (
 	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	gorm.io/driver/postgres v1.5.11 // indirect
+	gorm.io/driver/postgres v1.6.0 // indirect
 	gorm.io/gorm v1.30.0 // indirect
 	gorm.io/plugin/dbresolver v1.6.0 // indirect
 )
