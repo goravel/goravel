@@ -26,7 +26,7 @@ func init() {
 		// users are actually retrieved out of your database or other storage
 		// mechanisms used by this application to persist your user's data.
 		//
-		// Supported: "jwt"
+		// Supported drivers: "jwt", "session"
 		"guards": map[string]any{
 			"user": map[string]any{
 				"driver":   "jwt",
