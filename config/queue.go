@@ -13,7 +13,7 @@ func init() {
 		// Queue Connections
 		//
 		// Here you may configure the connection information for each server that is used by your application.
-		// Drivers: "sync", "database", "machinery", "custom"
+		// Drivers: "sync", "database", "custom"
 		"connections": map[string]any{
 			"sync": map[string]any{
 				"driver": "sync",
@@ -21,12 +21,6 @@ func init() {
 			"database": map[string]any{
 				"driver":     "database",
 				"connection": "postgres",
-				"queue":      "default",
-				"concurrent": 1,
-			},
-			"machinery": map[string]any{
-				"driver":     "machinery",
-				"connection": "default",
 				"queue":      "default",
 				"concurrent": 1,
 			},
