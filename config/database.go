@@ -21,7 +21,6 @@ func init() {
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"sslmode":  "disable",
-				"timezone": "UTC", // Asia/Shanghai
 				"prefix":   "",
 				"singular": false,
 				"schema":   config.Env("DB_SCHEMA", "public"),
