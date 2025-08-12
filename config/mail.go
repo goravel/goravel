@@ -39,5 +39,28 @@ func init() {
 		"username": config.Env("MAIL_USERNAME"),
 
 		"password": config.Env("MAIL_PASSWORD"),
+
+		// Template Configuration
+		//
+		// This controls template rendering for email views. Template engines are cached
+		// globally and support both built-in drivers and custom implementations via factories.
+		//
+		// Available Drivers: "html", "custom"
+		"template": map[string]any{
+			"default": config.Env("MAIL_TEMPLATE_ENGINE", "html"),
+			"engines": map[string]any{
+				"html": map[string]any{
+					"driver": "html",
+					"path":   config.Env("MAIL_VIEWS_PATH", "resources/views/mail"),
+				},
+				// Example custom template engine:
+				// "blade": map[string]any{
+				//     "driver": "custom",
+				//     "via": func() (mail.Template, error) {
+				//         return NewBladeTemplateEngine(), nil
+				//     },
+				// },
+			},
+		},
 	})
 }
