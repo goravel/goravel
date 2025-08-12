@@ -50,7 +50,7 @@ err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 文档
 
-在线文档 [https://www.goravel.dev/zh](https://www.goravel.dev/zh)
+在线文档 [https://www.goravel.dev/zh](https://www.goravel.dev/zh_CN)
 
 示例 [https://github.com/goravel/example](https://github.com/goravel/example)
 
