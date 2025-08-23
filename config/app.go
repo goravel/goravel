@@ -4,6 +4,15 @@ import (
 	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
 	"github.com/goravel/framework/support/carbon"
+	"github.com/goravel/framework/route"
+	"github.com/goravel/framework/http"
+	"github.com/goravel/framework/cache"
+	"github.com/goravel/framework/log"
+	"github.com/goravel/framework/console"
+	"github.com/goravel/framework/validation"
+	"github.com/goravel/framework/database"
+	"github.com/goravel/gin"
+	"github.com/goravel/postgres"
 
 	"goravel/app/providers"
 )
@@ -70,13 +79,21 @@ func init() {
 		// request to your application. Feel free to add your own services to
 		// this array to grant expanded functionality to your applications.
 		"providers": []foundation.ServiceProvider{
+			// Essential framework providers
+			&log.ServiceProvider{},
+			&console.ServiceProvider{},
+			&postgres.ServiceProvider{},
+			&database.ServiceProvider{},
+			&cache.ServiceProvider{},
+			&http.ServiceProvider{},
+			&route.ServiceProvider{},
+			&validation.ServiceProvider{},
+			&gin.ServiceProvider{},
+			
+			// Application service providers
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
 			&providers.DatabaseServiceProvider{},
-			&providers.ConsoleServiceProvider{},
-			&providers.GrpcServiceProvider{},
-			&providers.QueueServiceProvider{},
-			&providers.EventServiceProvider{},
 		},
 	})
 }
