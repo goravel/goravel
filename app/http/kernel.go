@@ -2,6 +2,7 @@ package http
 
 import (
 	"github.com/goravel/framework/contracts/http"
+	// "goravel/app/http/middleware"  // Uncomment when using optimized throttle middleware
 )
 
 type Kernel struct {
@@ -10,5 +11,9 @@ type Kernel struct {
 // The application's global HTTP middleware stack.
 // These middleware are run during every request to your application.
 func (kernel Kernel) Middleware() []http.Middleware {
-	return []http.Middleware{}
+	return []http.Middleware{
+		// Example of using the optimized throttle middleware:
+		// middleware.CreateAPIThrottle(),              // Basic API throttling
+		// middleware.CreateCustomAPIThrottle(),        // Custom throttling with better error messages
+	}
 }
