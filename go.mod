@@ -6,7 +6,7 @@ toolchain go1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.10.1
-	github.com/goravel/framework v1.16.1
+	github.com/goravel/framework v1.16.3
 	github.com/goravel/gin v1.4.0
 	github.com/goravel/postgres v1.4.0
 	github.com/stretchr/testify v1.10.0
@@ -62,7 +62,7 @@ require (
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.23.0 // indirect
 	github.com/go-redsync/redsync/v4 v4.13.0 // indirect
-	github.com/go-viper/mapstructure/v2 v2.3.0 // indirect
+	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
 	github.com/goccy/go-json v0.10.4 // indirect
 	github.com/goforj/godump v1.5.0 // indirect
 	github.com/golang-jwt/jwt/v5 v5.2.2 // indirect
