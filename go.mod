@@ -8,8 +8,8 @@ require (
 	github.com/gin-gonic/gin v1.10.1
 	github.com/goravel/framework v1.16.3
 	github.com/goravel/gin v1.4.0
-	github.com/goravel/postgres v1.4.0
-	github.com/stretchr/testify v1.10.0
+	github.com/goravel/postgres v1.4.1
+	github.com/stretchr/testify v1.11.1
 	google.golang.org/grpc v1.73.0
 )
 
@@ -165,6 +165,6 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/driver/postgres v1.6.0 // indirect
-	gorm.io/gorm v1.30.0 // indirect
+	gorm.io/gorm v1.30.1 // indirect
 	gorm.io/plugin/dbresolver v1.6.0 // indirect
 )
