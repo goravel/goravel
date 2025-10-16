@@ -14,4 +14,7 @@ func Boot() {
 
 	// Bootstrap the config.
 	config.Boot()
+
+	// Run the application
+	app.Run()
 }
