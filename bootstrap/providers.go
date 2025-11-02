@@ -21,6 +21,7 @@ import (
 	"github.com/goravel/framework/testing"
 	"github.com/goravel/framework/translation"
 	"github.com/goravel/framework/validation"
+	"github.com/goravel/framework/view"
 	"github.com/goravel/gin"
 	"github.com/goravel/postgres"
 
@@ -49,6 +50,7 @@ func Providers() []foundation.ServiceProvider {
 		&session.ServiceProvider{},
 		&translation.ServiceProvider{},
 		&testing.ServiceProvider{},
+		&view.ServiceProvider{},
 		&providers.AppServiceProvider{},
 		&providers.AuthServiceProvider{},
 		&providers.ConsoleServiceProvider{},
