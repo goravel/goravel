@@ -53,7 +53,6 @@ func Providers() []foundation.ServiceProvider {
 		&view.ServiceProvider{},
 		&providers.AppServiceProvider{},
 		&providers.AuthServiceProvider{},
-		&providers.ConsoleServiceProvider{},
 		&providers.QueueServiceProvider{},
 		&providers.EventServiceProvider{},
 		&providers.ValidationServiceProvider{},
