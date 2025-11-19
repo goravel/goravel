@@ -15,7 +15,7 @@ func main() {
 	bootstrap.Boot()
 
 	// Create a channel to listen for OS signals
-	quit := make(chan os.Signal)
+	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
 
 	// Start http server by facades.Route().
