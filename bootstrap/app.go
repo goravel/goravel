@@ -9,6 +9,8 @@ import (
 
 func Boot() {
 	foundation.Setup().
+		WithSeeders(Seeders()).
+		WithMigrations(Migrations()).
 		WithConfig(config.Boot).
 		WithProviders(Providers()).
 		WithRouting([]func(){
