@@ -1,9 +1,10 @@
 package config
 
 import (
-	"github.com/goravel/framework/facades"
 	"github.com/goravel/framework/support/path"
 	"github.com/goravel/framework/support/str"
+
+	"goravel/app/facades"
 )
 
 func init() {
@@ -14,7 +15,7 @@ func init() {
 		// This option controls the default session "driver" that will be used on
 		// requests. By default, we will use the lightweight file session driver, but you
 		// may specify any of the other wonderful drivers provided here.
-		"default": config.Env("SESSION_DRIVER", "file"),
+		"default": "file",
 
 		// Session drivers
 		// Available Drivers: "file", "custom"

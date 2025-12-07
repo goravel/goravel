@@ -3,15 +3,14 @@ package config
 import (
 	"github.com/gin-gonic/gin/render"
 	"github.com/goravel/framework/contracts/route"
-	"github.com/goravel/framework/facades"
 	"github.com/goravel/gin"
 	ginfacades "github.com/goravel/gin/facades"
+	"goravel/app/facades"
 )
 
 func init() {
 	config := facades.Config()
 	config.Add("http", map[string]any{
-		// HTTP Driver
 		"default": "gin",
 		// HTTP Drivers
 		"drivers": map[string]any{

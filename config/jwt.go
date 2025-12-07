@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/goravel/framework/facades"
+	"goravel/app/facades"
 )
 
 func init() {
@@ -11,7 +11,7 @@ func init() {
 		//
 		// Don't forget to set this in your .env file, as it will be used to sign
 		// your tokens. A helper command is provided for this:
-		// `go run . artisan jwt:secret`
+		// go run . artisan jwt:secret
 		"secret": config.Env("JWT_SECRET", ""),
 
 		// JWT time to live

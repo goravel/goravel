@@ -1,32 +1,9 @@
 package config
 
 import (
-	"github.com/goravel/framework/auth"
-	"github.com/goravel/framework/cache"
-	"github.com/goravel/framework/console"
-	"github.com/goravel/framework/contracts/foundation"
-	"github.com/goravel/framework/crypt"
-	"github.com/goravel/framework/database"
-	"github.com/goravel/framework/event"
-	"github.com/goravel/framework/facades"
-	"github.com/goravel/framework/filesystem"
-	"github.com/goravel/framework/grpc"
-	"github.com/goravel/framework/hash"
-	"github.com/goravel/framework/http"
-	"github.com/goravel/framework/log"
-	"github.com/goravel/framework/mail"
-	"github.com/goravel/framework/queue"
-	"github.com/goravel/framework/route"
-	"github.com/goravel/framework/schedule"
-	"github.com/goravel/framework/session"
 	"github.com/goravel/framework/support/carbon"
-	"github.com/goravel/framework/testing"
-	"github.com/goravel/framework/translation"
-	"github.com/goravel/framework/validation"
-	"github.com/goravel/gin"
-	"github.com/goravel/postgres"
 
-	"goravel/app/providers"
+	"goravel/app/facades"
 )
 
 // Boot Start all init methods of the current folder to bootstrap all config.
@@ -84,67 +61,5 @@ func init() {
 		// 32 character string, otherwise these encrypted strings
 		// will not be safe. Please do this before deploying an application!
 		"key": config.Env("APP_KEY", ""),
-
-		// Deployment
-		//
-		// The deployment configuration for the application.
-		"deploy": map[string]any{
-			"base_dir":                  config.Env("DEPLOY_BASE_DIR", "/var/www/"),
-			"ssh_ip":                    config.Env("DEPLOY_SSH_IP", "127.0.0.1"),
-			"reverse_proxy_port":        config.Env("DEPLOY_REVERSE_PROXY_PORT", "9000"),
-			"ssh_port":                  config.Env("DEPLOY_SSH_PORT", "22"),
-			"ssh_user":                  config.Env("DEPLOY_SSH_USER", "root"),
-			"ssh_key_path":              config.Env("DEPLOY_SSH_KEY_PATH", "~/.ssh/id_rsa"),
-			"prod_env_file_path":        config.Env("DEPLOY_PROD_ENV_FILE_PATH", ".env.production"),
-			"domain":                    config.Env("DEPLOY_DOMAIN", ""),
-			"env_decrypt_key":           config.Env("DEPLOY_ENV_DECRYPT_KEY", ""),
-			"reverse_proxy_enabled":     config.Env("DEPLOY_REVERSE_PROXY_ENABLED", true),
-			"reverse_proxy_tls_enabled": config.Env("DEPLOY_REVERSE_PROXY_TLS_ENABLED", true),
-			"remote_env_decrypt":        config.Env("DEPLOY_REMOTE_ENV_DECRYPT", false),
-		},
-
-		"build": map[string]any{
-			"os":     config.Env("DEPLOY_OS", "linux"),
-			"arch":   config.Env("DEPLOY_ARCH", "amd64"),
-			"static": config.Env("DEPLOY_STATIC", true),
-		},
-
-		// Autoload service providers
-		//
-		// The service providers listed here will be automatically loaded on the
-		// request to your application. Feel free to add your own services to
-		// this array to grant expanded functionality to your applications.
-		"providers": []foundation.ServiceProvider{
-			&log.ServiceProvider{},
-			&console.ServiceProvider{},
-			&postgres.ServiceProvider{},
-			&database.ServiceProvider{},
-			&cache.ServiceProvider{},
-			&http.ServiceProvider{},
-			&route.ServiceProvider{},
-			&schedule.ServiceProvider{},
-			&event.ServiceProvider{},
-			&queue.ServiceProvider{},
-			&grpc.ServiceProvider{},
-			&mail.ServiceProvider{},
-			&auth.ServiceProvider{},
-			&hash.ServiceProvider{},
-			&crypt.ServiceProvider{},
-			&filesystem.ServiceProvider{},
-			&validation.ServiceProvider{},
-			&session.ServiceProvider{},
-			&translation.ServiceProvider{},
-			&testing.ServiceProvider{},
-			&providers.AppServiceProvider{},
-			&providers.AuthServiceProvider{},
-			&providers.RouteServiceProvider{},
-			&providers.GrpcServiceProvider{},
-			&providers.ConsoleServiceProvider{},
-			&providers.QueueServiceProvider{},
-			&providers.EventServiceProvider{},
-			&providers.ValidationServiceProvider{},
-			&providers.DatabaseServiceProvider{},
-			&gin.ServiceProvider{},
-		},
 	})
 }

@@ -4,17 +4,17 @@ import (
 	"github.com/goravel/framework/foundation"
 
 	"goravel/config"
+	"goravel/routes"
 )
 
 func Boot() {
-	app := foundation.NewApplication()
-
-	// Bootstrap the application
-	app.Boot()
-
-	// Bootstrap the config.
-	config.Boot()
-
-	// Run the application
-	app.Run()
+	foundation.Setup().
+		WithRouting([]func(){
+			routes.Grpc,
+			routes.Web,
+		}).
+		WithMigrations(Migrations()).
+		WithConfig(config.Boot).
+		WithProviders(Providers()).
+		Run()
 }

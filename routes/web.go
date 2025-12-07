@@ -2,8 +2,9 @@ package routes
 
 import (
 	"github.com/goravel/framework/contracts/http"
-	"github.com/goravel/framework/facades"
 	"github.com/goravel/framework/support"
+
+	"goravel/app/facades"
 )
 
 func Web() {

@@ -1,6 +1,8 @@
 package config
 
-import "github.com/goravel/framework/facades"
+import (
+	"goravel/app/facades"
+)
 
 func init() {
 	config := facades.Config()
