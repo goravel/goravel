@@ -4,3 +4,4 @@
 .env.*
 !.env.example
 storage/framework
+tmp
