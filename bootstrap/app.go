@@ -9,12 +9,12 @@ import (
 
 func Boot() {
 	foundation.Setup().
-		WithRouting([]func(){
-			routes.Grpc,
-			routes.Web,
-		}).
 		WithMigrations(Migrations()).
-		WithConfig(config.Boot).
+		WithRouting([]func(){
+			routes.Web,
+			routes.Grpc,
+		}).
 		WithProviders(Providers()).
+		WithConfig(config.Boot).
 		Run()
 }

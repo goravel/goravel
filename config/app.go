@@ -61,5 +61,29 @@ func init() {
 		// 32 character string, otherwise these encrypted strings
 		// will not be safe. Please do this before deploying an application!
 		"key": config.Env("APP_KEY", ""),
+
+		// Deployment
+		//
+		// The deployment configuration for the application.
+		"deploy": map[string]any{
+			"base_dir":                  config.Env("DEPLOY_BASE_DIR", "/var/www/"),
+			"ssh_ip":                    config.Env("DEPLOY_SSH_IP", "127.0.0.1"),
+			"reverse_proxy_port":        config.Env("DEPLOY_REVERSE_PROXY_PORT", "9000"),
+			"ssh_port":                  config.Env("DEPLOY_SSH_PORT", "22"),
+			"ssh_user":                  config.Env("DEPLOY_SSH_USER", "root"),
+			"ssh_key_path":              config.Env("DEPLOY_SSH_KEY_PATH", "~/.ssh/id_rsa"),
+			"prod_env_file_path":        config.Env("DEPLOY_PROD_ENV_FILE_PATH", ".env.production"),
+			"domain":                    config.Env("DEPLOY_DOMAIN", ""),
+			"env_decrypt_key":           config.Env("DEPLOY_ENV_DECRYPT_KEY", ""),
+			"reverse_proxy_enabled":     config.Env("DEPLOY_REVERSE_PROXY_ENABLED", true),
+			"reverse_proxy_tls_enabled": config.Env("DEPLOY_REVERSE_PROXY_TLS_ENABLED", true),
+			"remote_env_decrypt":        config.Env("DEPLOY_REMOTE_ENV_DECRYPT", false),
+		},
+
+		"build": map[string]any{
+			"os":     config.Env("DEPLOY_OS", "linux"),
+			"arch":   config.Env("DEPLOY_ARCH", "amd64"),
+			"static": config.Env("DEPLOY_STATIC", true),
+		},
 	})
 }
