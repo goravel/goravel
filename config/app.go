@@ -50,12 +50,6 @@ func init() {
 		// the language folders that are provided through your application.
 		"fallback_locale": "en",
 
-		// Application Lang Path
-		//
-		// The path to the language files for the application. You may change
-		// the path to a different directory if you would like to customize it.
-		"lang_path": "lang",
-
 		// Encryption Key
 		//
 		// 32 character string, otherwise these encrypted strings
