@@ -32,7 +32,7 @@ func recoveryInterceptor() grpc.UnaryServerInterceptor {
 		defer func() {
 			if r := recover(); r != nil {
 				facades.Log().Errorf("gRPC panic recovered: %v\n%s", r, debug.Stack())
-				er	r = status.Errorf(codes.Internal, "internal server error")
+				err = status.Errorf(codes.Internal, "internal server error")
 			}
 		}()
 		return handler(ctx, req)
