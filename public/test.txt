@@ -1,2 +1,0 @@
-This is a test file in the public folder.
-Users can access this file via /public/test.txt
