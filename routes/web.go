@@ -8,6 +8,7 @@ import (
 )
 
 func Web() {
+	facades.Route().Static("/public", "./public")
 	facades.Route().Get("/", func(ctx http.Context) http.Response {
 		return ctx.Response().View().Make("welcome.tmpl", map[string]any{
 			"version": support.Version,
