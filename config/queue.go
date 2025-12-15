@@ -1,14 +1,14 @@
 package config
 
 import (
-	"github.com/goravel/framework/facades"
+	"goravel/app/facades"
 )
 
 func init() {
 	config := facades.Config()
 	config.Add("queue", map[string]any{
 		// Default Queue Connection Name
-		"default": config.Env("QUEUE_CONNECTION", "sync"),
+		"default": "sync",
 
 		// Queue Connections
 		//
