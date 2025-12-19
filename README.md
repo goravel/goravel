@@ -118,6 +118,7 @@ This project exists thanks to all the people who contribute, to participate in t
 <a href="https://github.com/zoryamba" target="_blank"><img src="https://avatars.githubusercontent.com/u/21248500?v=4" width="48" height="48"></a>
 <a href="https://github.com/oguzhankrcb" target="_blank"><img src="https://avatars.githubusercontent.com/u/7572058?v=4" width="48" height="48"></a>
 <a href="https://github.com/ChisThanh" target="_blank"><img src="https://avatars.githubusercontent.com/u/93512710?v=4" width="48" height="48"></a>
+<a href="https://github.com/wyicwx" target="_blank"><img src="https://avatars.githubusercontent.com/u/1241187?v=4" width="48" height="48"></a>
 
 ## Sponsor
 
