@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	bootstrap.Boot()
+	app := bootstrap.Boot()
 
-	select {}
+	app.Wait()
 }

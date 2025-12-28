@@ -1,14 +1,15 @@
 package bootstrap
 
 import (
+	contractsfoundation "github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/foundation"
 
 	"goravel/config"
 	"goravel/routes"
 )
 
-func Boot() {
-	foundation.Setup().
+func Boot() contractsfoundation.Application {
+	return foundation.Setup().
 		WithMigrations(Migrations()).
 		WithRouting([]func(){
 			routes.Web,
@@ -16,5 +17,5 @@ func Boot() {
 		}).
 		WithProviders(Providers()).
 		WithConfig(config.Boot).
-		Run()
+		Start()
 }
