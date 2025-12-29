@@ -148,8 +148,8 @@ github.com/gookit/validate v1.5.6 h1:D6vbSZzreuKYpeeXm5FDDEJy3K5E4lcWsQE4saSMZbU
 github.com/gookit/validate v1.5.6/go.mod h1:WYEHndRNepIIkM+6CtgEX9MQ9ToIQRhXxmz5oLHF/fc=
 github.com/goravel/file-rotatelogs/v2 v2.4.2 h1:g68AzbePXcm0V2CpUMc9j4qVzcDn7+7aoWSjZ51C0m4=
 github.com/goravel/file-rotatelogs/v2 v2.4.2/go.mod h1:23VuSW8cBS4ax5cmbV+5AaiLpq25b8UJ96IhbAkdo8I=
-github.com/goravel/framework v1.16.1-0.20251228133721-e15e7f6349f3 h1:RS4MbLd9MR7HIak/vUE5H9/xRN9jh3NkRtQojOL/YA0=
-github.com/goravel/framework v1.16.1-0.20251228133721-e15e7f6349f3/go.mod h1:JkW1lkJZzdIA765E7yY+pxrOYZx1MK3wpSeaCEq1cVQ=
+github.com/goravel/framework v1.16.1-0.20251229005739-a0465df08e0f h1:CudP6uyR5LDrMKKhoD+kYYq6S+BvKfux3kyFHfNVCYY=
+github.com/goravel/framework v1.16.1-0.20251229005739-a0465df08e0f/go.mod h1:JkW1lkJZzdIA765E7yY+pxrOYZx1MK3wpSeaCEq1cVQ=
 github.com/goravel/gin v1.4.1-0.20251222090234-f757fb223ccd h1:fWOmtb0vfu+jUPegI0vsAOAaC7lft8O5SccQvkcjNl4=
 github.com/goravel/gin v1.4.1-0.20251222090234-f757fb223ccd/go.mod h1:X3M05ZPU5K+p9CrfSa/By4eMQziifSWGZHYGZBkXQeM=
 github.com/goravel/postgres v1.4.2-0.20251220040806-fd631cfc1f6a h1:EjF30O/xW+Yk9pUIMIFcFnlvPWDDErrtkvL68fpzwKQ=

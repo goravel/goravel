@@ -5,7 +5,5 @@ import (
 )
 
 func main() {
-	app := bootstrap.Boot()
-
-	app.Wait()
+	bootstrap.Boot()
 }
