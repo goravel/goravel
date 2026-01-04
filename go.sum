@@ -355,8 +355,8 @@ github.com/gookit/validate v1.5.5 h1:jzMrwAYy9tbQa0mH8YFnv3C3JQR/0N4pRTsYiySwRJM
 github.com/gookit/validate v1.5.5/go.mod h1:p9sRPfpvYB4vXICBpEPzv8FoAky+XhUOhWQghgmmat4=
 github.com/goravel/file-rotatelogs/v2 v2.4.2 h1:g68AzbePXcm0V2CpUMc9j4qVzcDn7+7aoWSjZ51C0m4=
 github.com/goravel/file-rotatelogs/v2 v2.4.2/go.mod h1:23VuSW8cBS4ax5cmbV+5AaiLpq25b8UJ96IhbAkdo8I=
-github.com/goravel/framework v1.16.5 h1:nhWJj5pfIKuiggW4bQW4/qTsvFezGSb6CMP3vHlF8oU=
-github.com/goravel/framework v1.16.5/go.mod h1:drpy24MryZ2g7C0s20UVmPTQFont3wpzmqSOGzOT1S8=
+github.com/goravel/framework v1.16.6 h1:qaEKH+bXAyZu3xtfbG/oOIskcKccCtTjnNuYD+IUVJk=
+github.com/goravel/framework v1.16.6/go.mod h1:drpy24MryZ2g7C0s20UVmPTQFont3wpzmqSOGzOT1S8=
 github.com/goravel/gin v1.4.0 h1:uc3d40XMIl15puhJvUfh6cT7p39XTpK8biqPJ2WxCRQ=
 github.com/goravel/gin v1.4.0/go.mod h1:8yQxcARDgY4quV1Is4RCw8KjaZrW8GK1URWCSAE/Nzc=
 github.com/goravel/postgres v1.4.1 h1:LZh6NVltT33N2opj7qUxWRufqSSiaT3dHPC6iSCrFr4=
