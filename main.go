@@ -6,4 +6,6 @@ import (
 
 func main() {
 	bootstrap.Boot()
+
+	select {}
 }
