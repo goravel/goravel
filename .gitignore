@@ -1,7 +1,8 @@
 .idea
+.vscode
 .DS_Store
 .env
 .env.*
 !.env.example
-storage/framework
+storage
 tmp
