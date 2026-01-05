@@ -20,7 +20,7 @@ Goravel is a full-featured, scalable web application framework that provides a s
 
 The framework style is consistent with [Laravel](https://github.com/laravel/laravel), so PHP developers don’t need to learn a new framework and can still enjoy playing around with Golang, in tribute to Laravel!
 
-Welcome to star, PR and issues！
+We welcome stars, PRs, and issues!
 
 ## Getting started
 
