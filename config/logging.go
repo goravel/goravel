@@ -17,7 +17,7 @@ func init() {
 		// Log Channels
 		//
 		// Here you may configure the log channels for your application.
-		// Available Drivers: "single", "daily", "otel", "custom", "stack"
+		// Available Drivers: "single", "daily", "custom", "stack"
 		// Available Level: "debug", "info", "warning", "error", "fatal", "panic"
 		// Available Formatter: "text", "json"
 		"channels": map[string]any{
