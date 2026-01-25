@@ -16,38 +16,11 @@ English | [中文](./README_zh.md)
 
 ## About Goravel
 
-Goravel is a web application framework with complete functions and good scalability. As a starting scaffolding to help
-Gopher quickly build their own applications.
+Goravel is a full-featured, scalable web application framework that provides a starting scaffold to help Gophers quickly build their applications.
 
-The framework style is consistent with [Laravel](https://github.com/laravel/laravel), let Php developer don't need to learn a
-new framework, but also happy to play around Golang! In tribute to Laravel!
+The framework style is consistent with [Laravel](https://laravel.com/), so PHP developers don’t need to learn a new framework and can still enjoy playing around with Golang, in tribute to Laravel!
 
-Welcome to star, PR and issues！
-
-## Getting started
-
-```
-// Generate APP_KEY
-go run . artisan key:generate
-
-// Route
-facades.Route().Get("/", userController.Show)
-
-// ORM
-facades.Orm().Query().With("Author").First(&user)
-
-// Task Scheduling
-facades.Schedule().Command("send:emails name").EveryMinute()
-
-// Log
-facades.Log().Debug(message)
-
-// Cache
-value := facades.Cache().Get("goravel", "default")
-
-// Queues
-err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
-```
+We welcome stars, PRs, and issues!
 
 ## Documentation
 
@@ -58,15 +31,44 @@ Example [https://github.com/goravel/example](https://github.com/goravel/example)
 > To optimize the documentation, please submit a PR to the documentation
 > repository [https://github.com/goravel/docs](https://github.com/goravel/docs)
 
-## Main Function
+## Main Features
 
-|                                                                                        |                                                                 |                                                                          |                                                                       |                                                                                |
-|----------------------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [Config](https://www.goravel.dev/getting-started/configuration.html)                   | [Http](https://www.goravel.dev/the-basics/routing.html)         | [Authentication](https://www.goravel.dev/security/authentication.html)   | [Authorization](https://www.goravel.dev/security/authorization.html)  | [Orm](https://www.goravel.dev/orm/getting-started.html)                        |
-| [Migrate](https://www.goravel.dev/database/migrations.html)                                 | [Logger](https://www.goravel.dev/the-basics/logging.html)       | [Cache](https://www.goravel.dev/digging-deeper/cache.html)               | [Grpc](https://www.goravel.dev/the-basics/grpc.html)                  | [Artisan Console](https://www.goravel.dev/digging-deeper/artisan-console.html) |
-| [Task Scheduling](https://www.goravel.dev/digging-deeper/task-scheduling.html)         | [Queue](https://www.goravel.dev/digging-deeper/queues.html)     | [Event](https://www.goravel.dev/digging-deeper/event.html)               | [FileStorage](https://www.goravel.dev/digging-deeper/filesystem.html) | [Mail](https://www.goravel.dev/digging-deeper/mail.html)                       |
-| [Validation](https://www.goravel.dev/the-basics/validation.html)                       | [Mock](https://www.goravel.dev/testing/mock.html)               | [Hash](https://www.goravel.dev/security/hashing.html)                    | [Crypt](https://www.goravel.dev/security/encryption.html)             | [Carbon](https://www.goravel.dev/digging-deeper/helpers.html)                  |
-| [Package Development](https://www.goravel.dev/digging-deeper/package-development.html) | [Testing](https://www.goravel.dev/testing/getting-started.html) | [Localization](https://www.goravel.dev/digging-deeper/localization.html) | [Session](https://www.goravel.dev/the-basics/session.html)            |                                                                                |
+| Module Name | Description |
+|-------------|-------------|
+| [Artisan Console](https://www.goravel.dev/digging-deeper/artisan-console.html) | CLI command-line interface for application management and automation |
+| [Authentication](https://www.goravel.dev/security/authentication.html) | User identity verification with JWT and Session drivers |
+| [Authorization](https://www.goravel.dev/security/authorization.html) | Permission-based access control using policies and gates |
+| [Cache](https://www.goravel.dev/digging-deeper/cache.html) | Store and retrieve data using memory, Redis, or custom drivers |
+| [Carbon](https://www.goravel.dev/digging-deeper/helpers.html) | Helper functions for date and time manipulation |
+| [Config](https://www.goravel.dev/getting-started/configuration.html) | Application configuration management from files and environment |
+| [Crypt](https://www.goravel.dev/security/encryption.html) | Secure data encryption and decryption utilities |
+| [DB](https://www.goravel.dev/database/getting-started.html) | Database query builder |
+| [Event](https://www.goravel.dev/digging-deeper/event.html) | Application event dispatching and listening system |
+| [Factory](https://www.goravel.dev/orm/factories.html) | Generate fake model data for testing purposes |
+| [FileStorage](https://www.goravel.dev/digging-deeper/filesystem.html) | File upload, download, and storage across multiple drivers |
+| [Grpc](https://www.goravel.dev/the-basics/grpc.html) | High-performance gRPC server and client implementation |
+| [Hash](https://www.goravel.dev/security/hashing.html) | Secure password hashing |
+| [Http](https://www.goravel.dev/the-basics/routing.html) | HTTP routing, controllers, and middleware management |
+| [Http Client](https://www.goravel.dev/digging-deeper/http-client.html) | Make HTTP requests to external APIs and services |
+| [Localization](https://www.goravel.dev/digging-deeper/localization.html) | Multi-language translation and locale management |
+| [Logger](https://www.goravel.dev/the-basics/logging.html) | Application logging to files, console, or external services |
+| [Mail](https://www.goravel.dev/digging-deeper/mail.html) | Send emails via SMTP or queue-based delivery |
+| [Mock](https://www.goravel.dev/testing/mock.html) | Create test mocks for facades and dependencies |
+| [Migrate](https://www.goravel.dev/database/migrations.html) | Version control for database schema changes |
+| [Orm](https://www.goravel.dev/orm/getting-started.html) | Elegant Orm implementation for database operations |
+| [Package Development](https://www.goravel.dev/digging-deeper/package-development.html) | Build reusable packages to extend framework functionality |
+| [Process](https://www.goravel.dev/digging-deeper/process.html) | An expressive and elegant API around Go's standard os/exec package |
+| [Queue](https://www.goravel.dev/digging-deeper/queues.html) | Defer time-consuming tasks to background job processing |
+| [Seeder](https://www.goravel.dev/database/seeding.html) | Populate database tables with test or initial data |
+| [Session](https://www.goravel.dev/the-basics/session.html) | Manage user session data across HTTP requests |
+| [Task Scheduling](https://www.goravel.dev/digging-deeper/task-scheduling.html) | Schedule recurring tasks using cron-like expressions |
+| [Testing](https://www.goravel.dev/testing/getting-started.html) | HTTP testing, mocking, and assertion utilities |
+| [Validation](https://www.goravel.dev/the-basics/validation.html) | Validate incoming request data using rules |
+| [View](https://www.goravel.dev/the-basics/views.html) | Template rendering engine for HTML responses |
+
+## Compare With Laravel
+
+[For Detail](https://www.goravel.dev/prologue/compare-with-laravel.html)
 
 ## Roadmap
 
