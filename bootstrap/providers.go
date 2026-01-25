@@ -18,7 +18,6 @@ import (
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/schedule"
 	"github.com/goravel/framework/session"
-	"github.com/goravel/framework/telemetry"
 	"github.com/goravel/framework/testing"
 	"github.com/goravel/framework/translation"
 	"github.com/goravel/framework/validation"
@@ -29,11 +28,11 @@ import (
 
 func Providers() []foundation.ServiceProvider {
 	return []foundation.ServiceProvider{
+		&http.ServiceProvider{},
 		&log.ServiceProvider{},
 		&cache.ServiceProvider{},
 		&session.ServiceProvider{},
 		&validation.ServiceProvider{},
-		&http.ServiceProvider{},
 		&view.ServiceProvider{},
 		&route.ServiceProvider{},
 		&gin.ServiceProvider{},
@@ -50,7 +49,6 @@ func Providers() []foundation.ServiceProvider {
 		&process.ServiceProvider{},
 		&schedule.ServiceProvider{},
 		&filesystem.ServiceProvider{},
-		&telemetry.ServiceProvider{},
 		&testing.ServiceProvider{},
 	}
 }

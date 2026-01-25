@@ -18,35 +18,9 @@
 
 Goravel 是一个功能完备、具有良好扩展能力的 Web 应用程序框架。作为一个起始脚手架帮助 Golang 开发者快速构建自己的应用。
 
-框架风格与 [Laravel](https://github.com/laravel/laravel) 保持一致，让 Phper 不用学习新的框架，也可以愉快的玩转 Golang！致敬
-Laravel！
+框架风格与 [Laravel](https://laravel.com/) 保持一致，让 Phper 不用学习新的框架，也可以愉快的玩转 Golang！致敬 Laravel！
 
 欢迎 Star, PR, Issues！
-
-## 快速上手
-
-```
-// 生成 APP_KEY
-go run . artisan key:generate
-
-// 定义路由
-facades.Route().Get("/", userController.Show)
-
-// 数据库查询
-facades.Orm().Query().With("Author").First(&user)
-
-// 任务调度
-facades.Schedule().Command("send:emails name").EveryMinute()
-
-// 记录 Log
-facades.Log().Debug(message)
-
-// 获取缓存
-value := facades.Cache().Get("goravel", "default")
-
-// 队列
-err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
-```
 
 ## 文档
 
@@ -58,13 +32,42 @@ err := facades.Queue().Job(&jobs.Test{}, []queue.Arg{}).Dispatch()
 
 ## 主要功能
 
-|                                                                             |                                                               |                                                                    |                                                                   |                                                                               |
-|-----------------------------------------------------------------------------|---------------------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [自定义配置](https://www.goravel.dev/zh_CN/getting-started/configuration.html)      | [HTTP 服务](https://www.goravel.dev/zh_CN/the-basics/routing.html) | [用户认证](https://www.goravel.dev/zh_CN/security/authentication.html)    | [用户授权](https://www.goravel.dev/zh_CN/security/authorization.html)    | [数据库 ORM](https://www.goravel.dev/zh_CN/orm/getting-started.html)                |
-| [数据库迁移](https://www.goravel.dev/zh_CN/database/migrations.html)                     | [日志](https://www.goravel.dev/zh_CN/the-basics/logging.html)      | [缓存](https://www.goravel.dev/zh_CN/digging-deeper/cache.html)         | [Grpc](https://www.goravel.dev/zh_CN/the-basics/grpc.html)           | [Artisan 命令行](https://www.goravel.dev/zh_CN/digging-deeper/artisan-console.html) |
-| [任务调度](https://www.goravel.dev/zh_CN/digging-deeper/task-scheduling.html)      | [队列](https://www.goravel.dev/zh_CN/digging-deeper/queues.html)   | [事件系统](https://www.goravel.dev/zh_CN/digging-deeper/event.html)       | [文件存储](https://www.goravel.dev/zh_CN/digging-deeper/filesystem.html) | [邮件](https://www.goravel.dev/zh_CN/digging-deeper/mail.html)                     |
-| [表单验证](https://www.goravel.dev/zh_CN/the-basics/validation.html)               | [Mock](https://www.goravel.dev/zh_CN/testing/mock.html)   | [Hash](https://www.goravel.dev/zh_CN/security/hashing.html)           | [Crypt](https://www.goravel.dev/zh_CN/security/encryption.html)      | [Carbon](https://www.goravel.dev/zh_CN/digging-deeper/helpers.html)              |
-| [扩展包开发](https://www.goravel.dev/zh_CN/digging-deeper/package-development.html) | [测试](https://www.goravel.dev/zh_CN/testing/getting-started.html) | [本地化](https://www.goravel.dev/zh_CN/digging-deeper/localization.html) | [Session](https://www.goravel.dev/zh_CN/the-basics/session.html)     |                                                                               |
+| 模块名称 | 描述 |
+|-------------|-------------|
+| [Artisan Console](https://www.goravel.dev/zh_CN/digging-deeper/artisan-console.html) | 用于应用管理和自动化的 CLI 命令行界面 |
+| [Authentication](https://www.goravel.dev/zh_CN/security/authentication.html) | 使用 JWT 和 Session 驱动的用户身份验证 |
+| [Authorization](https://www.goravel.dev/zh_CN/security/authorization.html) | 基于策略和守卫的访问控制 |
+| [Cache](https://www.goravel.dev/zh_CN/digging-deeper/cache.html) | 使用内存、Redis 或自定义驱动存储和检索数据 |
+| [Carbon](https://www.goravel.dev/zh_CN/digging-deeper/helpers.html) | 日期和时间操作的辅助函数 |
+| [Config](https://www.goravel.dev/zh_CN/getting-started/configuration.html) | 从文件和环境变量管理应用配置 |
+| [Crypt](https://www.goravel.dev/zh_CN/security/encryption.html) | 数据加密和解密工具 |
+| [DB](https://www.goravel.dev/zh_CN/database/getting-started.html) | 数据库查询构建器 |
+| [Event](https://www.goravel.dev/zh_CN/digging-deeper/event.html) | 应用事件分发和监听系统 |
+| [Factory](https://www.goravel.dev/zh_CN/orm/factories.html) | 生成用于测试的模拟数据 |
+| [FileStorage](https://www.goravel.dev/zh_CN/digging-deeper/filesystem.html) | 支持多个驱动的文件上传、下载和存储 |
+| [Grpc](https://www.goravel.dev/zh_CN/the-basics/grpc.html) | 高性能 gRPC 服务端和客户端实现 |
+| [Hash](https://www.goravel.dev/zh_CN/security/hashing.html) | 安全密码哈希 |
+| [Http](https://www.goravel.dev/zh_CN/the-basics/routing.html) | HTTP 路由、控制器和中间件管理 |
+| [Http Client](https://www.goravel.dev/zh_CN/digging-deeper/http-client.html) | HTTP 客户端 |
+| [Localization](https://www.goravel.dev/zh_CN/digging-deeper/localization.html) | 多语言支持 |
+| [Logger](https://www.goravel.dev/zh_CN/the-basics/logging.html) | 应用日志记录到文件、控制台或外部服务 |
+| [Mail](https://www.goravel.dev/zh_CN/digging-deeper/mail.html) | 通过 SMTP 或队列发送邮件 |
+| [Mock](https://www.goravel.dev/zh_CN/testing/mock.html) | 为 facade 和依赖创建模拟测试 |
+| [Migrate](https://www.goravel.dev/zh_CN/database/migrations.html) | 支持版本控制的数据库迁移 |
+| [Orm](https://www.goravel.dev/zh_CN/orm/getting-started.html) | 优雅的 ORM 数据库操作实现 |
+| [Package Development](https://www.goravel.dev/zh_CN/digging-deeper/package-development.html) | 构建可重用的扩展包以扩展框架功能 |
+| [Process](https://www.goravel.dev/zh_CN/digging-deeper/process.html) | 围绕 Go 标准 os/exec 包构建的表达力强且优雅的 API |
+| [Queue](https://www.goravel.dev/zh_CN/digging-deeper/queues.html) | 将耗时任务延迟到后台任务处理 |
+| [Seeder](https://www.goravel.dev/zh_CN/database/seeding.html) | 使用测试或初始数据填充数据库表 |
+| [Session](https://www.goravel.dev/zh_CN/the-basics/session.html) | HTTP Session 会话管理 |
+| [Task Scheduling](https://www.goravel.dev/zh_CN/digging-deeper/task-scheduling.html) | 使用类 cron 表达式调度周期性任务 |
+| [Testing](https://www.goravel.dev/zh_CN/testing/getting-started.html) | HTTP 测试、模拟和断言工具 |
+| [Validation](https://www.goravel.dev/zh_CN/the-basics/validation.html) | 使用规则验证传入的请求数据 |
+| [View](https://www.goravel.dev/zh_CN/the-basics/views.html) | HTML 模板引擎 |
+
+## 与 Laravel 对比
+
+[查看详情](https://www.goravel.dev/zh_CN/prologue/compare-with-laravel.html)
 
 ## 路线图
 
