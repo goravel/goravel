@@ -4,9 +4,9 @@ go 1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.11.0
-	github.com/goravel/framework v1.16.1-0.20260125030654-ec87b76cadae
-	github.com/goravel/gin v1.4.1-0.20260119024408-7972b901c4a6
-	github.com/goravel/postgres v1.4.2-0.20260119025522-5fc6ef1d587e
+	github.com/goravel/framework v1.16.1-0.20260202061217-60e5444dde33
+	github.com/goravel/gin v1.4.1-0.20260202063042-46dbfa2d4bd4
+	github.com/goravel/postgres v1.4.2-0.20260202063923-5859268c6f26
 	github.com/stretchr/testify v1.11.1
 )
 

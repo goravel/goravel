@@ -17,5 +17,5 @@ func Boot() contractsfoundation.Application {
 		}).
 		WithProviders(Providers).
 		WithConfig(config.Boot).
-		Start()
+		Create()
 }
