@@ -3,6 +3,7 @@ package config
 import (
 	"github.com/goravel/framework/contracts/database/driver"
 	postgresfacades "github.com/goravel/postgres/facades"
+
 	"goravel/app/facades"
 )
 
@@ -13,11 +14,11 @@ func init() {
 		// Database connections
 		"connections": map[string]any{
 			"postgres": map[string]any{
-				"host":     config.Env("DB_HOST", "127.0.0.1"),
-				"port":     config.Env("DB_PORT", 5432),
-				"database": config.Env("DB_DATABASE", "forge"),
-				"username": config.Env("DB_USERNAME", ""),
-				"password": config.Env("DB_PASSWORD", ""),
+				"host":     config.Env("DB_HOST"),
+				"port":     config.Env("DB_PORT"),
+				"database": config.Env("DB_DATABASE"),
+				"username": config.Env("DB_USERNAME"),
+				"password": config.Env("DB_PASSWORD"),
 				"sslmode":  "disable",
 				"singular": false,
 				"prefix":   "",

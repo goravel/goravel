@@ -6,7 +6,7 @@ require (
 	github.com/gin-gonic/gin v1.11.0
 	github.com/goravel/framework v1.17.0
 	github.com/goravel/gin v1.17.0
-	github.com/goravel/postgres v1.17.0
+	github.com/goravel/postgres v1.17.1
 	github.com/stretchr/testify v1.11.1
 )
 
