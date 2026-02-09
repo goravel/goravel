@@ -152,8 +152,6 @@ github.com/goravel/framework v1.17.0 h1:a02vTMO7ETQE+fkpfndiNgSXucJKA58qB3nzm+mo
 github.com/goravel/framework v1.17.0/go.mod h1:ClgXBsig8R2w+xAJT2TVxpAkazGHFtvVmNBolYT94gQ=
 github.com/goravel/gin v1.17.0 h1:8H66v9GaYJR9UQ7C0VOef25/r8t/BAH9ZxlvxbHprlc=
 github.com/goravel/gin v1.17.0/go.mod h1:n0W6V/H+E0mqO+Gh+UMjeBANZe//lpWJ6X7kF3kwxR8=
-github.com/goravel/postgres v1.17.0 h1:xaOZiuS4SkYDwtyTz86cHqihSDYdu4DC9U7vHSjFvto=
-github.com/goravel/postgres v1.17.0/go.mod h1:JPBxn06MGb0BOpdAUmfgwXU1Q884sQwoFsSyKl1TeXk=
 github.com/goravel/postgres v1.17.1 h1:MJ2NyvyW6wxb8EfDaZozPEWWcKu8LEouRKnj0wEWilw=
 github.com/goravel/postgres v1.17.1/go.mod h1:JPBxn06MGb0BOpdAUmfgwXU1Q884sQwoFsSyKl1TeXk=
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.3 h1:NmZ1PKzSTQbuGHw9DGPFomqkkLWMC+vZCkfs+FHv1Vg=
