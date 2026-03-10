@@ -1,0 +1,11 @@
+with-expecter: True
+disable-version-string: True
+all: True
+recursive: true
+packages:
+  github.com/goravel/postgres/contracts:
+    config:
+      dir: mocks/{{replaceAll .InterfaceDirRelative "contracts" ""}}
+      filename: "{{.InterfaceName}}.go"
+      mockname: "{{.InterfaceName}}"
+      

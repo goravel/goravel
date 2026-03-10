@@ -1,0 +1,10 @@
+go 1.18
+
+use .
+
+// replace git.neotel.at/go/c5rest => /home/rl/work/c5rest
+// replace git.neotel.at/go/c5db => /home/rl/work/c5db
+
+// replace github.com/pterm/pterm => H:/work/github.com/pterm/pterm
+
+// replace atomicgo.dev/cursor => H:/github.com/atomicgo.dev/cursor

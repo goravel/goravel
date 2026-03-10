@@ -1,0 +1,32 @@
+run:
+  timeout: 10m
+  modules-download-mode: readonly
+  allow-parallel-runners: true
+
+linters:
+  enable-all: true
+  disable:
+    - paralleltest
+    - gochecknoglobals
+    - exhaustruct
+    - wrapcheck
+    - tagliatelle
+    - depguard
+    - ireturn
+    - funlen
+    - varnamelen
+    - gomnd
+    - execinquery
+    - copyloopvar
+    - intrange
+    - gocognit
+    - lll
+    - cyclop
+    - gocyclo
+    - testpackage
+    - err113
+    - nestif
+    - maintidx
+    - contextcheck
+    - perfsprint
+    - exportloopref

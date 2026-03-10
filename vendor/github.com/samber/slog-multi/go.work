@@ -1,0 +1,10 @@
+go 1.21
+
+use (
+	.
+	./examples/failover
+	./examples/fanout
+	./examples/pipe
+	./examples/pool
+	./examples/router
+)

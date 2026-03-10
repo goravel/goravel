@@ -1,0 +1,48 @@
+linters:
+  # Enable specific linter
+  # https://golangci-lint.run/usage/linters/#enabled-by-default-linters
+  enable:
+    - bidichk
+    - bodyclose
+    - containedctx
+    - contextcheck
+    - dogsled
+    - dupl
+    - durationcheck
+    - errcheck
+    - errchkjson
+    - errorlint
+    - exportloopref
+    - gocritic
+    - goheader
+    - goimports
+    - goprintffuncname
+    - gosec
+    - gosimple
+    - govet
+    - grouper
+    - importas
+    - ineffassign
+    - makezero
+    - misspell
+    - nilnil
+    - prealloc
+    - predeclared
+    - reassign
+    - revive
+    - staticcheck
+    - stylecheck
+    - tenv
+    - thelper
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - usestdlibvars
+    - wastedassign
+
+linters-settings:
+  gocritic:
+    disabled-checks:
+      - ifElseChain
+      - singleCaseSwitch

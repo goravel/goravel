@@ -1,0 +1,140 @@
+version: "2"
+
+linters:
+  default: all
+  disable:
+    # redundant
+    - cyclop    # revive
+    - funlen    # revive
+    - gocognit  # revive
+    - gocyclo   # revive
+    - lll       # revive
+    - unparam   # revive
+
+    # too strict
+    - depguard
+    - exhaustive
+    - exhaustruct
+    - gochecknoglobals
+    - godot
+    - mnd
+    - paralleltest
+    - testpackage
+    - varnamelen
+
+    # strict formatting
+    - nlreturn
+    - whitespace
+    - wsl
+
+    # nice to have
+    - usetesting
+    - unused
+    - testifylint
+    - perfsprint
+
+  settings:
+
+    errcheck:
+      check-type-assertions: true
+
+    gocritic:
+      enable-all: true
+      disabled-checks:
+        - unnamedResult
+        - sloppyLen
+        - singleCaseSwitch
+
+    govet:
+      disable:
+        - fieldalignment
+      enable-all: true
+
+    maintidx:
+      # higher = better
+      under: 19
+
+    misspell:
+      locale: US
+
+    nestif:
+      # lower=better
+      min-complexity: 5
+
+#    nlreturn:
+#      block-size: 5
+
+    nolintlint:
+      require-explanation: false  # don't require an explanation for nolint directives
+      require-specific: false     # don't require nolint directives to be specific about which linter is being skipped
+      allow-unused: false         # report any unused nolint directives
+
+    revive:
+      severity: error
+      enable-all-rules: true
+      rules:
+        - name: function-length
+          disabled: true
+        - name: add-constant
+          disabled: true
+        - name: cognitive-complexity
+          arguments:
+            - 60
+        - name: cyclomatic
+          arguments:
+            # lower=better
+            - 40
+        - name: empty-lines
+          disabled: true
+        - name: line-length-limit
+          disabled: true
+        - name: max-control-nesting
+          arguments:
+            # lower=better
+            - 4
+        - name: max-public-structs
+          disabled: true
+        - name: indent-error-flow
+          disabled: true
+        - name: package-comments
+          disabled: true
+        - name: unnecessary-stmt
+          disabled: true
+        - name: unused-parameter
+          disabled: true
+        - name: unused-receiver
+          disabled: true
+
+    staticcheck:
+      checks:
+        - all
+        - -ST1000
+
+    wsl:
+      allow-trailing-comment: true
+
+  exclusions:
+    paths:
+      - examples
+    presets:
+      - common-false-positives
+      - legacy
+      - std-error-handling
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+formatters:
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/goforj/godump)
+
+  exclusions:
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

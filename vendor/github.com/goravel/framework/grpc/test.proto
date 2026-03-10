@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/goravel/framework/grpc";
+
+package grpc;
+
+message TestRequest {
+  string name = 1;
+}
+
+message TestResponse {
+  int32 code = 1;
+  string message = 2;
+}
+
+service TestService {
+  rpc Get(TestRequest) returns (TestResponse) {}
+}
