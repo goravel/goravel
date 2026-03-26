@@ -40,6 +40,10 @@ func init() {
 				"print":     false,
 				"formatter": "text",
 			},
+			"otel": map[string]any{
+				"driver":          "otel",
+				"instrument_name": config.GetString("APP_NAME", "goravel/log"),
+			},
 		},
 	})
 }

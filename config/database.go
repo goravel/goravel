@@ -3,7 +3,6 @@ package config
 import (
 	"github.com/goravel/framework/contracts/database/driver"
 	postgresfacades "github.com/goravel/postgres/facades"
-
 	"goravel/app/facades"
 )
 
