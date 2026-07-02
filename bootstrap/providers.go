@@ -1,6 +1,7 @@
 package bootstrap
 
 import (
+	"github.com/goravel/framework/ai"
 	"github.com/goravel/framework/auth"
 	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/contracts/foundation"
@@ -28,14 +29,17 @@ import (
 
 func Providers() []foundation.ServiceProvider {
 	return []foundation.ServiceProvider{
-		&http.ServiceProvider{},
 		&log.ServiceProvider{},
 		&cache.ServiceProvider{},
+		&hash.ServiceProvider{},
+		&http.ServiceProvider{},
 		&session.ServiceProvider{},
+		&filesystem.ServiceProvider{},
 		&validation.ServiceProvider{},
 		&view.ServiceProvider{},
 		&route.ServiceProvider{},
 		&gin.ServiceProvider{},
+		&ai.ServiceProvider{},
 		&database.ServiceProvider{},
 		&postgres.ServiceProvider{},
 		&auth.ServiceProvider{},
@@ -43,11 +47,9 @@ func Providers() []foundation.ServiceProvider {
 		&queue.ServiceProvider{},
 		&event.ServiceProvider{},
 		&grpc.ServiceProvider{},
-		&hash.ServiceProvider{},
 		&translation.ServiceProvider{},
 		&mail.ServiceProvider{},
 		&schedule.ServiceProvider{},
-		&filesystem.ServiceProvider{},
 		&telemetry.ServiceProvider{},
 		&testing.ServiceProvider{},
 	}

@@ -40,6 +40,12 @@ func init() {
 		// - "b3multi": B3 Multi Header
 		"propagators": config.Env("OTEL_PROPAGATORS", "tracecontext"),
 
+		// Shutdown Timeout
+		//
+		// Max time to wait for flushing buffered telemetry when the application stops.
+		// Format: Duration string (e.g., "15s", "30s").
+		"shutdown_timeout": config.Env("OTEL_SHUTDOWN_TIMEOUT", "15s"),
+
 		// Traces Configuration
 		//
 		// Configures the distributed tracing signal. Traces record the path of
@@ -68,6 +74,23 @@ func init() {
 				// The ratio for "traceidratio" sampling (0.0 to 1.0).
 				// e.g., 0.1 records ~10% of traces.
 				"ratio": config.Env("OTEL_TRACES_SAMPLER_RATIO", 0.05),
+			},
+
+			// Processor Configuration
+			//
+			// Controls how finished spans are handed to the exporter.
+			"processor": map[string]any{
+				// Type: "batch" buffers spans for performance (recommended);
+				// "simple" exports each span synchronously (debugging).
+				"type": config.Env("OTEL_TRACE_PROCESSOR_TYPE", "batch"),
+
+				// Interval: How often buffered spans are pushed.
+				// Format: Duration string (e.g., "5s", "1m", "500ms").
+				"interval": config.Env("OTEL_TRACE_EXPORT_INTERVAL", "5s"),
+
+				// Timeout: Max time allowed for export before cancelling.
+				// Format: Duration string (e.g., "30s", "10s").
+				"timeout": config.Env("OTEL_TRACE_EXPORT_TIMEOUT", "30s"),
 			},
 		},
 
@@ -110,14 +133,18 @@ func init() {
 
 			// Processor Configuration
 			//
-			// Configures the BatchLogProcessor, which batches logs before export.
+			// Controls how log records are handed to the exporter.
 			"processor": map[string]any{
-				// Interval: How often logs are flushed.
-				// Format: Duration string (e.g., "1s", "500ms").
+				// Type: "batch" buffers records for performance (recommended);
+				// "simple" exports each record synchronously (debugging).
+				"type": config.Env("OTEL_LOG_PROCESSOR_TYPE", "batch"),
+
+				// Interval: How often buffered records are pushed.
+				// Format: Duration string (e.g., "1s", "1m", "500ms").
 				"interval": config.Env("OTEL_LOG_EXPORT_INTERVAL", "1s"),
 
 				// Timeout: Max time allowed for export before cancelling.
-				// Format: Duration string (e.g., "30s").
+				// Format: Duration string (e.g., "30s", "10s").
 				"timeout": config.Env("OTEL_LOG_EXPORT_TIMEOUT", "30s"),
 			},
 		},
@@ -183,9 +210,9 @@ func init() {
 			// Reference: https://opentelemetry.io/docs/specs/otel/protocol/
 			"otlptrace": map[string]any{
 				"driver":   "otlp",
-				"endpoint": config.Env("OTEL_EXPORTER_OTLP_TRACES_ENDPOINT", "http://localhost:4318"),
+				"endpoint": config.Env("OTEL_EXPORTER_OTLP_TRACES_ENDPOINT", "localhost:4318"),
 
-				// Protocol: "http/protobuf", "http/json" or "grpc".
+				// Protocol: "http/protobuf" or "grpc".
 				"protocol": config.Env("OTEL_EXPORTER_OTLP_TRACES_PROTOCOL", "http/protobuf"),
 
 				// Set to false to require TLS/SSL.
@@ -194,14 +221,34 @@ func init() {
 				// Timeout: Max time to wait for the backend to acknowledge.
 				// Format: Duration string (e.g., "10s", "500ms").
 				"timeout": config.Env("OTEL_EXPORTER_OTLP_TRACES_TIMEOUT", "10s"),
+
+				// Compression: "gzip" or "" (none).
+				"compression": config.Env("OTEL_EXPORTER_OTLP_TRACES_COMPRESSION", ""),
+
+				// TLS certificate file paths. Leave empty to use system roots.
+				// Conflicts with "insecure".
+				"tls": map[string]any{
+					"ca":   config.Env("OTEL_EXPORTER_OTLP_TRACES_CERTIFICATE", ""),
+					"cert": config.Env("OTEL_EXPORTER_OTLP_TRACES_CLIENT_CERTIFICATE", ""),
+					"key":  config.Env("OTEL_EXPORTER_OTLP_TRACES_CLIENT_KEY", ""),
+				},
+
+				// Retry with exponential backoff on export failure.
+				// Zero durations use the SDK defaults shown below.
+				"retry": map[string]any{
+					"enabled":          true,
+					"initial_interval": "5s",
+					"max_interval":     "30s",
+					"max_elapsed_time": "1m",
+				},
 			},
 
 			// OTLP Metric Exporter
 			"otlpmetric": map[string]any{
 				"driver":   "otlp",
-				"endpoint": config.Env("OTEL_EXPORTER_OTLP_METRICS_ENDPOINT", "http://localhost:4318"),
+				"endpoint": config.Env("OTEL_EXPORTER_OTLP_METRICS_ENDPOINT", "localhost:4318"),
 
-				// Protocol: "http/protobuf", "http/json" or "grpc".
+				// Protocol: "http/protobuf" or "grpc".
 				"protocol": config.Env("OTEL_EXPORTER_OTLP_METRICS_PROTOCOL", "http/protobuf"),
 
 				// Set to false to require TLS/SSL.
@@ -211,18 +258,39 @@ func init() {
 				// Format: Duration string (e.g., "10s", "500ms").
 				"timeout": config.Env("OTEL_EXPORTER_OTLP_METRICS_TIMEOUT", "10s"),
 
-				// Metric Temporality: "cumulative" or "delta".
+				// Metric Temporality: "cumulative", "delta" or "lowmemory".
 				// - "cumulative": Standard for Prometheus (counts never reset).
-				// - "delta": Standard for Datadog/StatsD (counts per interval).
+				// - "delta": Standard for Datadog/StatsD. UpDownCounters stay cumulative per the OTLP spec.
+				// - "lowmemory": Delta for synchronous Counter/Histogram only.
 				"metric_temporality": config.Env("OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY", "cumulative"),
+
+				// Compression: "gzip" or "" (none).
+				"compression": config.Env("OTEL_EXPORTER_OTLP_METRICS_COMPRESSION", ""),
+
+				// TLS certificate file paths. Leave empty to use system roots.
+				// Conflicts with "insecure".
+				"tls": map[string]any{
+					"ca":   config.Env("OTEL_EXPORTER_OTLP_METRICS_CERTIFICATE", ""),
+					"cert": config.Env("OTEL_EXPORTER_OTLP_METRICS_CLIENT_CERTIFICATE", ""),
+					"key":  config.Env("OTEL_EXPORTER_OTLP_METRICS_CLIENT_KEY", ""),
+				},
+
+				// Retry with exponential backoff on export failure.
+				// Zero durations use the SDK defaults shown below.
+				"retry": map[string]any{
+					"enabled":          true,
+					"initial_interval": "5s",
+					"max_interval":     "30s",
+					"max_elapsed_time": "1m",
+				},
 			},
 
 			// OTLP Log Exporter
 			"otlplog": map[string]any{
 				"driver":   "otlp",
-				"endpoint": config.Env("OTEL_EXPORTER_OTLP_LOGS_ENDPOINT", "http://localhost:4318"),
+				"endpoint": config.Env("OTEL_EXPORTER_OTLP_LOGS_ENDPOINT", "localhost:4318"),
 
-				// Protocol: "http/protobuf", "http/json" or "grpc".
+				// Protocol: "http/protobuf" or "grpc".
 				"protocol": config.Env("OTEL_EXPORTER_OTLP_LOGS_PROTOCOL", "http/protobuf"),
 
 				// Set to false to require TLS/SSL.
@@ -231,6 +299,26 @@ func init() {
 				// Timeout: Max time to wait for the backend to acknowledge.
 				// Format: Duration string (e.g., "10s", "500ms").
 				"timeout": config.Env("OTEL_EXPORTER_OTLP_LOGS_TIMEOUT", "10s"),
+
+				// Compression: "gzip" or "" (none).
+				"compression": config.Env("OTEL_EXPORTER_OTLP_LOGS_COMPRESSION", ""),
+
+				// TLS certificate file paths. Leave empty to use system roots.
+				// Conflicts with "insecure".
+				"tls": map[string]any{
+					"ca":   config.Env("OTEL_EXPORTER_OTLP_LOGS_CERTIFICATE", ""),
+					"cert": config.Env("OTEL_EXPORTER_OTLP_LOGS_CLIENT_CERTIFICATE", ""),
+					"key":  config.Env("OTEL_EXPORTER_OTLP_LOGS_CLIENT_KEY", ""),
+				},
+
+				// Retry with exponential backoff on export failure.
+				// Zero durations use the SDK defaults shown below.
+				"retry": map[string]any{
+					"enabled":          true,
+					"initial_interval": "5s",
+					"max_interval":     "30s",
+					"max_elapsed_time": "1m",
+				},
 			},
 
 			// Console Exporter (Debugging)

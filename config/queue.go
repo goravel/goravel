@@ -20,7 +20,7 @@ func init() {
 			},
 			"database": map[string]any{
 				"driver":     "database",
-				"connection": "postgres",
+				"connection": config.Env("DB_CONNECTION"),
 				"queue":      "default",
 				"concurrent": 1,
 			},
@@ -31,7 +31,7 @@ func init() {
 		// These options configure the behavior of failed queue job logging so you
 		// can control how and where failed jobs are stored.
 		"failed": map[string]any{
-			"database": config.Env("DB_CONNECTION", "postgres"),
+			"database": config.Env("DB_CONNECTION"),
 			"table":    "failed_jobs",
 		},
 	})

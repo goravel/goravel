@@ -55,5 +55,20 @@ func init() {
 		// 32 character string, otherwise these encrypted strings
 		// will not be safe. Please do this before deploying an application!
 		"key": config.Env("APP_KEY", ""),
+		"maintenance": map[string]any{
+			// Maintenance Mode Driver
+			//
+			// These configuration options determine the driver used to determine and
+			// manage Goravel's "maintenance mode" status. The "cache" driver will
+			// allow maintenance mode to be controlled across multiple machines.
+			//
+			// Supported drivers: "file", "cache"
+			"driver": config.Env("APP_MAINTENANCE_DRIVER", "file"),
+			// Maintenance Mode Store
+			//
+			// This option controls the cache store used by the "cache" maintenance
+			// driver. Leave it empty to use the default cache store.
+			"store": config.Env("APP_MAINTENANCE_STORE", ""),
+		},
 	})
 }

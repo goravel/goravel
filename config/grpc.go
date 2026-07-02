@@ -18,6 +18,7 @@ func init() {
 			//"user": map[string]any{
 			//	"host":           config.Env("GRPC_USER_HOST"),
 			//	"port":           config.Env("GRPC_USER_PORT"),
+			//  "credentials":    config.Env("GRPC_USER_CREDENTIALS"),
 			//  // the group name of UnaryClientInterceptorGroups
 			//	"interceptors":   []string{},
             //  "stats_handlers": []string{},
