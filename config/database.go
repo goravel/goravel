@@ -9,7 +9,8 @@ import (
 func init() {
 	config := facades.Config()
 	config.Add("database", map[string]any{
-		"default": "postgres",
+		// Default database connection name
+		"default": config.Env("DB_CONNECTION"),
 		// Database connections
 		"connections": map[string]any{
 			"postgres": map[string]any{

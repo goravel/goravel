@@ -188,7 +188,15 @@ func init() {
 			"grpc_client": map[string]any{
 				"enabled": config.Env("OTEL_GRPC_CLIENT_ENABLED", true),
 			},
-			
+
+			// Database Instrumentation
+			//
+			// Spans and metrics for ORM and DB query builder operations,
+			// plus connection pool metrics.
+			"database": map[string]any{
+				"enabled": config.Env("OTEL_DATABASE_ENABLED", true),
+			},
+
 			// Log Instrumentation
 			//
 			// Configures the instrumentation for the application logger.
