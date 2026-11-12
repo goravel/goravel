@@ -4,6 +4,6 @@ import (
 	"github.com/goravel/framework/contracts/http/client"
 )
 
-func Http() client.Request {
+func Http() client.Factory {
 	return App().MakeHttp()
 }
