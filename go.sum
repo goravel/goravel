@@ -93,8 +93,8 @@ github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSs
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1VwoXQT9A3Wy9MM3WgvqSxFWenqJduM=
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/dromara/carbon/v2 v2.6.11 h1:wnAWZ+sbza1uXw3r05hExNSCaBPFaarWfUvYAX86png=
-github.com/dromara/carbon/v2 v2.6.11/go.mod h1:7GXqCUplwN1s1b4whGk2zX4+g4CMCoDIZzmjlyt0vLY=
+github.com/dromara/carbon/v2 v2.6.17 h1:QL1LVcp5A/NQtIPbc1vrL9qIXxPNWnaDOBaFlmP1iDg=
+github.com/dromara/carbon/v2 v2.6.17/go.mod h1:NGo3reeV5vhWCYWcSqbJRZm46MEwyfYI5EJRdVFoLJo=
 github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=
 github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
 github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f h1:Y/CXytFA4m6baUTXGLOoWe4PQhGxaX0KpnayAqC48p4=
@@ -105,8 +105,8 @@ github.com/frankban/quicktest v1.14.6 h1:7Xjx+VpznH+oBnejlPUj8oUpdxnVs4f8XU8WnHk
 github.com/frankban/quicktest v1.14.6/go.mod h1:4ptaffx2x8+WTWXmUCuVU6aPUX1/Mz7zb5vbUoiM6w0=
 github.com/fsnotify/fsnotify v1.9.0 h1:2Ml+OJNzbYCTzsxtv8vKSFD9PbJjmhYF14k/jKC7S9k=
 github.com/fsnotify/fsnotify v1.9.0/go.mod h1:8jBTzvmWwFyi3Pb8djgCCO5IBqzKJ/Jwo8TRcHyHii0=
-github.com/gabriel-vasile/mimetype v1.4.13 h1:46nXokslUBsAJE/wMsp5gtO500a4F3Nkz9Ufpk2AcUM=
-github.com/gabriel-vasile/mimetype v1.4.13/go.mod h1:d+9Oxyo1wTzWdyVUPMmXFvp4F9tea18J8ufA774AB3s=
+github.com/gabriel-vasile/mimetype v1.4.15 h1:05iP/CYtZ/w455R/KZM6rZ5ieAdh99UPtd+d3YzLmaI=
+github.com/gabriel-vasile/mimetype v1.4.15/go.mod h1:azpTcoLcDZRNgFou5j+APrqQx9HqVPWa6ijYQIIVswQ=
 github.com/gin-contrib/sse v1.1.0 h1:n0w2GMuUpWDVp7qSpvze6fAu9iRxJY4Hmj6AmBOU05w=
 github.com/gin-contrib/sse v1.1.0/go.mod h1:hxRZ5gVpWMT7Z0B0gSNYqqsSCNIJMjzvm6fqCz9vjwM=
 github.com/gin-contrib/timeout v1.2.1 h1:vw+1K+rDo1M86G00A1RdQZDP9JJDcJjYj6+9ZVowjlk=
@@ -152,10 +152,10 @@ github.com/gookit/color v1.4.2/go.mod h1:fqRyamkC1W8uxl+lxCQxOT09l/vYfZ+QeiX3rKQ
 github.com/gookit/color v1.5.0/go.mod h1:43aQb+Zerm/BWh2GnrgOQm7ffz7tvQXEKV6BFMl7wAo=
 github.com/gookit/color v1.6.0 h1:JjJXBTk1ETNyqyilJhkTXJYYigHG24TM9Xa2M1xAhRA=
 github.com/gookit/color v1.6.0/go.mod h1:9ACFc7/1IpHGBW8RwuDm/0YEnhg3dwwXpoMsmtyHfjs=
-github.com/goravel/framework v1.18.0 h1:TFiLAAYcKGkJG4K9qcSGhzTIAUFvzp/APCumxN55shg=
-github.com/goravel/framework v1.18.0/go.mod h1:7nTfWdu987t+MmB1s+TtqbuJJLngmjCjsMbw3FQLNcA=
-github.com/goravel/gin v1.18.0 h1:4eIy9eAzH+0mz8SN03iwwocIGwc/2dpZkgz6Ol68KIE=
-github.com/goravel/gin v1.18.0/go.mod h1:QvS8KhRagh5DhbXvO4dTbjf1ZGdz2O56FiG+Z5nh21s=
+github.com/goravel/framework v1.18.1 h1:xNNDPI1FAdPdOeLDaiezfHTMnM8HuJFbB1V9LbIyQ8g=
+github.com/goravel/framework v1.18.1/go.mod h1:P0ja6/lxzU1mPKu+xyNVuTvzWyBWr29dY/xaVkKKpEo=
+github.com/goravel/gin v1.18.1 h1:791qqVKiReEcESWSbtwA9qKHBO/YW8chWKquBO6x7Wc=
+github.com/goravel/gin v1.18.1/go.mod h1:JuSHV5LNsaRPQbDmEvHlh4YRd6y9y/KAfmHyHiMsSmA=
 github.com/goravel/openai v1.18.0 h1:bldJDwIONxzKUJnbWbVCvIalvcrAMF3DJdSzCI8AzIE=
 github.com/goravel/openai v1.18.0/go.mod h1:Q79Mveb8JEXI4Xspaq9vKiqmQlrni+hDjsjUADP8Hq8=
 github.com/goravel/postgres v1.18.0 h1:vD5iJWm0UFLBABl719/4a0E9Qw7EXXC6GAa9k2QmNlg=
