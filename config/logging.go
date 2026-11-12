@@ -43,6 +43,7 @@ func init() {
 			"otel": map[string]any{
 				"driver":          "otel",
 				"instrument_name": config.GetString("APP_NAME", "goravel/log"),
+				"level":           config.Env("LOG_LEVEL", "debug"),
 			},
 		},
 	})
